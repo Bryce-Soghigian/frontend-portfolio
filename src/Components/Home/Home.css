@@ -1,5 +1,12 @@
 .description{
     color:#61DBFB;
-
+    margin:0;
     font-family: 'Fira Code';
+
+}
+@media(min-width:1700px){
+    .description{
+        font-size: 5rem;
+    }
+
 }

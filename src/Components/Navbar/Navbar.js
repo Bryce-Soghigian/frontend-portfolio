@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
 display:flex;
 width:100vw;
+height:7vh;
 background:#011627;
 /* border-bottom: 5px #4B6478; */
 `
@@ -25,7 +26,7 @@ align-items:center;
 background:#011627;
 border-bottom: 3px solid #4B6478;
 `
-const Name = styled.p`
+const Name = styled(Link)`
 /* margin:5px; */
 display:flex;
 justify-content:center;
@@ -33,6 +34,16 @@ align-items:center;
 color:white;
 text-transform:uppercase;
 font-family: 'Changa One';
+text-decoration:none;
+margin:5px;
+@media(min-width:1700px){
+    font-size: 3rem;
+}
+:hover{
+    transition:0.5s;
+    color:#61DAFB;
+
+}
 
 `
 
@@ -42,6 +53,9 @@ margin:5px;
 color:#4B6478;
 font-family: 'Changa One';
 text-decoration:none;
+@media(min-width:1700px){
+    font-size: 2rem;
+}
 :hover{
     transition:0.5s;
     color:white;
@@ -52,11 +66,11 @@ export default function Navbar() {
     return (
             <Container>
                 <Left>
-                    <Name>Bryce Soghigian</Name>
+                    <Name to="/">Bryce Soghigian</Name>
                 </Left>
                 <Right>
-                        <NavItem>Projects</NavItem>
-                        <NavItem>Contact</NavItem>
+                        <NavItem to="/Projects">Projects</NavItem>
+                        <NavItem to="/Contact">Contact</NavItem>
                         
                 </Right>
             </Container>
