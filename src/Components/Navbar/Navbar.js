@@ -14,7 +14,7 @@ justify-content:start;
 width:50vw;
 
 background:#011627;
-border-bottom: 3px solid #4B6478;
+border-bottom: 1px solid #4B6478;
 `
 const Right = styled.div`
 width:50vw;
@@ -24,7 +24,7 @@ flex-direction:row-reverse;
 justify-content:end;
 align-items:center;
 background:#011627;
-border-bottom: 3px solid #4B6478;
+border-bottom: 1px solid #4B6478;
 `
 const Name = styled(Link)`
 /* margin:5px; */

@@ -10,3 +10,9 @@
     }
 
 }
+@media(min-width:1500px){
+    .description{
+        font-size: 3rem;
+    }
+
+}

@@ -18,6 +18,12 @@ align-items:center;
 const Header = styled.h1`
 color:#61DBFB;
 margin:6.5%;
+@media(min-width:1200px){
+    font-size:3rem;
+}
+@media(min-width:1500px){
+    font-size:5rem;
+}
 @media(min-width:1700px){
     font-size: 7rem;
 }
@@ -48,6 +54,10 @@ margin:5%;
     transition:1s;
     color:white;
 }
+@media(min-width:1500px){
+
+        font-size: 3rem;
+}
 @media(min-width:1700px){
     
     font-size: 5rem;
@@ -66,12 +76,22 @@ margin:5%;
     transition:.7s;
     color:white;
 }
+@media(min-width:1500px){
+
+        font-size: 3rem;
+    }
 @media(min-width:1700px){
     font-size: 5rem;
 }
 `
 export default function Home() {
-
+    const CursorProps ={
+        show: true,
+        blink: true,
+        element: '|',
+        hideWhenDone: true,
+        hideWhenDoneDelay: 300,
+    }
     return (
         <MainDiv>
             <Header>Bryce Soghigian</Header>
@@ -90,7 +110,7 @@ export default function Home() {
             <Typist.Delay ms={8500}/>
             Fullstack Web Developer
             </Typist> */}
-                        <Typist className="description">Fullstack Web Developer<Typist.Backspace count={24} delay={1000}/>
+                        <Typist className="description" cursor={CursorProps}>Fullstack Web Developer<Typist.Backspace count={24} delay={1000}/>
             <Typist.Delay ms={1500}/>
             ThreeJS Developer<Typist.Backspace count={17} delay={2000}/>
             <Typist.Delay ms={2500}/>

@@ -14,7 +14,11 @@ function App() {
 
             <Route exact path = "/"  component={Home}/>
             <Route exact path = "/Projects" component ={Projects}/> 
+            <Route exact path="/Projects1"/>
+            <Route exact path="Projects2"/>
+            <Route exact path = "Projects3"/>
             <Route exact path = "/Contact" component={Contact}/>
+
     </div>
   );
 }
