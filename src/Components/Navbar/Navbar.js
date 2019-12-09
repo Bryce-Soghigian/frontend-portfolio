@@ -69,8 +69,9 @@ export default function Navbar() {
                     <Name to="/">Bryce Soghigian</Name>
                 </Left>
                 <Right>
+                <NavItem to="/Contact">Contact</NavItem>
                         <NavItem to="/Projects">Projects</NavItem>
-                        <NavItem to="/Contact">Contact</NavItem>
+                        
                         
                 </Right>
             </Container>
