@@ -1,8 +1,23 @@
 .Project1{
-    color:#fcbe03;
+    color:white;
     font-size: .35rem;
 }
+@media(min-width:800px){
+    .Project1{
+        font-size:1rem;
+    }
+
+} 
+
+
 .Project2{
-    color:#61DAFB;
+    color:white;
+    
     font-size:.35rem;
 }
+@media(min-width:800px){
+    .Project2{
+        font-size:1rem;
+    }
+
+} 
