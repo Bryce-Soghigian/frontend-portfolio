@@ -108,6 +108,10 @@ width:50vw;
 const ProjectThreeTitle = styled.h1`
 color:#ADDB67;
 `
+const ProjectThreeMore = styled(Link)`
+
+
+`
 export default function Projects() {
     const CursorProps ={
         show: true,

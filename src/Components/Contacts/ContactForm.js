@@ -50,7 +50,7 @@ margin:4%;
 height:17vh;
 
 &:focus {
-    outline-color:#011627;
+    outline-color:#61DBFB;
 }
 `
 const Input = styled.input`
@@ -58,7 +58,7 @@ border-style:solid;
 border-color:white;
 font-family: 'Bowlby One SC';
 &:focus {
-  outline-color:#011627;
+  outline-color:#61DBFB;
 }
 
 margin:4%;
@@ -144,11 +144,12 @@ export default function ContactForm({touched,errors}) {
       })
     })
     Swal.fire({
-      position: 'center',
-      type: 'success',
-      title: 'Thank You For Reaching Out!',
+      position:"center",
+      icon: 'success',
+      title: 'Your work has been saved',
       showConfirmButton: false,
-      timer: 3500
+      timer: 1500
+
     })
     console.log(state)
     document.getElementById("FormClear").reset();
@@ -161,23 +162,7 @@ export default function ContactForm({touched,errors}) {
       [e.target.name]: e.target.value
     })
   }
-//  const handleSubmit = event => {
-//    event.preventDefault();
-//    console.log(inputValue,"input Value")
-//    axios.post("https://nodemailer-to-bsoghigian.herokuapp.com/send",inputValue)
-//    .then((res) => {
-//      console.log(res)
-//    }).catch((err) => {
-// console.error(err)
-//    })
-//    validationSchema: Yup.object().shape({
-//     name: Yup.string()
-//       .required("This field is required")
-//     // passwordConfirmation: Yup.string()
-//     // .oneOf([Yup.ref('password'), null], 'Passwords must match'),
-//   })
 
-//  };
  return (
    <div>
      <H1>Contact Me Below!</H1>

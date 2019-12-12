@@ -95,22 +95,7 @@ export default function Home() {
     return (
         <MainDiv>
             <Header>Bryce Soghigian</Header>
-            
-            {/* <Typist className="description">Fullstack Web Developer<Typist.Backspace count={24} delay={1000}/>
-            <Typist.Delay ms={2000}/>
-            ThreeJS Developer<Typist.Backspace count={17} delay={2800}/>
-            <Typist.Delay ms={3500}/>
-            NodeJS Developer<Typist.Backspace count={16} delay={4100}/>
-            <Typist.Delay ms={4600}/>
-            Javascript Developer<Typist.Backspace count={21} delay={5600}/>
-            <Typist.Delay ms={6100}/>
-            Python Developer<Typist.Backspace count={15} delay={6700}/>
-            <Typist.Delay ms={7300}/>
-            React Developer<Typist.Backspace count={14} delay={8000}/>
-            <Typist.Delay ms={8500}/>
-            Fullstack Web Developer
-            </Typist> */}
-                        <Typist className="description" cursor={CursorProps}>Fullstack Web Developer<Typist.Backspace count={24} delay={1000}/>
+             <Typist className="description" cursor={CursorProps}>Fullstack Web Developer<Typist.Backspace count={24} delay={1000}/>
             <Typist.Delay ms={1500}/>
             ThreeJS Developer<Typist.Backspace count={17} delay={2000}/>
             <Typist.Delay ms={2500}/>
