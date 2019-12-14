@@ -5,6 +5,8 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contacts/Contact';
+import ProjectOne from './Components/Projects/ProjectOne';
+import ProjectTwo from './Components/Projects/ProjectTwo'
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
 
             <Route exact path = "/"  component={Home}/>
             <Route exact path = "/Projects" component ={Projects}/> 
-            <Route exact path="/Projects1"/>
-            <Route exact path="Projects2"/>
-            <Route exact path = "Projects3"/>
+            <Route exact path="/Project1" component={ProjectOne}/>
+            <Route exact path="/Project2" component={ProjectTwo}/>
+            <Route exact path = "/Projects3"/>
             <Route exact path = "/Contact" component={Contact}/>
 
     </div>
