@@ -213,7 +213,7 @@ export default function Projects() {
                     <Typist className="Project1" cursor={CursorProps}>import THREE from 'three';</Typist>
                     <CMTTitle>CMT9941</CMTTitle>
                     <Description>A Horror/Puzzle Game Made
-                         With threeJS,React,Django</Description>
+                         With ThreeJS,React,Django</Description>
                     <P1info to="/Project1">Read More</P1info>
 
                 </ProjectOneLeft>

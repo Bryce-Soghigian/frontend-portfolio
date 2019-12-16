@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Game from './Game.png'
+const Div = styled.div`
+margin:40px;
+`
 const ProjectOneContainer = styled.div`
 background:#011627;
-height:100%;
+height:107vh;
 display:flex;
 justify-content:center;
 /* align-items:center; */
@@ -87,7 +90,8 @@ export default function ProjectOne() {
     return (
 
         <ProjectOneContainer>
-                        <ProjectTitle>CMT9441v1</ProjectTitle>
+            <Div></Div>
+                        {/* <ProjectTitle>CMT9441v1</ProjectTitle> */}
             <ImageContainer>
 
             <IMG src={Game}/>
