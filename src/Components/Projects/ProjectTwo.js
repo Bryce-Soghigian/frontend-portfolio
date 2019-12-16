@@ -153,8 +153,8 @@ export default function ProjectTwo() {
             <H5>Technologies</H5>
             <Span><ListNumber>00</ListNumber><Tech>ReactJS</Tech></Span>
            <Span><ListNumber>01</ListNumber><Tech>MapboxGL</Tech></Span>
-           <Span><ListNumber>02</ListNumber><Tech>NodeJS</Tech></Span>
-           <Span><ListNumber>03</ListNumber><Tech>Express</Tech></Span>
+           <Span><ListNumber>02</ListNumber><Tech>Express</Tech></Span>
+           <Span><ListNumber>03</ListNumber><Tech>Fullstory</Tech></Span>
 
             </TechStack>
             </CenterContainer>

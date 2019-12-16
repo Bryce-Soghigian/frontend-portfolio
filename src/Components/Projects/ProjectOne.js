@@ -79,7 +79,7 @@ justify-content:center;
 align-items:center;
 font-size:.7rem;
 margin:1em;
-width:9vw;
+width:7vw;
 
 height:3vh;
 border-radius:5px;
