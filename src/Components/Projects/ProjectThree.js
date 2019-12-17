@@ -118,7 +118,7 @@ export default function ProjectThree() {
                     <QLDescription>
                         API experiment where i learned how to use GraphQLSchemas, Learned About the GraphQLObjectType, and graphQL typing while taking advantage of the convenices that come with NodeJS and Express
                     </QLDescription>
-                    <A href="https://github.com/Bryce-Soghigian/GraphQL-BookAPI/blob/master/server.js"><Button><FaCode/></Button></A>
+                    <A href="https://github.com/Bryce-Soghigian/GraphQL-BookAPI/blob/master/server.js" target="_blank"><Button><FaCode/></Button></A>
                 </QLDescriptionContainer>
             </GraphQLContainer>
             <KaffineCloneContainer>
