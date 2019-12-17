@@ -21,3 +21,12 @@
     }
 
 } 
+
+@media(min-width:1500px){
+    .Project1{
+        font-size:1.5rem;
+    }
+    .Project2{
+            font-size:1.5rem;
+    }
+}
