@@ -13,10 +13,23 @@ height:110vh;
 `
 //========GraphQL================//
 const GraphQLTitle = styled.h2`
+
 color:#ADDB67;
+@media(min-width:1400px){
+    font-size:3.2rem;
+    margin:.5px;
+}
+/* @media(min-width:2000px){
+    font-size:rem;
+} */
+
 `
 const Project = styled.h3`
 color:#ADDB67;
+@media(min-width:1400px){
+    font-size:3rem;
+}
+
 
 `
 const GraphQLTop = styled.div`
@@ -40,6 +53,9 @@ align-items:center;
 const QLDescription = styled.p`
 color:white;
 margin:5px;
+@media(min-width:1400px){
+    font-size:1.8rem;
+}
 
 `
 
