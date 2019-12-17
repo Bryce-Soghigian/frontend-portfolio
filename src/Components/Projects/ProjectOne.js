@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Game from './Game.png'
+import { FaCode } from "react-icons/fa";
+
+
 const Div = styled.div`
 margin:40px;
 `
@@ -64,6 +67,39 @@ flex-direction:column;
 const ListNumber = styled.p`
 color:#385164;
 `
+const ButtonContainer = styled.div`
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+`
+const Button = styled.button`
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:.7rem;
+margin:1em;
+width:7vw;
+
+height:3vh;
+border-radius:5px;
+border-style:solid;
+border-color:black;
+background:#61DBFB;
+font-family:'Changa One';
+cursor: pointer;
+min-width:50px;
+:hover{
+ color:white;
+ border-style:solid;
+border-color:white;
+ transform:scale(1.5);
+ transition:.5s;
+}
+`
+const A = styled.a`
+text-decoration:none;
+`
 const CenterContainer = styled.div`
 
 @media(min-width:800px){
@@ -94,7 +130,7 @@ export default function ProjectOne() {
                         {/* <ProjectTitle>CMT9441v1</ProjectTitle> */}
             <ImageContainer>
 
-            <IMG src={Game}/>
+            <IMG src={Game} href="https://cmt-9442v1.netlify.com/"/>
             </ImageContainer>
             
         <CenterContainer>
@@ -105,7 +141,11 @@ export default function ProjectOne() {
                 .With our Desktop Game application traverse the old tv channels for clues in order to reach a secret room. To traverse rooms 
                 either type in room numbers or traverse with the arrowup and arrowdown keys.
             </Description>
-
+            <ButtonContainer>
+                <A href="https://github.com/Bryce-Soghigian/CMT-9442V-FE" target="_blank"><Button>FE<FaCode/></Button></A>
+                <A href="https://github.com/CMT-9442V/CS_BW_GAME-BE" target="_blank"> <Button>BE<FaCode/></Button></A>
+                <A href="https://cmt-9442v1.netlify.com/" target="_blank"> <Button>Demo</Button></A>
+            </ButtonContainer>
             </DescriptionContainer>
             <TechStack>
             <H5>Technologies</H5>

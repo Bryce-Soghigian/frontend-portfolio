@@ -243,7 +243,7 @@ export default function Projects() {
                 <ProjectThreeMore to="/Project3">Read More</ProjectThreeMore>
                 </ProjectThreeLeft>
                 <ProjectThreeRight>
-                    <A target="_blank"><IMG src={Node}/></A>
+                    <A href="https://github.com/Bryce-Soghigian" target="_blank"><IMG src={Node}/></A>
                 </ProjectThreeRight>
             </ProjectThreeContainer>
         </ComponentContainer>

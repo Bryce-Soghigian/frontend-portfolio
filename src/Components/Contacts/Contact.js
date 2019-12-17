@@ -10,7 +10,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-width:100%;
+width: calc(100vw - (100vw - 100%));
 height:94vh;
 
 `

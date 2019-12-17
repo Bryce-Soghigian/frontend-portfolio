@@ -50,6 +50,10 @@ margin:5px;
 const NavItem = styled(Link)`
 display:flex;
 margin:5px;
+@media(min-width:800px){
+    margin-right:20px;
+}
+
 color:#4B6478;
 font-family: 'Changa One';
 text-decoration:none;
