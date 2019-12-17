@@ -170,6 +170,9 @@ display:flex;
 flex-direction:column;
 justify-content:flex-end;
 align-items:center;
+@media(min-width:800px){
+    font-size:1.5rem;
+}
 `
 const P2Info = styled(Link)`
 color:#ECC48D;
@@ -181,10 +184,16 @@ margin:0;
 //=============Project3================//
 const ProjectThreeLeft = styled.div`
 width:50vw;
+@media(min-width:800px){
+    font-size:1.5rem;
+}
 
 `
 const ProjectThreeRight = styled.div`
 width:50vw;
+@media(min-width:800px){
+    font-size:1.5rem;
+}
 `
 const ProjectThreeTitle = styled.h1`
 color:#ADDB67;
