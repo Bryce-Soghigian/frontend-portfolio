@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contacts/Contact';
 import ProjectOne from './Components/Projects/ProjectOne';
 import ProjectTwo from './Components/Projects/ProjectTwo'
+import ProjectThree from './Components/Projects/ProjectThree';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route exact path = "/Projects" component ={Projects}/> 
             <Route exact path="/Project1" component={ProjectOne}/>
             <Route exact path="/Project2" component={ProjectTwo}/>
-            <Route exact path = "/Projects3"/>
+            <Route exact path = "/Project3" component={ProjectThree}/>
             <Route exact path = "/Contact" component={Contact}/>
 
     </div>
