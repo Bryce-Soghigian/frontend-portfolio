@@ -10,9 +10,8 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-width: calc(100vw - (100vw - 100%));
+width:100vw;
 height:94vh;
-
 `
 
 
@@ -22,7 +21,7 @@ export default function Contact() {
         <div>
             <ContactDiv>
  <ContactForm/> 
-{/* <TravestyMediaForm/> */}
+
             </ContactDiv>
 
         </div>
