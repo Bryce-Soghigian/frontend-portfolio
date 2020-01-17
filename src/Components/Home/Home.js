@@ -110,7 +110,7 @@ export default function Home() {
             Fullstack Web Developer
             </Typist>
             <SocialsContainer>
-            <Linked href="https://www.linkedin.com/in/bryce-soghigian-0556a9184/" target="_blank"><FaLinkedin/></Linked>
+            <Linked href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><FaLinkedin/></Linked>
             <Github href="https://github.com/Bryce-Soghigian" target="_blank"><FaGithubSquare/></Github>
             </SocialsContainer>
 

@@ -20,6 +20,7 @@ function App() {
             <Route exact path="/Project1" component={ProjectOne}/>
             <Route exact path="/Project2" component={ProjectTwo}/>
             <Route exact path = "/Project3" component={ProjectThree}/>
+            <Route exact path ="/Project4"/>
             <Route exact path = "/Contact" component={Contact}/>
 
     </div>

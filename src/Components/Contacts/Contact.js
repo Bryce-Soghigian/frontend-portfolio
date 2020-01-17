@@ -21,7 +21,7 @@ export default function Contact() {
         <div>
             <ContactDiv>
  <ContactForm/> 
-{/* <TravestyMediaForm/> */}
+
             </ContactDiv>
 
         </div>
