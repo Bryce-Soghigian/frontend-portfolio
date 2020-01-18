@@ -7,7 +7,7 @@ margin:40px;
 `
 const ProjectTwoContainer = styled.div`
 background:#011627;
-height:107vh;
+height:117vh;
 display:flex;
 justify-content:center;
 /* align-items:center; */
@@ -137,10 +137,10 @@ export default function ProjectTwo() {
             
         <CenterContainer>
             <DescriptionContainer>
-                <H5>The Project</H5>
+                <H5>Crime Statistics</H5>
             <Description>
                 This is a project I built out to showcase crime statistics in our filter tabs and with the data overlay. I worked with two other developers on this project. I loved every minute of it.
-            I also really enjoyed working with geolocation and reverse geocoding during this project
+            I also really enjoyed working with geolocation and reverse geocoding during this project. 
             </Description>
             <ButtonContainer>
                 <A href="https://github.com/Lambda-School-Labs/crime-statistics-for-travelers-fe" target="_blank"><Button>FE<FaCode/></Button></A>

@@ -9,7 +9,7 @@ margin:40px;
 `
 const ProjectOneContainer = styled.div`
 background:#011627;
-height:107vh;
+height:117vh;
 display:flex;
 justify-content:center;
 /* align-items:center; */
@@ -135,7 +135,7 @@ export default function ProjectOne() {
             
         <CenterContainer>
             <DescriptionContainer>
-                <H5>The Project</H5>
+                <H5>CMT Desktop Puzzle app</H5>
             <Description>
                 This project is a puzzle game with audio cues spread throughout the application, along with clues in the old TV channels
                 .With our Desktop Game application ,traverse the old tv channels for clues in order to reach a secret room. To traverse rooms 
