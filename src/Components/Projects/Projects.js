@@ -7,6 +7,7 @@ import './Projects.css'
 import Node from './node.png'
 import CMT from './Game.png'
 import Crime from './Crime.png'
+import scribe from './scribe.png'
 const ComponentContainer = styled.div`
 
 `
@@ -205,8 +206,17 @@ color:#ADDB67;
 `
 const A = styled.a`
 
+
+`
+const ScribeTitle = styled.h1`
+color:#D3423E;
+margin:0;
+`
+const P4Info = styled(Link)`
+color:#D3423E;
 `
 export default function Projects() {
+ 
     const CursorProps ={
         show: true,
         blink: true,
@@ -217,9 +227,20 @@ export default function Projects() {
     return (
         
         <ComponentContainer>
+            <ProjectTwoContainer>
+                <ProjectTwoLeft>
+                <A href="https://scribe-notes.netlify.com/transcripts" target="_blank"><IMG src={scribe} /></A>
+                </ProjectTwoLeft>
+                <ProjectTwoRight>
+                <Typist className="Project2" cursor={CursorProps}><Typist.Delay ms={0}/>import React from 'react'</Typist>
+                <ScribeTitle>Scribe</ScribeTitle>
+                    <DescriptionRight>Voice Recogntion Application that utilized React,Redux,and MongoDB</DescriptionRight>
+                    <P4Info to="/Project4">Read More</P4Info>
+                </ProjectTwoRight>
+            </ProjectTwoContainer>
              <ProjectContainer>
                 <ProjectOneLeft>
-                    <Typist className="Project1" cursor={CursorProps}>import THREE from 'three';</Typist>
+                    <Typist className="Project1" cursor={CursorProps} ms={1000}>import * as THREE from 'three'</Typist>
                     <CMTTitle>CMT9941</CMTTitle>
                     <Description>A Horror/Puzzle Game Made
                          With ThreeJS,React,Django</Description>
