@@ -209,11 +209,13 @@ const A = styled.a`
 
 `
 const ScribeTitle = styled.h1`
-color:#D3423E;
+/* color:#D3423E; */
+color:#1FB2AA;
 margin:0;
 `
 const P4Info = styled(Link)`
-color:#D3423E;
+/* color:#D3423E; */
+color:#1FB2AA;
 `
 export default function Projects() {
  
@@ -234,7 +236,7 @@ export default function Projects() {
                 <ProjectTwoRight>
                 <Typist className="Project2" cursor={CursorProps}><Typist.Delay ms={0}/>import React from 'react'</Typist>
                 <ScribeTitle>Scribe</ScribeTitle>
-                    <DescriptionRight>Voice Recogntion Application that utilized React,Redux,and MongoDB</DescriptionRight>
+                    <DescriptionRight>Voice Recognition Application that utilized React,Redux,and MongoDB</DescriptionRight>
                     <P4Info to="/Project4">Read More</P4Info>
                 </ProjectTwoRight>
             </ProjectTwoContainer>
