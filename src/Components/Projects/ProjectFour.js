@@ -146,6 +146,7 @@ export default function ProjectFour() {
                 <A href="https://github.com/scribe-notes/scribe-fe" target="_blank"><Button>FE<FaCode/></Button></A>
                 <A href="https://github.com/scribe-notes/scribe-be" target="_blank"> <Button>BE<FaCode/></Button></A>
                 <A href="https://scribe-notes.netlify.com/login" target="_blank"> <Button>Demo</Button></A>
+                <A href="https://scribe-docs.netlify.com/" target="_blank"> <Button>Docs</Button></A>
 
             </ButtonContainer>
             </DescriptionContainer>
