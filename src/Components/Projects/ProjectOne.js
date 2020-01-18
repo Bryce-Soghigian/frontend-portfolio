@@ -137,8 +137,8 @@ export default function ProjectOne() {
             <DescriptionContainer>
                 <H5>The Project</H5>
             <Description>
-                This project is a puzzle game with audio cues spread throughout the application along with clues in the old TV channels
-                .With our Desktop Game application traverse the old tv channels for clues in order to reach a secret room. To traverse rooms 
+                This project is a puzzle game with audio cues spread throughout the application, along with clues in the old TV channels
+                .With our Desktop Game application ,traverse the old tv channels for clues in order to reach a secret room. To traverse rooms 
                 either type in room numbers or traverse with the arrowup and arrowdown keys.
             </Description>
             <ButtonContainer>
