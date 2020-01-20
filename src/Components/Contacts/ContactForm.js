@@ -148,9 +148,9 @@ export default function ContactForm({touched,errors}) {
     Swal.fire({
       position:"center",
       icon: 'success',
-      title: 'Your work has been saved',
+      title: 'Thanks for reaching out!',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2500
 
     })
     console.log(state)
