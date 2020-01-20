@@ -10,6 +10,7 @@ import ProjectTwo from './Components/Projects/ProjectTwo'
 import ProjectThree from './Components/Projects/ProjectThree';
 import ProjectFour from './Components/Projects/ProjectFour';
 import Skills from './Components/Skills/Skills'
+import Test from './Test'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path ="/Project4" component={ProjectFour}/>
             <Route exact path = "/Contact" component={Contact}/>
             <Route exact path ="/Skills" component = {Skills}/>
+            <Route exact path = "/Test" component = {Test}/>
 
     </div>
   );
