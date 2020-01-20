@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import { FaCode } from "react-icons/fa";
 import Graph from './GraphQL.png'
 import Alarm from './Alarm1.png'
+import Video from './video.png'
 const ProjectThreeContainer = styled.div`
 background:#011627;
 /* display:flex;
 justify-content:center;
 flex-direction:column;
 align-items:center; */
-height:110vh;
+height:162vh;
 `
 //========GraphQL================//
 const GraphQLTitle = styled.h2`
@@ -64,6 +65,7 @@ margin:5px;
 const KaffineCloneContainer = styled.div`
 display:flex;
 flex-direction:column-reverse;
+border-bottom: 1px solid #4B6478;
 @media(min-width:1000px){
     flex-direction:row;
 }
@@ -78,14 +80,11 @@ const CloneRight=styled.div`
 
 `
 
-//======== NodeMailer===================//
-const NodeMailerContainer = styled.div`
 
-`
 const IMG = styled.img`
 
 object-fit:cover;
-width:45vw;
+width:40vw;
 `
 const Buttons = styled.div`
 display:flex;
@@ -123,6 +122,22 @@ text-decoration:none;
 export default function ProjectThree() {
     return (
         <ProjectThreeContainer>
+            <KaffineCloneContainer>
+            <CloneLeft>
+                    <Project>Description</Project>
+                    <QLDescription>
+                            This is the api i wrote that streams all the video for my portfolio. I basically parse the mp4 into chunks and send it over with pipes. 
+                    </QLDescription>
+                    <Buttons>
+                    <A href="https://github.com/Bryce-Soghigian/portfolio-video-api" target="_blank"><Button><FaCode/></Button></A>
+                    <A href="https://www.brycesoghigian.com/Project1" target="_blank"><Button>Demo</Button></A>
+                    </Buttons>
+                </CloneLeft>
+                <CloneRight>
+                <GraphQLTitle>NodeJS Video Streamer</GraphQLTitle>
+                <IMG src={Video}/>
+                </CloneRight>
+            </KaffineCloneContainer>
             <GraphQLContainer>
                 <GraphQLTop>
                 <GraphQLTitle>Book API</GraphQLTitle>                 
@@ -139,7 +154,7 @@ export default function ProjectThree() {
             </GraphQLContainer>
             <KaffineCloneContainer>
                 <CloneLeft>
-                    <Project>API Alarm</Project>
+                    <Project>Description</Project>
                     <QLDescription>
                         Project that keeps important apis from falling asleep due to inactivity. My Application will Ping your API every 30 minutes so it doesn't fall asleep. You have a sleepy API? add it to the list below!
                     </QLDescription>

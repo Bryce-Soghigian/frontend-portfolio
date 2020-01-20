@@ -28,10 +28,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const IMG = styled.img`
-  object-fit: cover;
-  width: 45vw;
-`;
+
 
 const Description = styled.p`
   margin: 0%;
@@ -118,7 +115,6 @@ export default function ProjectTwo() {
   return (
     <ProjectTwoContainer>
       <Div></Div>
-      {/* <ProjectTitle>CMT9441v1</ProjectTitle> */}
       <ImageContainer>
         <video
           style={{ width: "45vw" }}
@@ -133,7 +129,6 @@ export default function ProjectTwo() {
             type="video/mp4"
           />
         </video>
-        {/* <IMG src={Crime} href="https://crimestatsfortravelers.com/"/> */}
       </ImageContainer>
 
       <CenterContainer>
