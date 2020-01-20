@@ -29,7 +29,6 @@ const ImageContainer = styled.div`
   align-items: center;
 `;
 
-
 const Description = styled.p`
   margin: 0%;
   color: white;
@@ -135,11 +134,13 @@ export default function ProjectTwo() {
         <DescriptionContainer>
           <H5>Crime Statistics</H5>
           <Description>
-            This is a project I built out to showcase crime statistics in our
-            filter tabs and with the data overlay. I worked with two other
-            developers on this project. I loved every minute of it. I also
-            really enjoyed working with geolocation and reverse geocoding during
-            this project.
+            This is an app to showcase crime statistics through data
+            visualization and data filters in the tab menus. You can search your
+            state and the crime rate will appear in the box on the left. To
+            visit a random place in the united states click the dice. To view
+            crime data click the magnifying glass icon. I could go on and on
+            about all the functionality but I think it would be better if you
+            just gave the app a try!
           </Description>
           <ButtonContainer>
             <A

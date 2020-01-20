@@ -139,9 +139,7 @@ export default function ProjectOne() {
             <DescriptionContainer>
                 <H5>CMT Desktop Puzzle app</H5>
             <Description>
-                This project is a puzzle game with audio cues spread throughout the application, along with clues in the old TV channels
-                .With our Desktop Game application ,traverse the old tv channels for clues in order to reach a secret room. To traverse rooms 
-                either type in room numbers or traverse with the arrowup and arrowdown keys.
+                    This is a project build with Django,ThreeJS,and React. You can navigate the old tv channels with the arrow keys and search for clues. Look for the auth numbers. There is a bit of scattered story in the 100 channels. Can you piece together the clues to find the secret rooms?
             </Description>
             <ButtonContainer>
                 <A href="https://github.com/Bryce-Soghigian/CMT-9442V-FE" target="_blank"><Button>FE<FaCode/></Button></A>
