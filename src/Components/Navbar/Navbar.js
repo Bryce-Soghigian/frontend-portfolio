@@ -64,7 +64,6 @@ const NavItem = styled(Link)`
   }
 `;
 
-
 export default function Navbar() {
   return (
     <Container>
@@ -72,7 +71,6 @@ export default function Navbar() {
         <Name to="/">Bryce Soghigian</Name>
       </Left>
       <Right>
-
         <NavItem to="/Contact">Contact</NavItem>
         <NavItem to="/Skills">Skills</NavItem>
         <NavItem to="/Projects">Projects</NavItem>

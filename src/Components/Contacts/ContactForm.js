@@ -1,106 +1,102 @@
-import React,{useState} from 'react'
-import axios from 'axios';
-import styled from 'styled-components';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import axios from "axios";
+import styled from "styled-components";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const H5 = styled.h6`
-  color:white;
+  color: white;
 `;
 const H1 = styled.h1`
-font-size:3rem;
-color:#61DBFB;
-margin:0px;
-margin-right:10px;
-margin-bottom:.5px;
-text-shadow: 2px 2px 2px black;
-font-family:'Changa One';
-
-`
+  font-size: 3rem;
+  color: #61dbfb;
+  margin: 0px;
+  margin-right: 10px;
+  margin-bottom: 0.5px;
+  text-shadow: 2px 2px 2px black;
+  font-family: "Changa One";
+`;
 const FormContainer = styled.div`
-
- margin: 1em ;
- padding: 2em;
- display: flex;
- flex-wrap: wrap;
- flex-direction: column;
- align-content: center;
- justify-content: space-evenly;
- /* box-shadow: 0px 12px 22px -1px #545309; */
- font-family: "Ubuntu", sans-serif;
-
-`
+  margin: 1em;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  /* box-shadow: 0px 12px 22px -1px #545309; */
+  font-family: "Ubuntu", sans-serif;
+`;
 const TopForm = styled.div`
-display:flex;
-flex-direction:column;
+  display: flex;
+  flex-direction: column;
 
-justify-content:center;
+  justify-content: center;
 
-margin:.5em;
-
-`
+  margin: 0.5em;
+`;
 const TextArea = styled.textarea`
-border-style:solid;
-border-color:black;
-font-family: 'Bowlby One SC';
-border-radius:5px;
-margin:4%;
- width:50vw;
- resize: none;
-height:17vh;
+  border-style: solid;
+  border-color: black;
+  font-family: "Bowlby One SC";
+  border-radius: 5px;
+  margin: 4%;
+  width: 50vw;
+  resize: none;
+  height: 17vh;
 
-&:focus {
-    outline-color:#61DBFB;
-}
-`
+  &:focus {
+    outline-color: #61dbfb;
+  }
+`;
 const Input = styled.input`
-border-style:solid;
-border-color:white;
-border-radius:5px;
-font-family: 'Bowlby One SC';
-&:focus {
-  outline-color:#61DBFB;
-}
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  font-family: "Bowlby One SC";
+  &:focus {
+    outline-color: #61dbfb;
+  }
 
-margin:4%;
-width:50vw;
-height:3vh;
-`
-const Center=styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-`
+  margin: 4%;
+  width: 50vw;
+  height: 3vh;
+`;
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Button = styled.button`
-font-size:.7rem;
-margin:1em;
-width:9vw;
-height:3vh;
-border-radius:5px;
-border-style:solid;
-border-color:black;
-background:#61DBFB;
-font-family:'Changa One';
-cursor: pointer;
-min-width:50px;
-:hover{
- color:white;
- border-style:solid;
-border-color:white;
- transform:scale(1.5);
- transition:.5s;
-}
-`
-export default function ContactForm({touched,errors}) {
-  const [state, setState] = useState({})
+  font-size: 0.7rem;
+  margin: 1em;
+  width: 9vw;
+  height: 3vh;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  background: #61dbfb;
+  font-family: "Changa One";
+  cursor: pointer;
+  min-width: 50px;
+  :hover {
+    color: white;
+    border-style: solid;
+    border-color: white;
+    transform: scale(1.5);
+    transition: 0.5s;
+  }
+`;
+export default function ContactForm({ touched, errors }) {
+  const [state, setState] = useState({});
 
   const defaultForm = {
-    name: '',
-    email: '',
-    company: '',
-    message: '',
-    error: ''
-  }
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+    error: ""
+  };
 
   const [form, setForm] = useState(defaultForm);
 
@@ -108,8 +104,8 @@ export default function ContactForm({touched,errors}) {
     setForm({
       ...form,
       error
-    })
-  }
+    });
+  };
 
   const sendMessage = e => {
     e.preventDefault();
@@ -120,80 +116,87 @@ export default function ContactForm({touched,errors}) {
     const message = form.message.trim();
 
     setState({
-      ...state,
-  
-    })
-  
+      ...state
+    });
 
-
-    axios.post('https://nodemailer-to-bsoghigian.herokuapp.com/send', {
-      name,
-      email,
-      company,
-      message
-    })
-    .then(() => {
-      setState({
-        ...state
-
+    axios
+      .post("https://nodemailer-to-bsoghigian.herokuapp.com/send", {
+        name,
+        email,
+        company,
+        message
       })
-      setForm(defaultForm);
-    })
-    .catch(err => {
-      setState({
-        ...state
-
+      .then(() => {
+        setState({
+          ...state
+        });
+        setForm(defaultForm);
       })
-    })
+      .catch(err => {
+        setState({
+          ...state
+        });
+      });
     Swal.fire({
-      position:"center",
-      icon: 'success',
-      title: 'Thanks for reaching out!',
+      position: "center",
+      icon: "success",
+      title: "Thanks for reaching out!",
       showConfirmButton: false,
       timer: 2500
-
-    })
-    console.log(state)
+    });
+    console.log(state);
     document.getElementById("FormClear").reset();
-  }
+  };
 
   const handleChange = e => {
-    setError('');
+    setError("");
     setForm({
       ...form,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
- return (
-   <div>
-     <H1>Contact Me Below!</H1>
-     <form id="FormClear">
-       <FormContainer>
+  return (
+    <div>
+      <H1>Contact Me Below!</H1>
+      <form id="FormClear">
+        <FormContainer>
+          <Input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Name"
+          />
 
-        
-        <Input  type='text' name='name' value={form.name} onChange={handleChange} placeholder="Name"/>
-      
+          <Input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
 
-       
-        <Input  type='email' name='email' value={form.email} onChange={handleChange} placeholder="Email"/>
-   
+          <Input
+            type="text"
+            name="company"
+            value={form.company}
+            onChange={handleChange}
+            placeholder="Company"
+          />
 
-  
-        <Input  type='text' name='company' value={form.company} onChange={handleChange} placeholder="Company"/>
-   
+          <TextArea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Message"
+          />
 
-        
-        <TextArea  name='message' value={form.message} onChange={handleChange} placeholder="Message"/>
-      
-
-      <Center>
-      <Button  onClick={sendMessage}>Send!</Button>
-      </Center>
-      </FormContainer>
-    </form>
-
-
-   </div>
- )
+          <Center>
+            <Button onClick={sendMessage}>Send!</Button>
+          </Center>
+        </FormContainer>
+      </form>
+    </div>
+  );
 }

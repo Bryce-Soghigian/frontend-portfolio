@@ -139,7 +139,7 @@ export default function ProjectTwo() {
             state and the crime rate will appear in the box on the left. To
             visit a random place in the united states click the dice. To view
             crime data click the magnifying glass icon. I could go on and on
-            about all the functionality but I think it would be better if you
+            about all the functionality but, I think it would be better if you
             just gave the app a try!
           </Description>
           <ButtonContainer>
