@@ -140,7 +140,7 @@ export default function ProjectFour() {
             <DescriptionContainer>
                 <H5>scribe</H5>
             <Description>
-                This is a project I built out with my friend mohammad to showcase our ability to leverage speech synthesis and speech recogniton apis. It allows you to record and share voice notes with other users.
+            Scribe is a web application I built with my friends. I wrote the voice recognition, and speech synthesis functionality, along with the authentication components, testing, and documentation.
             </Description>
             <ButtonContainer>
                 <A href="https://github.com/scribe-notes/scribe-fe" target="_blank"><Button>FE<FaCode/></Button></A>

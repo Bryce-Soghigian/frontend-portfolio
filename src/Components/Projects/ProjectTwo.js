@@ -134,13 +134,7 @@ export default function ProjectTwo() {
         <DescriptionContainer>
           <H5>Crime Statistics</H5>
           <Description>
-            This is an app to showcase crime statistics through data
-            visualization and data filters in the tab menus. You can search your
-            state and the crime rate will appear in the box on the left. To
-            visit a random place in the united states click the dice. To view
-            crime data click the magnifying glass icon. I could go on and on
-            about all the functionality but, I think it would be better if you
-            just gave the app a try!
+          Crime statistics is a web application I built with crime statistics for travelers' teams. I wrote the code for the map functionality using Mapbox, and React. I also wrote the map style swap code, the data filtering, auth0 login functionality, Geolocation searching, along with all the data visualization present in our application
           </Description>
           <ButtonContainer>
             <A

@@ -4,6 +4,7 @@ import Game from './Game.png'
 import { FaCode } from "react-icons/fa";
 
 
+
 const Div = styled.div`
 margin:40px;
 `
@@ -129,9 +130,9 @@ export default function ProjectOne() {
             <Div></Div>
                         {/* <ProjectTitle>CMT9441v1</ProjectTitle> */}
             <ImageContainer>
-            <video style={{width:'45vw'}} id="videoPlayer" controls muted="muted" autoplay loop> 
+            <video-js style={{width:'45vw'}} id="videoPlayer" controls muted="muted" autoplay loop> 
               <source src="https://portfolio-nodejs-streams.herokuapp.com/cmt" type="video/mp4"/>
-            </video>
+            </video-js>
 
             </ImageContainer>
             
