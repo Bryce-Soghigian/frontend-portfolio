@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 import axios from 'axios'
 import 'babel-polyfill';
-import { FaGithubSquare,FaLinkedin } from 'react-icons/fa';
+import { FaGithubSquare,FaLinkedin, FaMailBulk } from 'react-icons/fa';
 
 import "./Home.css"
 const MainDiv = styled.div`
@@ -135,6 +135,7 @@ export default function Home() {
             <SocialsContainer>
             <Linked href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><FaLinkedin/></Linked>
             <Github href="https://github.com/Bryce-Soghigian" target="_blank"><FaGithubSquare/></Github>
+            <Github href = "mailto: bsoghigian@gmail.com" target="_blank"><FaMailBulk/></Github>
             </SocialsContainer>
 
         </MainDiv>
