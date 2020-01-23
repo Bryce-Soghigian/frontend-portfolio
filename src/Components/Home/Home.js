@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
 import Typist from 'react-typist';
+import axios from 'axios'
 import 'babel-polyfill';
 import { FaGithubSquare,FaLinkedin } from 'react-icons/fa';
 
@@ -85,6 +86,28 @@ margin:5%;
 }
 `
 export default function Home() {
+
+    //========Waking up our apis==============//
+    useEffect(() => {
+
+        axios.get("https://portfolio-nodejs-streams.herokuapp.com/awake")
+        .then(res => {
+            console.log(res)
+            console.log("Made request")
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+    }, [])
+    useEffect(() => {
+        axios.get("https://ourtvgame.herokuapp.com/api/adv/initialize")
+        .then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+    }, [])
     const CursorProps ={
         show: true,
         blink: true,

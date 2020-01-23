@@ -28,10 +28,6 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const IMG = styled.img`
-  object-fit: cover;
-  width: 45vw;
-`;
 
 const Description = styled.p`
   margin: 0%;
@@ -118,7 +114,6 @@ export default function ProjectTwo() {
   return (
     <ProjectTwoContainer>
       <Div></Div>
-      {/* <ProjectTitle>CMT9441v1</ProjectTitle> */}
       <ImageContainer>
         <video
           style={{ width: "45vw" }}
@@ -133,18 +128,13 @@ export default function ProjectTwo() {
             type="video/mp4"
           />
         </video>
-        {/* <IMG src={Crime} href="https://crimestatsfortravelers.com/"/> */}
       </ImageContainer>
 
       <CenterContainer>
         <DescriptionContainer>
           <H5>Crime Statistics</H5>
           <Description>
-            This is a project I built out to showcase crime statistics in our
-            filter tabs and with the data overlay. I worked with two other
-            developers on this project. I loved every minute of it. I also
-            really enjoyed working with geolocation and reverse geocoding during
-            this project.
+          Crime statistics is a web application I built with crime statistics for travelers' teams. I wrote the code for the map functionality using Mapbox, and React. I also wrote the map style swap code, the data filtering, auth0 login functionality, Geolocation searching, along with all the data visualization present in our application
           </Description>
           <ButtonContainer>
             <A
