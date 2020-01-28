@@ -8,7 +8,9 @@ import Node from "./node.png";
 import CMT from "./Game.png";
 import Crime from "./Crime.png";
 import scribe from "./scribe.png";
-const ComponentContainer = styled.div``;
+const ComponentContainer = styled.div`
+width:100vw;
+`;
 const ProjectContainer = styled.div`
   background: #011627;
   height: 93vh;
@@ -226,7 +228,7 @@ export default function Projects() {
           </Typist>
           <ScribeTitle>Scribe</ScribeTitle>
           <DescriptionRight>
-            Voice Recognition Application that utilized React,Redux,and MongoDB
+            Voice Recognition Application that utilized React, Redux, and MongoDB.
           </DescriptionRight>
           <P4Info to="/Project4">Read More</P4Info>
         </ProjectTwoRight>
@@ -238,7 +240,7 @@ export default function Projects() {
           </Typist>
           <CMTTitle>CMT9941</CMTTitle>
           <Description>
-            A Horror/Puzzle Game Made With ThreeJS,React,Django
+            A Horror/Puzzle Game Made With ThreeJS, React, Django
           </Description>
           <P1info to="/Project1">Read More</P1info>
         </ProjectOneLeft>
@@ -263,7 +265,7 @@ export default function Projects() {
           </Typist>
           <CrimeStatsTitle>Crime Statistics App</CrimeStatsTitle>
           <DescriptionRight>
-            Crime Statistics Application with testing,user habit tracking, and
+            Crime Statistics Application with testing, user habit tracking, and
             user analytics
           </DescriptionRight>
           <P2Info to="/Project2">Read More</P2Info>

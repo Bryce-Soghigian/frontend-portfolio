@@ -112,7 +112,7 @@ export default function ProjectThree() {
         <CloneLeft>
           <Project>Description</Project>
           <QLDescription>
-            This is the api i wrote that streams all the video for my portfolio.
+            This is the api I wrote that streams all the video for my portfolio.
             I basically parse the mp4 into chunks and send it over with pipes.
           </QLDescription>
           <Buttons>
@@ -142,9 +142,9 @@ export default function ProjectThree() {
         <QLDescriptionContainer>
           <Project>Description</Project>
           <QLDescription>
-            API experiment where i learned how to use GraphQLSchemas, Learned
+          This is an API experiment where I learned how to use GraphQLSchemas, Learned
             About the GraphQLObjectType, and graphQL typing while taking
-            advantage of the convenices that come with NodeJS and Express.
+            advantage of the conveniences that come with NodeJS and Express.
           </QLDescription>
           <A
             href="https://github.com/Bryce-Soghigian/GraphQL-BookAPI/blob/master/server.js"
@@ -160,10 +160,8 @@ export default function ProjectThree() {
         <CloneLeft>
           <Project>Description</Project>
           <QLDescription>
-            Project that keeps important apis from falling asleep due to
-            inactivity. My Application will Ping your API every 30 minutes so it
-            doesn't fall asleep. You have a sleepy API? add it to the list
-            below!
+          The project that keeps important APIs from falling asleep due to
+            inactivity. My Application will Ping your API every 30 minutes so it doesn't fall asleep. Do you have a sleepy API? add it to the list
           </QLDescription>
           <Buttons>
             <A

@@ -140,7 +140,7 @@ export default function ProjectFour() {
             <DescriptionContainer>
                 <H5>scribe</H5>
             <Description>
-            Scribe is a web application I built with my friends. I wrote the voice recognition, and speech synthesis functionality, along with the authentication components, testing, and documentation.
+            Scribe is a web application I pair programmed with one of my peers. I wrote the voice recognition, and speech synthesis functionality, along with the authentication components, testing, and documentation.
             </Description>
             <ButtonContainer>
                 <A href="https://github.com/scribe-notes/scribe-fe" target="_blank"><Button>FE<FaCode/></Button></A>
