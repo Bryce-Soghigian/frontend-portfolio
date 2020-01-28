@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 const Container = styled.div`
   display: flex;
-  width: calc(100vw - (100vw - 100%));
+  width: 100vw;
   height: 7vh;
   background: #011627;
   /* border-bottom: 5px #4B6478; */
