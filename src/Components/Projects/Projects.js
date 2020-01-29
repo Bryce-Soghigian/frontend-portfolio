@@ -10,6 +10,7 @@ import Crime from "./Crime.png";
 import scribe from "./scribe.png";
 const ComponentContainer = styled.div`
 width:100vw;
+overflow:hidden;
 `;
 const ProjectContainer = styled.div`
   background: #011627;
@@ -211,7 +212,7 @@ export default function Projects() {
     hideWhenDoneDelay: 300
   };
   return (
-    <ComponentContainer>
+    <ComponentContainer >
       <ProjectTwoContainer>
         <ProjectTwoLeft>
           <A
