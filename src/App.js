@@ -10,13 +10,14 @@ import ProjectTwo from "./Components/Projects/ProjectTwo";
 import ProjectThree from "./Components/Projects/ProjectThree";
 import ProjectFour from "./Components/Projects/ProjectFour";
 import Skills from "./Components/Skills/Skills";
-
+import About from './Components/About Me/About'
 function App() {
   return (
     <div className="App">
       <Navbar />
 
       <Route exact path="/" component={Home} />
+      <Route exact path="/About" component={About}/>
       <Route exact path="/Projects" component={Projects} />
       <Route exact path="/Project1" component={ProjectOne} />
       <Route exact path="/Project2" component={ProjectTwo} />

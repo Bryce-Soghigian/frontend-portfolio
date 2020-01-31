@@ -71,8 +71,10 @@ export default function Navbar() {
         <Name to="/">Bryce Soghigian</Name>
       </Left>
       <Right>
+
         <NavItem to="/Contact">Contact</NavItem>
         <NavItem to="/Skills">Skills</NavItem>
+        <NavItem to ="/About">About</NavItem>
         <NavItem to="/Projects">Projects</NavItem>
       </Right>
     </Container>

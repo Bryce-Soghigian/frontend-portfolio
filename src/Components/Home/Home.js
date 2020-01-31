@@ -44,7 +44,7 @@ margin:5%;
 }
 `
 const Linked = styled.a`
-font-size:2rem;
+font-size:1rem;
 color:#61DBFB;
 margin:5%;
 :visited{
@@ -54,6 +54,9 @@ margin:5%;
     transform: scale(1.25);
     transition:1s;
     color:white;
+}
+@media(min-width:1000px){
+    font-size:2rem;
 }
 @media(min-width:1500px){
 
@@ -66,7 +69,7 @@ margin:5%;
 `
 const Github = styled.a`
 color:#61DBFB;
-font-size:2rem;
+font-size:1rem;
 margin:5%;
 :visited{
     
@@ -76,6 +79,9 @@ margin:5%;
     transform: scale(1.25);
     transition:.7s;
     color:white;
+}
+@media(min-width:1000px){
+    font-size:2rem;
 }
 @media(min-width:1500px){
 
