@@ -5,7 +5,7 @@ import Bryce from './Bryce.png'
 const Container = styled.div`
 
 background:#011627;
-height:93vh;
+height:110vh;
 width:100vw;
 display:flex;
 flex-direction:column;
@@ -15,19 +15,64 @@ align-items:center;
 
 `
 const ImageDiv = styled.div`
-
+margin:5%;
+border:solid #61DBFB 2px;
+border-radius:50%;
 `
 const Image = styled.img`
+/* 
+object-fit:cover; */
 
-object-fit:cover;
+width:300px;
+height:300px;
 border-radius:50%;
 
 `
 
 const H1 = styled.h1`
  color:white;
+ font-family: 'Bangers';
+`
+const AboutDiv = styled.div`
+border:solid #61DBFB 2px;
+height:35vh;
+width:75vw;
+display:flex;
+
+
+
+`
+const AboutLeft = styled.div`
+color:#61DBFB;
+width:37.5vw;
+height:35vh;
+
 `
 
+const AboutRight = styled.div`
+color:#61DBFB;
+width:37.5vw;
+height:35vh;
+
+
+`
+const H3 = styled.h3`
+color:#61DBFB;
+
+
+`
+const Li = styled.p`
+color:#61DBFB;
+text-transform:uppercase;
+text-decoration:underline;
+`
+const A = styled.a`
+color:#61DBFB;
+:visited{
+    color:#61DBFB;
+}
+
+`
 export default function About() {
     const CursorProps ={
         show: true,
@@ -60,14 +105,18 @@ export default function About() {
             <ImageDiv>
             <Image src={Bryce}/>
             </ImageDiv>
-            <div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-            </div>
+                <AboutDiv>
+                    <AboutLeft>
+                                    <H3>About Me</H3>
+                            <p>I am a software engineer looking to relocate to some large city! I like cooking, drones, programming ,and reading.</p>
+                    </AboutLeft>
+                    <AboutRight>
+                        <H3>Socials?</H3>
+                        <A href="https://github.com/Bryce-Soghigian" target = "_blank"><Li>Github</Li></A>
+                        <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><Li>LInkedIn</Li></A>
+                        <A href="https://twitter.com/brybrycodingguy" target="_blank"><Li>Twitter</Li></A>
+                    </AboutRight>
+                </AboutDiv>
         </Container>
     )
 }

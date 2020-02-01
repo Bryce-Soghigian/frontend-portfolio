@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import Swal from "sweetalert2";
-import * as Yup from "yup";
+
 
 const H5 = styled.h6`
   color: white;
