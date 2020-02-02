@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import Bryce from './Bryce.png'
+import "./about.css"
+
 const Container = styled.div`
 
 background:#011627;
+
 height:110vh;
 width:100vw;
 display:flex;
@@ -50,6 +53,7 @@ height:35vh;
 `
 
 const AboutRight = styled.div`
+background-image: url("./blob.svg");
 color:#61DBFB;
 width:37.5vw;
 height:35vh;
@@ -83,8 +87,8 @@ export default function About() {
     }
 
     return (
-        <Container>
-            <div>
+        <Container className="test2">
+            <div >
                 <H1>I AM</H1>
 
                 <Typist className="description" cursor={CursorProps}>A drone hobbist<Typist.Backspace count={24} delay={1000}/>
@@ -110,7 +114,7 @@ export default function About() {
                                     <H3>About Me</H3>
                             <p>I am a software engineer looking to relocate to some large city! I like cooking, drones, programming ,and reading.</p>
                     </AboutLeft>
-                    <AboutRight>
+                    <AboutRight className="test">
                         <H3>Socials?</H3>
                         <A href="https://github.com/Bryce-Soghigian" target = "_blank"><Li>Github</Li></A>
                         <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><Li>LInkedIn</Li></A>

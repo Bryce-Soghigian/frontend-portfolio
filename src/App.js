@@ -1,7 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+// import Navbar from "./Components/Navbar/Navbar";
+import NavBarTwo from './Components/Navbar/NavBarTwo';
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contacts/Contact";
@@ -11,11 +12,12 @@ import ProjectThree from "./Components/Projects/ProjectThree";
 import ProjectFour from "./Components/Projects/ProjectFour";
 import Skills from "./Components/Skills/Skills";
 import About from './Components/About Me/About'
+import NewNav from "./Components/Navbar/NewNav";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-
+      <NewNav />
+{/* <NavBarTwo/> */}
       <Route exact path="/" component={Home} />
       <Route exact path="/About" component={About}/>
       <Route exact path="/Projects" component={Projects} />
