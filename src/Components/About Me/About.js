@@ -119,6 +119,7 @@ export default function About() {
                         <A href="https://github.com/Bryce-Soghigian" target = "_blank"><Li>Github</Li></A>
                         <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><Li>LInkedIn</Li></A>
                         <A href="https://twitter.com/brybrycodingguy" target="_blank"><Li>Twitter</Li></A>
+                        <Li>515-346-8817</Li>
                     </AboutRight>
                 </AboutDiv>
         </Container>
