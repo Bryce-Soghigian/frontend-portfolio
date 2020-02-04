@@ -26,8 +26,8 @@ const Image = styled.img`
 /* 
 object-fit:cover; */
 
-width:300px;
-height:300px;
+width:250px;
+height:250px;
 border-radius:50%;
 
 `
@@ -39,8 +39,10 @@ const H1 = styled.h1`
 const AboutDiv = styled.div`
 border:solid #61DBFB 2px;
 
-
-height:35vh;
+@media(min-width:750px){
+    height: 35vh;
+}
+height:49vh;
 width:75vw;
 display:flex;
 
@@ -114,7 +116,7 @@ export default function About() {
                 <AboutDiv>
                     <AboutLeft>
                                     <H3>About Me</H3>
-                            <p>I am a software engineer looking to relocate to some large city! I like cooking, drones, programming ,and reading.</p>
+                            <p>A software engineer who loves to play with new technologies. I enjoy playing with Javascript libraries and sometimes dogs. I would love to relocate! I work with ReactJS, Node.js, Express, Postgres, ThreeJS, TensorflowJS, Python, Flask, Django, Cypress, Jest, and lastly HTML&&SCSS.</p>
                     </AboutLeft>
                     <AboutRight>
                         <H3>Socials?</H3>
