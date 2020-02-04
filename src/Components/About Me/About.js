@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import Bryce from './Bryce.png'
-import "./about.css"
+
 
 const Container = styled.div`
 
 background:#011627;
 
-height:110vh;
+height:120vh;
 width:100vw;
 display:flex;
 flex-direction:column;
@@ -19,7 +19,7 @@ align-items:center;
 `
 const ImageDiv = styled.div`
 margin:5%;
-border:solid #61DBFB 2px;
+border:solid #61DBFB 5px;
 border-radius:50%;
 `
 const Image = styled.img`
@@ -38,6 +38,8 @@ const H1 = styled.h1`
 `
 const AboutDiv = styled.div`
 border:solid #61DBFB 2px;
+
+
 height:35vh;
 width:75vw;
 display:flex;
@@ -49,14 +51,14 @@ const AboutLeft = styled.div`
 color:#61DBFB;
 width:37.5vw;
 height:35vh;
-
+/* border-right:solid white 2px; */
 `
 
 const AboutRight = styled.div`
-background-image: url("./blob.svg");
+
 color:#61DBFB;
 width:37.5vw;
-height:35vh;
+height:40vh;
 
 
 `
@@ -114,11 +116,13 @@ export default function About() {
                                     <H3>About Me</H3>
                             <p>I am a software engineer looking to relocate to some large city! I like cooking, drones, programming ,and reading.</p>
                     </AboutLeft>
-                    <AboutRight className="test">
+                    <AboutRight>
                         <H3>Socials?</H3>
                         <A href="https://github.com/Bryce-Soghigian" target = "_blank"><Li>Github</Li></A>
                         <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><Li>LInkedIn</Li></A>
-                        <A href="https://twitter.com/brybrycodingguy" target="_blank"><Li>Twitter</Li></A>
+
+                        <A href="https://docs.google.com/document/d/1h88tzouRqqVw_qy-c3MAhTSCiiyhajs4RRe7rriLAEc/edit?usp=sharing" target="_blank"><Li>Resume</Li></A>
+                        <Li>515-346-8817</Li>
                     </AboutRight>
                 </AboutDiv>
         </Container>
