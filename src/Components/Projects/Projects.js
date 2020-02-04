@@ -229,7 +229,8 @@ export default function Projects() {
           </Typist>
           <ScribeTitle>Scribe</ScribeTitle>
           <DescriptionRight>
-            Voice Recognition Application that utilized React, Redux, and MongoDB.
+          Voice Recognition Application<br/>
+          React | Redux | MongoDB
           </DescriptionRight>
           <P4Info to="/Project4">Read More</P4Info>
         </ProjectTwoRight>
@@ -241,7 +242,8 @@ export default function Projects() {
           </Typist>
           <CMTTitle>CMT9941</CMTTitle>
           <Description>
-            A Horror/Puzzle Game Made With ThreeJS, React, Django
+            A Horror/Puzzle Game<br/>
+            ThreeJS | React | Django
           </Description>
           <P1info to="/Project1">Read More</P1info>
         </ProjectOneLeft>
@@ -266,8 +268,8 @@ export default function Projects() {
           </Typist>
           <CrimeStatsTitle>Crime Statistics App</CrimeStatsTitle>
           <DescriptionRight>
-            Crime Statistics Application with testing, user habit tracking, and
-            user analytics
+            Crime Statistics Application<br/>
+            Fullstory | React | Cypress | CI | Mapbox
           </DescriptionRight>
           <P2Info to="/Project2">Read More</P2Info>
         </ProjectTwoRight>
@@ -280,7 +282,8 @@ export default function Projects() {
           </Typist>
           <ProjectThreeTitle>NodeJS && Express APIS</ProjectThreeTitle>
           <Description>
-            A collection of my favorite APIS I have built
+            A collection of my favorite APIS I have built<br/>
+            NodeJS | Express | Postgres | Mongo | GraphQL
           </Description>
           <ProjectThreeMore to="/Project3">Read More</ProjectThreeMore>
         </ProjectThreeLeft>
