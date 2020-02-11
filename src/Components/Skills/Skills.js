@@ -3,6 +3,7 @@ import {FaReact,FaNodeJs,FaPython,FaSass,FaCss3Alt} from 'react-icons/fa'
 import{DiJavascript1,DiPostgresql,DiHtml5} from 'react-icons/di'
 import {GiMoebiusTriangle,GiFizzingFlask} from 'react-icons/gi'
 import styled from "styled-components";
+
 const Container = styled.div`
   height: 93vh;
   width: 100vw;
@@ -10,6 +11,7 @@ const Container = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow-x:hidden;
 `;
 
 const Bottom = styled.div`
@@ -25,7 +27,8 @@ margin:2.5%;
 `
 const SkillsContainer = styled.div`
 display:flex;
-justify-content:space-around;
+justify-content:space-evenly;
+overflow-x:show;
 
 `
 //============Icons=============//
@@ -179,7 +182,7 @@ margin:0;
 const SkillsText = styled.h1`
 font-size:7rem;
 color:white;
-font-family: 'Bangers';
+font-family: "Changa One";
 
 
 `
