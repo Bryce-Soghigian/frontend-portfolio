@@ -10,7 +10,8 @@ import Crime from "./Crime.png";
 import scribe from "./scribe.png";
 const ComponentContainer = styled.div`
 width:100vw;
-overflow:hidden;
+/* overflow:hidden; */
+overflow-x:hidden;
 `;
 const ProjectContainer = styled.div`
   background: #011627;

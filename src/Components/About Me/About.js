@@ -7,7 +7,7 @@ import Bryce from './Bryce.png'
 const Container = styled.div`
 
 background:#011627;
-
+overflow-x:hidden;
 height:120vh;
 width:100vw;
 display:flex;
