@@ -23,7 +23,7 @@ function App() {
       <Route exact path="/Project2" component={ProjectTwo} />
       <Route exact path="/Project3" component={ProjectThree} />
       <Route exact path="/Project4" component={ProjectFour} />
-      <Route exact path="Project5" component={ProjectFive}/>
+      <Route exact path="/Project5" component={ProjectFive}/>
       <Route exact path="/Contact" component={Contact} />
       <Route exact path="/Skills" component={Skills} />
     </div>
