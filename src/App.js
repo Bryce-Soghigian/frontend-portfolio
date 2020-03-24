@@ -1,8 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
-// import Navbar from "./Components/Navbar/Navbar";
-import NavBarTwo from './Components/Navbar/NavBarTwo';
+import ProjectFive from './Components/Projects/ProjectFive'
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contacts/Contact";
@@ -17,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <NewNav />
-{/* <NavBarTwo/> */}
       <Route exact path="/" component={Home} />
       <Route exact path="/About" component={About}/>
       <Route exact path="/Projects" component={Projects} />
@@ -25,10 +23,10 @@ function App() {
       <Route exact path="/Project2" component={ProjectTwo} />
       <Route exact path="/Project3" component={ProjectThree} />
       <Route exact path="/Project4" component={ProjectFour} />
+      <Route exact path="Project5" component={ProjectFive}/>
       <Route exact path="/Contact" component={Contact} />
       <Route exact path="/Skills" component={Skills} />
     </div>
   );
-}
-
-export default App;
+  }
+export default App
