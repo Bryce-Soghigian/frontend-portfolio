@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import Bryce from './Bryce.png'
+import { FaGithub, FaLinkedin ,FaFileAlt} from 'react-icons/fa';
 
 
 const Container = styled.div`
@@ -37,49 +38,28 @@ const H1 = styled.h1`
  font-family: 'Bangers';
 `
 const AboutDiv = styled.div`
-border:solid #61DBFB 2px;
-
-@media(min-width:750px){
-    height: 35vh;
-}
-height:49vh;
-width:75vw;
+/* border:solid #61DBFB 2px; */
 display:flex;
+width:80vw;
+justify-content:center;
+align-items:center;
 
 
-
-`
-const AboutLeft = styled.div`
-color:#61DBFB;
-width:37.5vw;
-height:35vh;
-/* border-right:solid white 2px; */
-`
-
-const AboutRight = styled.div`
-
-color:#61DBFB;
-width:37.5vw;
-height:40vh;
 
 
 `
-const H3 = styled.h3`
-color:#61DBFB;
 
-
-`
-const Li = styled.p`
-color:#61DBFB;
-text-transform:uppercase;
-text-decoration:underline;
-`
 const A = styled.a`
 color:#61DBFB;
+font-size:3rem;
+margin:5%;
 :visited{
     color:#61DBFB;
 }
-
+:hover{
+    transform:scale(1.2);
+    color:white;
+}
 `
 export default function About() {
     const CursorProps ={
@@ -114,18 +94,13 @@ export default function About() {
             <Image src={Bryce}/>
             </ImageDiv>
                 <AboutDiv>
-                    <AboutLeft>
-                                    <H3>About Me</H3>
-                            <p>A software engineer who loves to play with new technologies. I enjoy playing with Javascript libraries and sometimes dogs. I would love to relocate! I work with ReactJS, Node.js, Express, Postgres, ThreeJS, TensorflowJS, Python, Flask, Django, Cypress, Jest, and lastly HTML&&SCSS.</p>
-                    </AboutLeft>
-                    <AboutRight>
-                        <H3>Socials?</H3>
-                        <A href="https://github.com/Bryce-Soghigian" target = "_blank"><Li>Github</Li></A>
-                        <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><Li>LInkedIn</Li></A>
 
-                        <A href="https://docs.google.com/document/d/1h88tzouRqqVw_qy-c3MAhTSCiiyhajs4RRe7rriLAEc/edit?usp=sharing" target="_blank"><Li>Resume</Li></A>
-                        <Li>515-346-8817</Li>
-                    </AboutRight>
+                        <A href="https://github.com/Bryce-Soghigian" target = "_blank"><FaGithub/></A>
+                        <A href="https://www.linkedin.com/in/bsoghigian/" target="_blank"><FaLinkedin/></A>
+
+
+                        <A href="https://docs.google.com/document/d/1h88tzouRqqVw_qy-c3MAhTSCiiyhajs4RRe7rriLAEc/edit?usp=sharing" target="_blank"><FaFileAlt/></A>
+         
                 </AboutDiv>
         </Container>
     )
