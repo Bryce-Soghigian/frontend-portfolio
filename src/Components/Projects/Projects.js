@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
 import { Link } from "react-router-dom";
-import ProjectFilter from "./ProjectFilter";
 import "./Projects.css";
 import Node from "./node.png";
 import CMT from "./Game.png";
 import Crime from "./Crime.png";
 import scribe from "./scribe.png";
+import planet from './Planet.png'
 const ComponentContainer = styled.div`
 width:100vw;
 /* overflow:hidden; */
@@ -32,14 +32,7 @@ const ProjectContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
   }
-  /* background:#011627;
-height:93vh;
-width:100vw;
-border-bottom: 1px solid #4B6478;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-align-items:center; */
+
 `;
 const ProjectTwoContainer = styled.div`
   background: #011627;
@@ -82,27 +75,7 @@ const IMG = styled.img`
     transform: scale(1.1);
   }
 `;
-/* // const IMG = styled.img`
-// width:50vw;
-// height:25vh;
-// @media(min-width:1200px){
-//     width:25vw;
-// } */
-/* @media(min-width:500px){
-//     width:45vw;
-// height:25vh;
-// }
-// @media(min-width:800px){
-//     width:45vh
-// }
-// @media(min-width:1200px){
-//     width:45vh
-// }
-// @media(min-width:1500px){
-//     width:45vh
-// } */
 
-// `
 //==================Project1=================//
 const ProjectOneLeft = styled.div`
   width: 50vw;
@@ -111,10 +84,6 @@ const ProjectOneLeft = styled.div`
   @media (min-width: 800px) {
     font-size: 1.5rem;
   }
-  /* display:flex;
-flex-wrap: wrap;
-flex-direction:column;
-justify-content:flex-start; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -204,6 +173,13 @@ const P4Info = styled(Link)`
   /* color:#D3423E; */
   color: #1fb2aa;
 `;
+const PlanetTitle = styled.h1`
+color:#1e90ff;
+`
+const P5Info = styled(Link)`
+color:#1e90ff;
+
+`
 export default function Projects() {
   const CursorProps = {
     show: true,
@@ -214,6 +190,28 @@ export default function Projects() {
   };
   return (
     <ComponentContainer >
+      <ProjectContainer>
+        <ProjectTwoRight>
+        <Typist className="Project2" cursor={CursorProps}>
+            <Typist.Delay ms={0} />
+            import React from 'react'
+          </Typist>
+          <PlanetTitle>Universe Exploration</PlanetTitle>
+          <DescriptionRight>
+          Collection Of Apps to Explore the Universe<br/>
+          React | Express | PG | THREE
+          </DescriptionRight>
+          <P5Info to="/Project5">Read More</P5Info>
+        </ProjectTwoRight>
+        <ProjectTwoLeft>
+          <A
+            href="https://www.npmjs.com/package/react-planetary"
+            target="_blank"
+          >
+            <IMG src={planet} />
+          </A>
+        </ProjectTwoLeft>
+      </ProjectContainer>
       <ProjectTwoContainer>
         <ProjectTwoLeft>
           <A
@@ -244,7 +242,7 @@ export default function Projects() {
           <CMTTitle>CMT9941</CMTTitle>
           <Description>
             A Horror/Puzzle Game<br/>
-            ThreeJS | React | Django
+            THREE | React | Django
           </Description>
           <P1info to="/Project1">Read More</P1info>
         </ProjectOneLeft>
