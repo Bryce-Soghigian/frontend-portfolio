@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import react_planetary from './react-planetary.png'
+import react_planetary from "./react-planetary.png";
+import api from "./api.png";
+import northwestern from './northwestern.png'
 const ProjectContainer = styled.div`
   background: #011627;
   height: 93vh;
@@ -20,16 +22,14 @@ const ProjectContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
   }
-
-`
+`;
 const ProjectLeft = styled.div`
-
-
-`
+  margin:10px;
+`;
 const ProjectRight = styled.div`
+  margin:10px;
+  `;
 
-
-`
 const ImageContainer = styled.img`
   object-fit: cover;
   width: 45vw;
@@ -38,24 +38,17 @@ const ImageContainer = styled.img`
   :hover {
     transform: scale(1.1);
   }
-
-
-`
+`;
 const ProjectTitle = styled.h2`
-color: dodgerblue;
-
-`
+  color: #61dbfb;
+`;
 const Description = styled.p`
-color:white;
-
-`
+  color: white;
+`;
 const ButtonsContainer = styled.div`
-
-display:flex;
-justify-content:center;
-
-
-`
+  display: flex;
+  justify-content: center;
+`;
 const Button = styled.button`
   display: flex;
   justify-content: center;
@@ -86,52 +79,102 @@ const A = styled.a`
 export default function ProjectFive() {
   return (
     <div>
-        <ProjectContainer>
-
+      <ProjectContainer>
         <ProjectRight>
-            <ProjectTitle>
-                react-planetary
-            </ProjectTitle>
-            <Description>
-                React planetary is an npm module that I built that allows you to import entire planets into your application with one line of code. 
-                <br></br>
-                 NPM | THREEJS | REACT | STORYBOOK
-            </Description>
-            <ButtonsContainer>
-          <A
-          href="https://heuristic-mestorf-b06f09.netlify.com/"
-          target="_blank"
-          >
-            <Button>
-              Demo
-            </Button>
+          <ProjectTitle>react-planetary</ProjectTitle>
+          <Description>
+            React planetary is an npm module that I built that allows you to
+            import entire planets into your application with one line of code.
+            <br></br>
+            NPM | THREEJS | REACT | STORYBOOK
+          </Description>
+          <ButtonsContainer>
+            <A
+              href="https://heuristic-mestorf-b06f09.netlify.com/"
+              target="_blank"
+            >
+              <Button>Demo</Button>
             </A>
             <A
-            href="https://github.com/Bryce-Soghigian/react-planetary"
-            target="_blank"
+              href="https://github.com/Bryce-Soghigian/react-planetary"
+              target="_blank"
             >
-              <Button>
-                Code
-              </Button>
+              <Button>Code</Button>
             </A>
             <A
-            href="https://www.npmjs.com/package/react-planetary"
-            target="_blank"
+              href="https://www.npmjs.com/package/react-planetary"
+              target="_blank"
             >
-              <Button>
-                NPM
-              </Button>
+              <Button>NPM</Button>
             </A>
-            </ButtonsContainer>
+          </ButtonsContainer>
         </ProjectRight>
         <ProjectLeft>
-            <ImageContainer src={react_planetary}/>
+          <ImageContainer src={react_planetary} />
         </ProjectLeft>
+      </ProjectContainer>
+      <ProjectContainer>
+        <ProjectLeft>
+          <A
+            target="_blank"
+            href="https://nasa-exoplanet-kepler-api.herokuapp.com/static/"
+          >
+            <ImageContainer src={api} />
+          </A>
+        </ProjectLeft>
+        <ProjectRight>
+        <ProjectTitle>Nasa Exoplanets api</ProjectTitle>
+          <Description>
+            This is an app that seeds and serves nasas confirmed exoplanet data with pg.
 
+            <br></br>
+            EXPRESS | APIDOCS | PG | KNEX
+          </Description>
+          <ButtonsContainer>
+            <A
+              href="https://github.com/Bryce-Soghigian/nasa-exoplanets-api"
+              target="_blank"
+            >
+              <Button>Code</Button>
+            </A>
+            <A
+              href="https://nasa-exoplanet-kepler-api.herokuapp.com/static/"
+              target="_blank"
+            >
+              <Button>Docs</Button>
+            </A>
+          </ButtonsContainer>
+        </ProjectRight>
+      </ProjectContainer>
+      <ProjectContainer>
+    <ProjectRight>
+    <ProjectTitle>Code Challenge</ProjectTitle>
+          <Description>
+            I interviewed with a company and they asked me to build a quick react app. So I made a frontend for 
+            the web api that serves nasas exoplanet data
+            <br></br>
+            REACT | REACT-PLANETARY | THREE
+          </Description>
+          <ButtonsContainer>
+            <A
+              href="https://northwestern-code-challenge.netlify.com/"
+              target="_blank"
+            >
+              <Button>Demo</Button>
+            </A>
+            <A
+              href="https://github.com/Bryce-Soghigian/northwestern-mutual-code-challenge"
+              target="_blank"
+            >
+              <Button>Code</Button>
+            </A>
+          </ButtonsContainer>
+    </ProjectRight>
+    <ProjectLeft>
+      <ImageContainer src={northwestern}/>
+    </ProjectLeft>
 
-
-        </ProjectContainer>
-
+      </ProjectContainer>
     </div>
   );
 }
