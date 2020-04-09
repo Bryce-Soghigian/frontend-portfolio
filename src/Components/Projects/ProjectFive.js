@@ -110,7 +110,21 @@ export default function ProjectFive() {
           </ButtonsContainer>
         </ProjectRight>
         <ProjectLeft>
-          <ImageContainer src={react_planetary} />
+        
+         <video
+          style={{ width: "45vw" }}
+          id="videoPlayer"
+          controls
+          muted="muted"
+          autoplay ="true"
+          loop = "true"
+        >
+          <source
+            src="https://portfolio-nodejs-streams.herokuapp.com/byname/planetary"
+            type="video/mp4"
+          />
+        </video>
+      
         </ProjectLeft>
       </ProjectContainer>
       <ProjectContainer>
