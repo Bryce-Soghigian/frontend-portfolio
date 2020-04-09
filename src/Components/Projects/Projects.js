@@ -7,7 +7,7 @@ import Node from "./node.png";
 import CMT from "./Game.png";
 import Crime from "./Crime.png";
 import scribe from "./scribe.png";
-import planet from './Planet.png'
+import Space from './Space.jpeg'
 const ComponentContainer = styled.div`
 width:100vw;
 /* overflow:hidden; */
@@ -164,6 +164,10 @@ const ProjectThreeMore = styled(Link)`
   color: #addb67;
 `;
 const A = styled.a``;
+const ALink = styled(Link)`
+
+
+`
 const ScribeTitle = styled.h1`
   /* color:#D3423E; */
   color: #1fb2aa;
@@ -204,12 +208,10 @@ export default function Projects() {
           <P5Info to="/Project5">Read More</P5Info>
         </ProjectTwoRight>
         <ProjectTwoLeft>
-          <A
-            href="https://www.npmjs.com/package/react-planetary"
-            target="_blank"
-          >
-            <IMG src={planet} />
-          </A>
+          <ALink to="/Project5">
+          <IMG src={Space} />
+          </ALink>
+ 
         </ProjectTwoLeft>
       </ProjectContainer>
       <ProjectTwoContainer>
