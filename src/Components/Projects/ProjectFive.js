@@ -7,6 +7,7 @@ const ProjectContainer = styled.div`
   background: #011627;
   height: 93vh;
   width: 100vw;
+  margin:0;
   border-bottom: 1px solid #4b6478;
   display: flex;
   flex-direction: column;
@@ -164,8 +165,8 @@ export default function ProjectFive() {
     <ProjectRight>
     <ProjectTitle>Code Challenge</ProjectTitle>
           <Description>
-            I interviewed with a company and they asked me to build a quick react app. So I made a frontend for 
-            the web api that serves nasas exoplanet data
+            I interviewed with a company and they asked me to build a quick<br></br>
+             react app. So I made a frontend for the web api that serves nasas exoplanet data
             <br></br>
             REACT | REACT-PLANETARY | THREE
           </Description>
