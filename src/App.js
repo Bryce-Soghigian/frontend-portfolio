@@ -12,11 +12,15 @@ import ProjectFour from "./Components/Projects/ProjectFour";
 import Skills from "./Components/Skills/Skills";
 import About from './Components/About Me/About'
 import NewNav from "./Components/Navbar/NewNav";
+import ProjectsHome from "./Components/ProjectsRefactor/ProjectsHome";
+import OpenHome from './Components/ProjectsRefactor/Open/OpenHome'
 function App() {
   return (
     <div className="App">
       <NewNav />
       <Route exact path="/" component={Home} />
+      <Route exact path="/ProjectsNew" component={ProjectsHome} />
+      <Route exact path="/Open" component={OpenHome} />
       <Route exact path="/About" component={About}/>
       <Route exact path="/Projects" component={Projects} />
       <Route exact path="/Project1" component={ProjectOne} />
