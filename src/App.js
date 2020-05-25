@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
-import ProjectFive from './Components/Projects/ProjectFive'
+import ProjectFive from "./Components/Projects/ProjectFive";
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contacts/Contact";
@@ -10,10 +10,10 @@ import ProjectTwo from "./Components/Projects/ProjectTwo";
 import ProjectThree from "./Components/Projects/ProjectThree";
 import ProjectFour from "./Components/Projects/ProjectFour";
 import Skills from "./Components/Skills/Skills";
-import About from './Components/About Me/About'
+import About from "./Components/About Me/About";
 import NewNav from "./Components/Navbar/NewNav";
 import ProjectsHome from "./Components/ProjectsRefactor/ProjectsHome";
-import OpenHome from './Components/ProjectsRefactor/Open/OpenHome'
+import OpenHome from "./Components/ProjectsRefactor/Open/OpenHome";
 function App() {
   return (
     <div className="App">
@@ -21,16 +21,16 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/ProjectsNew" component={ProjectsHome} />
       <Route exact path="/Open" component={OpenHome} />
-      <Route exact path="/About" component={About}/>
+      <Route exact path="/About" component={About} />
       <Route exact path="/Projects" component={Projects} />
       <Route exact path="/Project1" component={ProjectOne} />
       <Route exact path="/Project2" component={ProjectTwo} />
       <Route exact path="/Project3" component={ProjectThree} />
       <Route exact path="/Project4" component={ProjectFour} />
-      <Route exact path="/Project5" component={ProjectFive}/>
+      <Route exact path="/Project5" component={ProjectFive} />
       <Route exact path="/Contact" component={Contact} />
       <Route exact path="/Skills" component={Skills} />
     </div>
   );
-  }
-export default App
+}
+export default App;

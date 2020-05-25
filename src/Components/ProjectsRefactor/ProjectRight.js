@@ -80,9 +80,7 @@ export default function ProjectRight(props) {
       transform: scale(1.1);
     }
   `;
-  const Alink = styled(Link)`
-  
-  `
+  const Alink = styled(Link)``;
   const CursorProps = {
     show: true,
     blink: true,

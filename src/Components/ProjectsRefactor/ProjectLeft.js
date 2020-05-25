@@ -2,14 +2,14 @@ import React from "react";
 import Typist from "react-typist";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-export default function ProjectLeft(props){
-    const CursorProps = {
-        show: true,
-        blink: true,
-        element: "|",
-        hideWhenDone: true,
-        hideWhenDoneDelay: 300
-      };
+export default function ProjectLeft(props) {
+  const CursorProps = {
+    show: true,
+    blink: true,
+    element: "|",
+    hideWhenDone: true,
+    hideWhenDoneDelay: 300,
+  };
   const ProjectContainer = styled.div`
     background: #011627;
     height: 99vh;
@@ -51,7 +51,7 @@ export default function ProjectLeft(props){
       transform: scale(1.1);
     }
   `;
-    const Title = styled.h1`
+  const Title = styled.h1`
     color: ${props.titlecolor};
   `;
 

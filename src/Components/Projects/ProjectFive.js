@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import react_planetary from "./react-planetary.png";
 import api from "./api.png";
-import northwestern from './northwestern.png'
+import northwestern from "./northwestern.png";
 const ProjectContainer = styled.div`
   background: #011627;
   height: 93vh;
   width: 100vw;
-  margin:0;
+  margin: 0;
   border-bottom: 1px solid #4b6478;
   display: flex;
   flex-direction: column;
@@ -25,11 +24,11 @@ const ProjectContainer = styled.div`
   }
 `;
 const ProjectLeft = styled.div`
-  margin:10px;
+  margin: 10px;
 `;
 const ProjectRight = styled.div`
-  margin:10px;
-  `;
+  margin: 10px;
+`;
 
 const ImageContainer = styled.img`
   object-fit: cover;
@@ -92,103 +91,93 @@ export default function ProjectFive() {
           <ButtonsContainer>
             <A
               href="https://heuristic-mestorf-b06f09.netlify.com/"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Demo</Button>
             </A>
             <A
               href="https://github.com/Bryce-Soghigian/react-planetary"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Code</Button>
             </A>
             <A
               href="https://www.npmjs.com/package/react-planetary"
-              target="_blank"
-            >
+              target="_blank">
               <Button>NPM</Button>
             </A>
           </ButtonsContainer>
         </ProjectRight>
         <ProjectLeft>
-        
-         <video
-          style={{ width: "45vw" }}
-          id="videoPlayer"
-          controls
-          muted="muted"
-          autoplay ="true"
-          loop = "true"
-        >
-          <source
-            src="https://portfolio-nodejs-streams.herokuapp.com/byname/planetary"
-            type="video/mp4"
-          />
-        </video>
-      
+          <video
+            style={{ width: "45vw" }}
+            id="videoPlayer"
+            controls
+            muted="muted"
+            autoplay="true"
+            loop="true">
+            <source
+              src="https://portfolio-nodejs-streams.herokuapp.com/byname/planetary"
+              type="video/mp4"
+            />
+          </video>
         </ProjectLeft>
       </ProjectContainer>
       <ProjectContainer>
         <ProjectLeft>
           <A
             target="_blank"
-            href="https://nasa-exoplanet-kepler-api.herokuapp.com/static/"
-          >
+            href="https://nasa-exoplanet-kepler-api.herokuapp.com/static/">
             <ImageContainer src={api} />
           </A>
         </ProjectLeft>
         <ProjectRight>
-        <ProjectTitle>Nasa Exoplanets api</ProjectTitle>
+          <ProjectTitle>Nasa Exoplanets api</ProjectTitle>
           <Description>
-            This is an app that seeds and serves nasas confirmed exoplanet data with pg.
-
+            This is an app that seeds and serves nasas confirmed exoplanet data
+            with pg.
             <br></br>
             EXPRESS | APIDOCS | PG | KNEX
           </Description>
           <ButtonsContainer>
             <A
               href="https://github.com/Bryce-Soghigian/nasa-exoplanets-api"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Code</Button>
             </A>
             <A
               href="https://nasa-exoplanet-kepler-api.herokuapp.com/static/"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Docs</Button>
             </A>
           </ButtonsContainer>
         </ProjectRight>
       </ProjectContainer>
       <ProjectContainer>
-    <ProjectRight>
-    <ProjectTitle>Code Challenge</ProjectTitle>
+        <ProjectRight>
+          <ProjectTitle>Code Challenge</ProjectTitle>
           <Description>
-            I interviewed with a company and they asked me to build a quick<br></br>
-             react app. So I made a frontend for the web api that serves nasas exoplanet data
+            I interviewed with a company and they asked me to build a quick
+            <br></br>
+            react app. So I made a frontend for the web api that serves nasas
+            exoplanet data
             <br></br>
             REACT | REACT-PLANETARY | THREE
           </Description>
           <ButtonsContainer>
             <A
               href="https://northwestern-code-challenge.netlify.com/"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Demo</Button>
             </A>
             <A
               href="https://github.com/Bryce-Soghigian/northwestern-mutual-code-challenge"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Code</Button>
             </A>
           </ButtonsContainer>
-    </ProjectRight>
-    <ProjectLeft>
-      <ImageContainer src={northwestern}/>
-    </ProjectLeft>
-
+        </ProjectRight>
+        <ProjectLeft>
+          <ImageContainer src={northwestern} />
+        </ProjectLeft>
       </ProjectContainer>
     </div>
   );

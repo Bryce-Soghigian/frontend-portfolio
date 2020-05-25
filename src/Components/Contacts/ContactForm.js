@@ -3,7 +3,6 @@ import axios from "axios";
 import styled from "styled-components";
 import Swal from "sweetalert2";
 
-
 const H5 = styled.h6`
   color: white;
 `;
@@ -95,7 +94,7 @@ export default function ContactForm({ touched, errors }) {
     email: "",
     company: "",
     message: "",
-    error: ""
+    error: "",
   };
 
   const [form, setForm] = useState(defaultForm);
@@ -103,7 +102,7 @@ export default function ContactForm({ touched, errors }) {
   const setError = error => {
     setForm({
       ...form,
-      error
+      error,
     });
   };
 
@@ -116,7 +115,7 @@ export default function ContactForm({ touched, errors }) {
     const message = form.message.trim();
 
     setState({
-      ...state
+      ...state,
     });
 
     axios
@@ -124,17 +123,17 @@ export default function ContactForm({ touched, errors }) {
         name,
         email,
         company,
-        message
+        message,
       })
       .then(() => {
         setState({
-          ...state
+          ...state,
         });
         setForm(defaultForm);
       })
       .catch(err => {
         setState({
-          ...state
+          ...state,
         });
       });
     Swal.fire({
@@ -142,7 +141,7 @@ export default function ContactForm({ touched, errors }) {
       icon: "success",
       title: "Thanks for reaching out!",
       showConfirmButton: false,
-      timer: 2500
+      timer: 2500,
     });
     console.log(state);
     document.getElementById("FormClear").reset();
@@ -152,7 +151,7 @@ export default function ContactForm({ touched, errors }) {
     setError("");
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 

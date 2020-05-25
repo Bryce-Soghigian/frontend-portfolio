@@ -118,8 +118,7 @@ export default function ProjectThree() {
           <Buttons>
             <A
               href="https://github.com/Bryce-Soghigian/portfolio-video-api"
-              target="_blank"
-            >
+              target="_blank">
               <Button>
                 <FaCode />
               </Button>
@@ -142,14 +141,13 @@ export default function ProjectThree() {
         <QLDescriptionContainer>
           <Project>Description</Project>
           <QLDescription>
-          This is an API experiment where I learned how to use GraphQLSchemas, Learned
-            About the GraphQLObjectType, and graphQL typing while taking
+            This is an API experiment where I learned how to use GraphQLSchemas,
+            Learned About the GraphQLObjectType, and graphQL typing while taking
             advantage of the conveniences that come with NodeJS and Express.
           </QLDescription>
           <A
             href="https://github.com/Bryce-Soghigian/GraphQL-BookAPI/blob/master/server.js"
-            target="_blank"
-          >
+            target="_blank">
             <Button>
               <FaCode />
             </Button>
@@ -160,22 +158,21 @@ export default function ProjectThree() {
         <CloneLeft>
           <Project>Description</Project>
           <QLDescription>
-          The project that keeps important APIs from falling asleep due to
-            inactivity. My Application will Ping your API every 30 minutes so it doesn't fall asleep. Do you have a sleepy API? add it to the list
+            The project that keeps important APIs from falling asleep due to
+            inactivity. My Application will Ping your API every 30 minutes so it
+            doesn't fall asleep. Do you have a sleepy API? add it to the list
           </QLDescription>
           <Buttons>
             <A
               href="https://github.com/Bryce-Soghigian/API-ALARMCLOCK-BE"
-              target="_blank"
-            >
+              target="_blank">
               <Button>
                 <FaCode />
               </Button>
             </A>
             <A
               href="https://wake-up-api-you-are-late-for-school.netlify.com/"
-              target="_blank"
-            >
+              target="_blank">
               <Button>Demo</Button>
             </A>
           </Buttons>
