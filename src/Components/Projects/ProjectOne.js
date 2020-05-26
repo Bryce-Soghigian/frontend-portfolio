@@ -125,8 +125,7 @@ export default function ProjectOne() {
           controls
           muted="muted"
           autoplay
-          loop
-        >
+          loop>
           <source
             src="https://portfolio-nodejs-streams.herokuapp.com/cmt"
             type="video/mp4"
@@ -138,13 +137,16 @@ export default function ProjectOne() {
         <DescriptionContainer>
           <H5>CMT Desktop Puzzle app</H5>
           <Description>
-          This is a project build with Django, ThreeJS, and React. You can navigate the old tv channels with the arrow keys and search for clues. Look for the auth numbers. There is a bit of scattered story in the 100 channels. Can you piece together the clues to find the secret rooms?
+            This is a project build with Django, ThreeJS, and React. You can
+            navigate the old tv channels with the arrow keys and search for
+            clues. Look for the auth numbers. There is a bit of scattered story
+            in the 100 channels. Can you piece together the clues to find the
+            secret rooms?
           </Description>
           <ButtonContainer>
             <A
               href="https://github.com/Bryce-Soghigian/CMT-9442V-FE"
-              target="_blank"
-            >
+              target="_blank">
               <Button>
                 FE
                 <FaCode />
@@ -152,8 +154,7 @@ export default function ProjectOne() {
             </A>
             <A
               href="https://github.com/CMT-9442V/CS_BW_GAME-BE"
-              target="_blank"
-            >
+              target="_blank">
               {" "}
               <Button>
                 BE

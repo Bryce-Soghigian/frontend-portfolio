@@ -7,11 +7,11 @@ import Node from "./node.png";
 import CMT from "./Game.png";
 import Crime from "./Crime.png";
 import scribe from "./scribe.png";
-import Space from './Space.jpeg'
+import Space from "./Space.jpeg";
 const ComponentContainer = styled.div`
-width:100vw;
-/* overflow:hidden; */
-overflow-x:hidden;
+  width: 100vw;
+  /* overflow:hidden; */
+  overflow-x: hidden;
 `;
 const ProjectContainer = styled.div`
   background: #011627;
@@ -32,7 +32,6 @@ const ProjectContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
   }
-
 `;
 const ProjectTwoContainer = styled.div`
   background: #011627;
@@ -164,10 +163,7 @@ const ProjectThreeMore = styled(Link)`
   color: #addb67;
 `;
 const A = styled.a``;
-const ALink = styled(Link)`
-
-
-`
+const ALink = styled(Link)``;
 const ScribeTitle = styled.h1`
   /* color:#D3423E; */
   color: #1fb2aa;
@@ -178,48 +174,46 @@ const P4Info = styled(Link)`
   color: #1fb2aa;
 `;
 const PlanetTitle = styled.h1`
-color:#1e90ff;
-`
+  color: #1e90ff;
+`;
 const P5Info = styled(Link)`
-color:#1e90ff;
-
-`
+  color: #1e90ff;
+`;
 export default function Projects() {
   const CursorProps = {
     show: true,
     blink: true,
     element: "|",
     hideWhenDone: true,
-    hideWhenDoneDelay: 300
+    hideWhenDoneDelay: 300,
   };
   return (
-    <ComponentContainer >
+    <ComponentContainer>
       <ProjectContainer>
         <ProjectTwoRight>
-        <Typist className="Project2" cursor={CursorProps}>
+          <Typist className="Project2" cursor={CursorProps}>
             <Typist.Delay ms={0} />
             import React from 'react'
           </Typist>
           <PlanetTitle>Universe Exploration</PlanetTitle>
           <DescriptionRight>
-          Collection Of Apps to Explore the Universe<br/>
-          React | Express | PG | THREE
+            Collection Of Apps to Explore the Universe
+            <br />
+            React | Express | PG | THREE
           </DescriptionRight>
           <P5Info to="/Project5">Read More</P5Info>
         </ProjectTwoRight>
         <ProjectTwoLeft>
           <ALink to="/Project5">
-          <IMG src={Space} />
+            <IMG src={Space} />
           </ALink>
- 
         </ProjectTwoLeft>
       </ProjectContainer>
       <ProjectTwoContainer>
         <ProjectTwoLeft>
           <A
             href="https://scribe-notes.netlify.com/transcripts"
-            target="_blank"
-          >
+            target="_blank">
             <IMG src={scribe} />
           </A>
         </ProjectTwoLeft>
@@ -230,8 +224,9 @@ export default function Projects() {
           </Typist>
           <ScribeTitle>Scribe</ScribeTitle>
           <DescriptionRight>
-          Voice Recognition Application<br/>
-          React | Redux | MongoDB
+            Voice Recognition Application
+            <br />
+            React | Redux | MongoDB
           </DescriptionRight>
           <P4Info to="/Project4">Read More</P4Info>
         </ProjectTwoRight>
@@ -243,7 +238,8 @@ export default function Projects() {
           </Typist>
           <CMTTitle>CMT9941</CMTTitle>
           <Description>
-            A Horror/Puzzle Game<br/>
+            A Horror/Puzzle Game
+            <br />
             THREE | React | Django
           </Description>
           <P1info to="/Project1">Read More</P1info>
@@ -269,7 +265,8 @@ export default function Projects() {
           </Typist>
           <CrimeStatsTitle>Crime Statistics App</CrimeStatsTitle>
           <DescriptionRight>
-            Crime Statistics Application<br/>
+            Crime Statistics Application
+            <br />
             Fullstory | React | Cypress | CI | Mapbox
           </DescriptionRight>
           <P2Info to="/Project2">Read More</P2Info>
@@ -283,7 +280,8 @@ export default function Projects() {
           </Typist>
           <ProjectThreeTitle>NodeJS && Express APIS</ProjectThreeTitle>
           <Description>
-            A collection of my favorite APIS I have built<br/>
+            A collection of my favorite APIS I have built
+            <br />
             NodeJS | Express | Postgres | Mongo | GraphQL
           </Description>
           <ProjectThreeMore to="/Project3">Read More</ProjectThreeMore>

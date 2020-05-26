@@ -1,18 +1,15 @@
-.description{
-    color:#61DBFB;
-    margin:0;
-    font-family: 'Fira Code';
-
+.description {
+  color: #61dbfb;
+  margin: 0;
+  font-family: "Fira Code";
 }
-@media(min-width:1700px){
-    .description{
-        font-size: 5rem;
-    }
-
+@media (min-width: 1700px) {
+  .description {
+    font-size: 5rem;
+  }
 }
-@media(min-width:1500px){
-    .description{
-        font-size: 3rem;
-    }
-
+@media (min-width: 1500px) {
+  .description {
+    font-size: 3rem;
+  }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FaCode } from "react-icons/fa";
-import Crime from "./Crime2.png";
 const Div = styled.div`
   margin: 40px;
 `;
@@ -13,16 +12,7 @@ const ProjectTwoContainer = styled.div`
   /* align-items:center; */
   flex-direction: column;
 `;
-const ProjectTitle = styled.h1`
-  margin-top: 5%;
-  color: #61dafb;
-  text-decoration: initial;
-  border-bottom: 2px solid #61dafb;
-  text-transform: uppercase;
-  @media (min-width: 500px) {
-    margin: 1%;
-  }
-`;
+
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -121,8 +111,7 @@ export default function ProjectTwo() {
           controls
           muted="muted"
           autoplay
-          loop
-        >
+          loop>
           <source
             src="https://portfolio-nodejs-streams.herokuapp.com/Crime"
             type="video/mp4"
@@ -134,13 +123,15 @@ export default function ProjectTwo() {
         <DescriptionContainer>
           <H5>Crime Statistics</H5>
           <Description>
-          Crime statistics is a web application I built with crime statistics for travelers' teams. I wrote the code for the map functionality using Mapbox, and React. I also wrote the map style swap code, the data filtering, auth0 login functionality, Geolocation searching, along with all the data visualization present in our application
+            I wrote the code for the map functionality using Mapbox, and React.
+            I also wrote the map style swap code, the data filtering, auth0
+            login functionality, Geolocation searching, along with all the data
+            visualization present in our application
           </Description>
           <ButtonContainer>
             <A
               href="https://github.com/Lambda-School-Labs/crime-statistics-for-travelers-fe"
-              target="_blank"
-            >
+              target="_blank">
               <Button>
                 FE
                 <FaCode />
@@ -148,8 +139,7 @@ export default function ProjectTwo() {
             </A>
             <A
               href="https://github.com/Lambda-School-Labs/crime-statistics-for-travelers-be"
-              target="_blank"
-            >
+              target="_blank">
               {" "}
               <Button>
                 BE
@@ -162,8 +152,7 @@ export default function ProjectTwo() {
             </A>
             <A
               href="https://www.notion.so/Crime-Statistics-for-Travelers-a7e69847024d4cdc85aaf85cb413df71"
-              target="_blank"
-            >
+              target="_blank">
               <Button>PVD</Button>
             </A>
           </ButtonContainer>
