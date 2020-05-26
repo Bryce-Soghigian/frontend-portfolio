@@ -31,7 +31,7 @@ ${props.titlecolor};
         isNavLink={true}
         title="Open Source Work"
         importName="import { createBasicPlanet } from 'react-planetary' "
-        description="Open source projects That I published to the npm registry"
+        description="Open source projects published to the npm registry"
         technology="NPM | NODE | REACT | THREE"
         route="/Open"
         titlecolor={lightblue}
