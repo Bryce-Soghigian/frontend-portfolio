@@ -100,7 +100,6 @@ export default function ReactPlanetary() {
         </video>
       </LeftPlanetaryContainer>
       <RightPlanetaryContainer>
-
         <Title>React Planetary</Title>
         <Typist className="Project2" cursor={CursorProps}>
           <Typist.Delay ms={0} />

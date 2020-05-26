@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FaCode } from "react-icons/fa";
-import Crime from "./Crime2.png";
 const Div = styled.div`
   margin: 40px;
 `;
@@ -13,16 +12,7 @@ const ProjectTwoContainer = styled.div`
   /* align-items:center; */
   flex-direction: column;
 `;
-const ProjectTitle = styled.h1`
-  margin-top: 5%;
-  color: #61dafb;
-  text-decoration: initial;
-  border-bottom: 2px solid #61dafb;
-  text-transform: uppercase;
-  @media (min-width: 500px) {
-    margin: 1%;
-  }
-`;
+
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -133,11 +123,10 @@ export default function ProjectTwo() {
         <DescriptionContainer>
           <H5>Crime Statistics</H5>
           <Description>
-            Crime statistics is a web application I built with crime statistics
-            for travelers' teams. I wrote the code for the map functionality
-            using Mapbox, and React. I also wrote the map style swap code, the
-            data filtering, auth0 login functionality, Geolocation searching,
-            along with all the data visualization present in our application
+            I wrote the code for the map functionality using Mapbox, and React.
+            I also wrote the map style swap code, the data filtering, auth0
+            login functionality, Geolocation searching, along with all the data
+            visualization present in our application
           </Description>
           <ButtonContainer>
             <A

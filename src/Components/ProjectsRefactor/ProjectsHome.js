@@ -51,17 +51,16 @@ ${props.titlecolor};
         route="/Project5"
       />
       <ProjectLeft
-      title="Data and Machine Learning"
-      imageLink="https://i.imgur.com/UivQoFy.png"
-      titlecolor={lightblue}
-      infoColor={lightblue}
-      importName="pip3 install 'torch' "
-      description="Some of my Data Visualization and Machine Learning Projects"
-      technology="React | Python | Pytorch"
-      route="/Data"
-      isNavLink={true}
+        title="Data and Machine Learning"
+        imageLink="https://i.imgur.com/UivQoFy.png"
+        titlecolor={lightblue}
+        infoColor={lightblue}
+        importName="pip3 install 'torch' "
+        description="Some of my Data Visualization and Machine Learning Projects"
+        technology="React | Python | Pytorch"
+        route="/Data"
+        isNavLink={true}
       />
-
     </ComponentContainer>
   );
 }

@@ -81,44 +81,34 @@ export default function ProjectFive() {
     <div>
       <ProjectContainer>
         <ProjectRight>
-          <ProjectTitle>react-planetary</ProjectTitle>
+          <ProjectTitle>Exoplanet Showcase</ProjectTitle>
           <Description>
-            React planetary is an npm module that I built that allows you to
-            import entire planets into your application with one line of code.
+            I interviewed with a company and they asked me to build a quick
             <br></br>
-            NPM | THREEJS | REACT | STORYBOOK
+            react app. So I made a frontend for the web api that serves nasas
+            exoplanet data
+            <br></br>
+            REACT | REACT-PLANETARY | THREE
           </Description>
           <ButtonsContainer>
             <A
-              href="https://heuristic-mestorf-b06f09.netlify.com/"
+              href="https://northwestern-code-challenge.netlify.com/"
               target="_blank">
               <Button>Demo</Button>
             </A>
             <A
-              href="https://github.com/Bryce-Soghigian/react-planetary"
+              href="https://github.com/Bryce-Soghigian/northwestern-mutual-code-challenge"
               target="_blank">
               <Button>Code</Button>
-            </A>
-            <A
-              href="https://www.npmjs.com/package/react-planetary"
-              target="_blank">
-              <Button>NPM</Button>
             </A>
           </ButtonsContainer>
         </ProjectRight>
         <ProjectLeft>
-          <video
-            style={{ width: "45vw" }}
-            id="videoPlayer"
-            controls
-            muted="muted"
-            autoplay="true"
-            loop="true">
-            <source
-              src="https://portfolio-nodejs-streams.herokuapp.com/byname/planetary"
-              type="video/mp4"
-            />
-          </video>
+          <A
+            target="_blank"
+            href="https://northwestern-code-challenge.netlify.app/">
+            <ImageContainer src={northwestern} />
+          </A>
         </ProjectLeft>
       </ProjectContainer>
       <ProjectContainer>
@@ -150,34 +140,6 @@ export default function ProjectFive() {
             </A>
           </ButtonsContainer>
         </ProjectRight>
-      </ProjectContainer>
-      <ProjectContainer>
-        <ProjectRight>
-          <ProjectTitle>Code Challenge</ProjectTitle>
-          <Description>
-            I interviewed with a company and they asked me to build a quick
-            <br></br>
-            react app. So I made a frontend for the web api that serves nasas
-            exoplanet data
-            <br></br>
-            REACT | REACT-PLANETARY | THREE
-          </Description>
-          <ButtonsContainer>
-            <A
-              href="https://northwestern-code-challenge.netlify.com/"
-              target="_blank">
-              <Button>Demo</Button>
-            </A>
-            <A
-              href="https://github.com/Bryce-Soghigian/northwestern-mutual-code-challenge"
-              target="_blank">
-              <Button>Code</Button>
-            </A>
-          </ButtonsContainer>
-        </ProjectRight>
-        <ProjectLeft>
-          <ImageContainer src={northwestern} />
-        </ProjectLeft>
       </ProjectContainer>
     </div>
   );
