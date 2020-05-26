@@ -24,6 +24,7 @@ ${props.titlecolor};
 
 */
   const blue = "#1e90ff";
+  const lightblue = "#61dbfb";
   return (
     <ComponentContainer>
       <ProjectLeft
@@ -33,8 +34,8 @@ ${props.titlecolor};
         description="Open source projects That I published to the npm registry"
         technology="NPM | NODE | REACT | THREE"
         route="/Open"
-        titlecolor={blue}
-        infoColor={blue}
+        titlecolor={lightblue}
+        infoColor={lightblue}
         imageLink="https://i.imgur.com/RIrixnU.jpg"
       />
 
@@ -49,6 +50,18 @@ ${props.titlecolor};
         isNavLink={true}
         route="/Project5"
       />
+      <ProjectLeft
+      title="Data and Machine Learning"
+      imageLink="https://i.imgur.com/UivQoFy.png"
+      titlecolor={lightblue}
+      infoColor={lightblue}
+      importName="pip3 install 'torch' "
+      description="Some of my Data Visualization and Machine Learning Projects"
+      technology="React | Python | Pytorch"
+      route="/Data"
+      isNavLink={true}
+      />
+
     </ComponentContainer>
   );
 }

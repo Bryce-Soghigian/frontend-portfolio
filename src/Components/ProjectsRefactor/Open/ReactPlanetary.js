@@ -100,11 +100,12 @@ export default function ReactPlanetary() {
         </video>
       </LeftPlanetaryContainer>
       <RightPlanetaryContainer>
+
+        <Title>React Planetary</Title>
         <Typist className="Project2" cursor={CursorProps}>
           <Typist.Delay ms={0} />
           import * as THREE from 'three'
         </Typist>
-        <Title>React Planetary</Title>
         <Description>
           React Planetary is a library I built to allow you to import entire
           planets with a single line of code.
