@@ -88,7 +88,7 @@ export default function About() {
         </Typist>
       </div>
       <ImageDiv>
-        <Image src={Bryce} />
+        <Image src="https://i.imgur.com/G42HY0i.jpg" />
       </ImageDiv>
       <AboutDiv>
         <A href="https://github.com/Bryce-Soghigian" target="_blank">
