@@ -1,7 +1,7 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaPython, FaSass} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaPython, FaSass } from "react-icons/fa";
 import { DiJavascript1, DiPostgresql, DiHtml5 } from "react-icons/di";
-import { GiMoebiusTriangle} from "react-icons/gi";
+import { GiMoebiusTriangle } from "react-icons/gi";
 import styled from "styled-components";
 
 const Container = styled.div`
