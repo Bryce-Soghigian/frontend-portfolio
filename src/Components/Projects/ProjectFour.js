@@ -14,16 +14,7 @@ const ProjectTwoContainer = styled.div`
   /* align-items:center; */
   flex-direction: column;
 `;
-const ProjectTitle = styled.h1`
-  margin-top: 5%;
-  color: #61dafb;
-  text-decoration: initial;
-  border-bottom: 2px solid #61dafb;
-  text-transform: uppercase;
-  @media (min-width: 500px) {
-    margin: 1%;
-  }
-`;
+
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;

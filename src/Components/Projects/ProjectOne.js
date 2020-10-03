@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Game from "./Game.png";
 import { FaCode } from "react-icons/fa";
 
 const Div = styled.div`
@@ -14,25 +13,25 @@ const ProjectOneContainer = styled.div`
   /* align-items:center; */
   flex-direction: column;
 `;
-const ProjectTitle = styled.h1`
-  margin-top: 5%;
-  color: #61dafb;
-  text-decoration: initial;
-  border-bottom: 2px solid #61dafb;
-  text-transform: uppercase;
-  @media (min-width: 500px) {
-    margin: 1%;
-  }
-`;
+// const ProjectTitle = styled.h1`
+//   margin-top: 5%;
+//   color: #61dafb;
+//   text-decoration: initial;
+//   border-bottom: 2px solid #61dafb;
+//   text-transform: uppercase;
+//   @media (min-width: 500px) {
+//     margin: 1%;
+//   }
+// `;
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-const IMG = styled.img`
-  object-fit: cover;
-  width: 45vw;
-`;
+// const IMG = styled.img`
+//   object-fit: cover;
+//   width: 45vw;
+// `;
 
 const Description = styled.p`
   margin: 0%;
