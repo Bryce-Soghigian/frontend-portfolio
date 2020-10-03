@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
-import Bryce from "./Bryce.png";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 const Container = styled.div`

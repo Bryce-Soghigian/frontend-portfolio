@@ -3,9 +3,9 @@ import axios from "axios";
 import styled from "styled-components";
 import Swal from "sweetalert2";
 
-const H5 = styled.h6`
-  color: white;
-`;
+// const H5 = styled.h6`
+//   color: white;
+// `;
 const H1 = styled.h1`
   font-size: 3rem;
   color: #61dbfb;
@@ -26,14 +26,14 @@ const FormContainer = styled.div`
   /* box-shadow: 0px 12px 22px -1px #545309; */
   font-family: "Ubuntu", sans-serif;
 `;
-const TopForm = styled.div`
-  display: flex;
-  flex-direction: column;
+// const TopForm = styled.div`
+//   display: flex;
+//   flex-direction: column;
 
-  justify-content: center;
+//   justify-content: center;
 
-  margin: 0.5em;
-`;
+//   margin: 0.5em;
+// `;
 const TextArea = styled.textarea`
   border-style: solid;
   border-color: black;

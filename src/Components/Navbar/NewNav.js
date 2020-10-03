@@ -5,7 +5,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import HamburgerMenu from "react-hamburger-menu";
+
 const Container = styled.div`
   display: flex;
   flex-direction: row-reverse;
