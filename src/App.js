@@ -8,7 +8,7 @@ import ProjectOne from "./Components/Projects/ProjectOne";
 import ProjectTwo from "./Components/Projects/ProjectTwo";
 import ProjectThree from "./Components/Projects/ProjectThree";
 import ProjectFour from "./Components/Projects/ProjectFour";
-import Skills from "./Components/Skills/Skills";
+import SkillsHome from './Components/SkillsRefactor/SkillsHome';
 import About from "./Components/About Me/About";
 import NewNav from "./Components/Navbar/NewNav";
 import ProjectsHome from "./Components/ProjectsRefactor/ProjectsHome";
@@ -29,7 +29,7 @@ function App() {
       <Route exact path="/Project4" component={ProjectFour} />
       <Route exact path="/Project5" component={ProjectFive} />
       <Route exact path="/Contact" component={Contact} />
-      <Route exact path="/Skills" component={Skills} />
+      <Route exact path="/Skills" component={SkillsHome} />
     </div>
   );
 }
