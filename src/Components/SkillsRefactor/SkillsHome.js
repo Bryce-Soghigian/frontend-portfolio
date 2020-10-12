@@ -22,7 +22,7 @@ export default function SkillsHome() {
   `;
 
 
-  const [skills, setSkills] = useState([
+  const [skills] = useState([
     { icon: <FaAws />, color: "#FF9900", skillName: "Aws" },
     { icon: <FaReact />, color: "#0d73d9", skillName: "React" },
     { icon: <FaNodeJs />, color: "#addb67", skillName: "NodeJS" },
