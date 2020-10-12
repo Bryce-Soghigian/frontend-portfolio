@@ -76,7 +76,7 @@ const Button = styled.button`
 const A = styled.a`
   text-decoration: none;
 `;
-export default function ProjectFive() {
+export default function UniverseHome() {
   return (
     <div>
       <ProjectContainer>
