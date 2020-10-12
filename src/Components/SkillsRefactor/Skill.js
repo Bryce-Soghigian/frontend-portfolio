@@ -12,9 +12,6 @@ export default function Skill(props) {
     font-size: 2rem;
     color: ${props.color};
   `;
-  const BlueSquare = styled.div`
-    width: 5vw;
-  `;
   const SkillsText = styled.h1`
     font-size: 5rem;
     color: white;
@@ -31,6 +28,10 @@ export default function Skill(props) {
   };
   const SkillsContainer = styled.div`
     margin: 4em;
+    transition: all .2s ease-in-out;
+    :hover{
+      transform: scale(1.1);
+    }
   `;
   if (props.isSkillsText === true) {
     return <SkillsText>SKills</SkillsText>;
