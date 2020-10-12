@@ -9,20 +9,20 @@ export default function Skill(props) {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:1rem;
+    font-size:2rem;
     color: ${props.color};
   `;
   const BlueSquare = styled.div`
   width:5vw;
   `
-//   const SkillsText = styled.h1`
-//   font-size: 5rem;
-//   color: white;
-//   font-family: "Changa One";
-//   text-transform: bold;
-//   margin:0;
+  const SkillsText = styled.h1`
+  font-size: 5rem;
+  color: white;
+  font-family: "Changa One";
+  text-transform: bold;
+  margin:0;
 
-// `;
+`;
 const CursorProps = {
   show: true,
   blink: true,
@@ -33,12 +33,8 @@ const CursorProps = {
 const SkillsContainer = styled.div`
 margin:4em;
 `
-if(props.blank === true){
-  return(
-    <BlueSquare>
-
-    </BlueSquare>
-  )
+if(props.isSkillsText === true){
+  return<SkillsText>SKills</SkillsText>
 // }else if(props.isSkillsText === true){
 //   return <SkillsText>SKILLS</SkillsText>
 }else{

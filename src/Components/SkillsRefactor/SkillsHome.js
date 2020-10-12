@@ -18,10 +18,21 @@ grid-template-rows: 1fr 1fr;
 @media(max-width:600px){
   grid-template-columns: repeat(2, 1fr);
 grid-template-rows: 1fr 1fr;
-}
+}`
 
+  const SkillsText = styled.h1`
+  font-size: 5rem;
+  color: white;
+  font-family: "Changa One";
+  text-transform: bold;
+  margin:0;
+  @media(min-width:500px){
+    transform:rotateX('45')
+  }
 
-  `
+ `
+
+  
   const [skills, setSkills] = useState([
     {icon:<FaAws /> , color:"#FF9900", skillName:"Aws"},
     // {blank:true},
@@ -31,9 +42,8 @@ grid-template-rows: 1fr 1fr;
     // {blank:true},
     { icon: <FaPython />, color: "#4b8bbe", skillName: "Python" },
     // {blank:true},
-    { icon: <FaSass />, color: "#bf4080", skillName: "Sass" },
     // {blank:true},
-    
+    {isSkillsText:true},
     // {blank:true},
     { icon: <DiJavascript1 />, color: "#f7df1e", skillName: "Javascript" },
     // {blank:true},
@@ -43,11 +53,12 @@ grid-template-rows: 1fr 1fr;
     // {blank:true},
     { icon: <GiMoebiusTriangle />, color: "white", skillName: "ThreeJS" },
     // {blank:true},
-    {isSkillsText:true},
+    // {isSkillsText:true},
     
   ]);
 
 return <Container>{skills.map(x => {
     return <Skill isSkillsText = {x.isSkillsText?true:null}icon = {x.icon} color={x.color} skillName={x.skillName} />
-})}</Container>;
+})}
+</Container>;
 }
