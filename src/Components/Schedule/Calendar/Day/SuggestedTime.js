@@ -8,6 +8,10 @@ export default function SuggestedTime(props) {
     border-radius:5%;
     background:"#1e90ff";
     color:"#61dbfb";
+    border-color:"#61dbfb";
+    ::hover(){
+        transform: scale(1.1)
+    }
     `
     return (
         <StyledButton onClick={triggerModal}>
