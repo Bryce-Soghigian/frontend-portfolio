@@ -28,8 +28,8 @@ export default function Skill(props) {
   };
   const SkillsContainer = styled.div`
     margin: 4em;
-    transition: all .2s ease-in-out;
-    :hover{
+    transition: all 0.2s ease-in-out;
+    :hover {
       transform: scale(1.1);
     }
   `;

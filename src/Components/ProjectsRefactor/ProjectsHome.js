@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ProjectRight from "./ProjectRight";
 import ProjectLeft from "./ProjectLeft";
 export default function ProjectsHome() {
-
   /*
 PROPS NEEDED
 
@@ -20,10 +19,10 @@ ${props.titlecolor};
 //======================================
 
 */
-const ComponentContainer = styled.div`
-width: 100vw;
-overflow-x: hidden;
-`;
+  const ComponentContainer = styled.div`
+    width: 100vw;
+    overflow-x: hidden;
+  `;
   const blue = "#1e90ff";
   const lightblue = "#61dbfb";
   return (
@@ -61,7 +60,6 @@ overflow-x: hidden;
         isNavLink={true}
         route="/universe"
       />
-
     </ComponentContainer>
   );
 }
