@@ -12,7 +12,7 @@ import DataHome from "./Components/ProjectsRefactor/Data/DataHome";
 import UniverseHome from "./Components/ProjectsRefactor/Universe/UniverseHome";
 import ScheduleHome from "./Components/Schedule/ScheduleHome";
 import { GlobalContext } from "./contexts";
-import { initialState, reducer } from "./reducer";
+import { reducer,initialState } from "./reducer";
 function App() {
   //Providing Global State
   const [state, dispatch] = useReducer(reducer, initialState);

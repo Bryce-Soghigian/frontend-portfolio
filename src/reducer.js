@@ -1,11 +1,11 @@
-const initialState = {
+export const initialState = {
   currentCalendarData:null,
   currentMeetingTime: "03:30",
   displayModalStart: true,
   displayModalEnd: false,
 };
 
-const reducer = (state, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
     case "displayModalStartTrue":
       return {
@@ -38,4 +38,4 @@ const reducer = (state, action) => {
       return { ...state };
   }
 };
-module.exports = { reducer, initialState };
+

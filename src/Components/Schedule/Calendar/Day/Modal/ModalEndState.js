@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import {GlobalContext} from '../../../../../contexts'
 import styled from 'styled-components'
 export default function ModalEndState() {
-    const {state,dispatch} = useContext(GlobalContext)
+    const {state} = useContext(GlobalContext)
     const Empty = styled.div`
     display: none;
   `;
