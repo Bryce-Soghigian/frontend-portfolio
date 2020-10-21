@@ -15,7 +15,7 @@
 
 .Project2 {
   color: white;
-
+  font-family:monospace;
   font-size: 0.35rem;
 }
 @media (min-width: 800px) {
