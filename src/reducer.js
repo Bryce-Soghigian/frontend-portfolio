@@ -19,8 +19,14 @@ export const reducer = (state, action) => {
           let filteredData = {}
 
           for(let key in x){
-            console.log(key)
               if(key === "currentDate"){
+                let date = x[key]
+                let formatedDate = date.slice(0,2) + "-"+date.slice(2,4)+ "-" + date.slice(6)
+                console.log(formatedDate,"new date")
+                let day = new Date(formatedDate).toString().split(" ")
+                console.log(day)
+                  filteredData["day"] = day[0]
+                  filteredData["date"] = `${day[1]} ${day[2]}`
                   filteredData[key] = x[key]
               }else if(x[key] === "free"){
                   filteredData[key] = x[key]
