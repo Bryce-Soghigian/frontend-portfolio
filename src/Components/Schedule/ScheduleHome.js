@@ -4,6 +4,7 @@ import ModalStartState from "./Calendar/Day/Modal/ModalStartState";
 import ModalEndState from './Calendar/Day/Modal/ModalEndState'
 import axios from 'axios'
 import {GlobalContext} from '../../contexts'
+import DatePicker from './Calendar/DateRangeComponents/DatePicker';
 export default function ScheduleHome() {
   const {state,dispatch} = useContext(GlobalContext)
 
@@ -14,6 +15,7 @@ export default function ScheduleHome() {
   `;
   return (
     <ScheduleContainer>
+      <DatePicker />
       <ModalStartState />
       <ModalEndState />
     </ScheduleContainer>

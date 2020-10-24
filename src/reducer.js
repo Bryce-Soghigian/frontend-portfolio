@@ -1,13 +1,24 @@
+import { getStartDate,getEndDate } from "./utils/DateRangeHelpers";
+
+
+
 export const initialState = {
   currentCalendarData:null,
   currentMeetingTime: "03:30",
   displayModalStart: false,
   displayModalEnd: false,
+  currentDateRange:[{startDate:getStartDate()},{endDate:getEndDate()}],
+  errorMessage:"",
   scheduleData:[]
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "newErrorMessage":
+      return {
+        ...state,
+        errorMessage:action.payload
+      }
     case "fetchScheduleData":
       let data = action.payload
       let results = [];
@@ -34,24 +45,6 @@ export const reducer = (state, action) => {
           }
           freeTimes.push(filteredData)
         }))
-        // for(let i =0;i< results.length;i++){
-        //   let currentObject= results[i]
-        //   console.log(currentObject)
-          // console.log(Object.keys(currentObject.data),"curr")
-          //Go through each object and push the date and the free times into a new object
-          // let filteredData = {}
-
-          // for(let key in currentObject.data){
-          //   console.log(key)
-          //     if(key === "currentDate"){
-          //         filteredData[key] = currentObject[key]
-          //     }else if(currentObject[key] === "free"){
-          //         filteredData[key] = currentObject[key]
-          //     }
-          // }
-          // freeTimes.push(filteredData)
-        // }
-        // console.log(freeTimes,"free times")
       return {
         ...state,
         scheduleData:freeTimes
