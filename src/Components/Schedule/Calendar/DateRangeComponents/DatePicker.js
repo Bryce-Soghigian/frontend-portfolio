@@ -1,35 +1,71 @@
-import React,{useContext} from 'react'
-import {GlobalContext} from '../../../../contexts'
-import {getTheCurrentDate} from '../../../../utils/today'
+import React, { useContext } from "react";
+import { GlobalContext } from "../../../../contexts";
+import { getTheCurrentDate } from "../../../../utils/today";
 import styled from "styled-components";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function DatePicker() {
-    const {state,dispatch} = useContext(GlobalContext);
-    const errorMessageParagraph = styled.p`
-color:#FF1A00;
+  const ErrorMessageParagraph = styled.p`
+    color: #ff1a00;
+  `;
+  const Button = styled.button`
+    background: none;
+    border: none;
+    color: white;
+  `;
+  /**
+   * <== state.startDate,state.endDate ==>
+   */
+  const WhiteParagraph = styled.p`
+    color: white;
+  `;
+  const PickerContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
 
-`
-    /**
-     * <== state.startDate,state.endDate ==>
-     */
+  const { state, dispatch } = useContext(GlobalContext);
+  const formatDate = date => {
+    date = date.slice(0, 2) + "-" + date.slice(2, 4) + "-" + date.slice(6);
+    let day = new Date(date).toString().split(" ");
 
-    const handleReverse = () => {
+    let returnString = `${day[1]} ${day[2]}`;
+    return returnString;
+  };
+  const handleReverse = () => {
     /**
      * Calculate new dates
      */
     let startDate = state.currentDateRange[0].startDate;
-        if(1>0){
-            dispatch({type:"newErrorMessage",payload:`Date you tried to select is not a vaild meeting time`})
-        }
+    console.log(startDate, getTheCurrentDate());
+    if (getTheCurrentDate() > startDate) {
+      dispatch({
+        type: "newErrorMessage",
+        payload: `Date you tried to select is not a vaild meeting time`,
+      });
+    } else {
+      dispatch({ type: "handleBackwards" });
     }
+  };
 
-    return (
-        <div>
-            <errorMessageParagraph>{state.errorMessage}</errorMessageParagraph>
-            <div>
-            <button onClick={handleReverse}>Back</button>
+  const handleForward = () => {};
 
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <ErrorMessageParagraph>{state.errorMessage}</ErrorMessageParagraph>
+      <PickerContainer>
+        <Button onClick={handleReverse}>
+          <IoIosArrowBack />
+        </Button>
+        <WhiteParagraph>
+          {formatDate(state.currentDateRange[0].startDate)}-
+          {formatDate(state.currentDateRange[1].endDate)}
+        </WhiteParagraph>
+      </PickerContainer>
+      <Button onClick={handleForward}>
+        <IoIosArrowForward />
+      </Button>
+    </div>
+  );
 }

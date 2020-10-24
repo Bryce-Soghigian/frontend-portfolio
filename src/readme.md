@@ -19,14 +19,13 @@
 <img src="http://img.shields.io/badge/-VS%20Code-007ACC?style=flat&logo=visual%20studio%20code&logoColor=white">
 <img src="http://img.shields.io/badge/-Heroku-430098?style=flat&logo=heroku&logoColor=white">
 <img src="http://img.shields.io/badge/-Vercel-black?style=flat&logo=vercel&logoColor=white">
-<img src="https://img.shields.io/badge/-Python-black?style=flat&logo=python&logoColor=white"> 
+<img src="https://img.shields.io/badge/-Python-black?style=flat&logo=python&logoColor=white">
 
 <div>
 
 <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bryce-Soghigian&langs_count=9&theme=tokyonight&layout=compact" alt="Bryces :: Top Langs" /></p>
 <p align="center"><img src="https://github-readme-stats.vercel.app/api?username=Bryce-Soghigian&show_icons=true&theme=synthwave" alt="Bryce :: Profile Stats" /></p>
  </div>
-
 
 <h2 align="center">You can reach me at </h2>
 
@@ -38,17 +37,8 @@
  
 </p>
 
-
-
-
 <h4 align="center">Visitor's count :eyes:</h4>
 
 <p align="center"><img src="https://profile-counter.glitch.me/{Bryce-Soghigian}/count.svg" alt="Bryce :: Visitor's Count" /></p>
 
-
-
-
-
-
 ---
-
