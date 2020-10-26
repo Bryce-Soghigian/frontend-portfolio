@@ -24,7 +24,7 @@ export const getEndDate = () => {
     return new Date(d.setDate(diff));
   }
   let startDate = getMonday(new Date());
-  startDate.setDate(startDate.getDate() + 14);
+  startDate.setDate(startDate.getDate() + 7);
   var dd = String(startDate.getDate()).padStart(2, "0");
   var mm = String(startDate.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = startDate.getFullYear();

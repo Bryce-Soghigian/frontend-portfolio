@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { GlobalContext } from "../../../../contexts";
 export default function SuggestedTime(props) {
-  const triggerModal = () => {};
-  let meetingEnd = props.meetingTimeStart.toString()
-  meetingEnd = meetingEnd.split(" ")
-    meetingEnd[0] = Number(meetingEnd[0] + 1).toString();
-    meetingEnd = meetingEnd.join(" ")
-
+  const { dispatch } = useContext(GlobalContext);
+  const triggerModal = () => {
+    dispatch({
+      type: "updateCurrentMeetingTime",
+      payload: props.meetingTimeStart,
+    });
+    dispatch({ type: "displayModalStartTrue" });
+  };
 
   const StyledButton = styled.button`
     border-radius: 5%;
     background: "#1e90ff";
+    width: 100%;
     color: "#61dbfb";
     border-color: "#61dbfb";
     ::hover() {
@@ -19,7 +23,7 @@ export default function SuggestedTime(props) {
   `;
   return (
     <StyledButton onClick={triggerModal}>
-      {`${props.meetingTimeStart}-${meetingEnd}`}
+      {`${props.meetingTimeStart}`}
     </StyledButton>
   );
 }
