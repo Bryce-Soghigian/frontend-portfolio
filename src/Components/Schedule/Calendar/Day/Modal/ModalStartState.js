@@ -17,13 +17,14 @@ export default function ModalStartState(props) {
     position: fixed;
     top: 50%;
     left: 50%;
+    height: 30vh;
+    width: 30vw;
     transform: translate(-50%, -50%);
     padding: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 5%;
-    border-color: black;
+    border: 5px solid ${lightblue};
   `;
   const Top = styled.div`
     text-align: center;

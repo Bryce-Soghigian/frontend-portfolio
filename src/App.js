@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
@@ -12,11 +12,26 @@ import DataHome from "./Components/ProjectsRefactor/Data/DataHome";
 import UniverseHome from "./Components/ProjectsRefactor/Universe/UniverseHome";
 import ScheduleHome from "./Components/Schedule/ScheduleHome";
 import { GlobalContext } from "./contexts";
-import { reducer,initialState } from "./reducer";
+import { reducer, initialState } from "./reducer";
+import axios from "axios";
 function App() {
   //Providing Global State
   const [state, dispatch] = useReducer(reducer, initialState);
+  //Fetching schedule data
+  console.log(state);
 
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:5555/api/v1/meeting/range/${state.currentDateRange[0].startDate}/${state.currentDateRange[1].endDate}`,
+      )
+      .then(data => {
+        dispatch({ type: "fetchScheduleData", payload: data.data });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [state.currentDateRange]);
   return (
     <GlobalContext.Provider
       value={{
