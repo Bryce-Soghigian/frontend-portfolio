@@ -8,6 +8,7 @@ export const initialState = {
   currentDateRange: [{ startDate: getStartDate() }, { endDate: getEndDate() }],
   errorMessage: "",
   scheduleData: [],
+
 };
 
 export const reducer = (state, action) => {
@@ -46,7 +47,7 @@ export const reducer = (state, action) => {
 
     case "handleBackwards":
       //This function updates the start date by two weeks
-
+      
 
       //Calculate new start date
 
@@ -87,7 +88,7 @@ export const reducer = (state, action) => {
       results.push(data);
       results.map(x =>
         x.map(x => {
-          let filteredData = {};
+          let filteredData = {freeTimesArray:[]};
 
           for (let key in x) {
             if (key === "currentDate") {
@@ -99,12 +100,15 @@ export const reducer = (state, action) => {
               filteredData["date"] = `${day[1]} ${day[2]}`;
               filteredData[key] = x[key];
             } else if (x[key] === "free") {
-              filteredData[key] = x[key];
+              filteredData.freeTimesArray.push(key)
             }
           }
           freeTimes.push(filteredData);
+          
         }),
+
       );
+
       return {
         ...state,
         scheduleData: freeTimes,

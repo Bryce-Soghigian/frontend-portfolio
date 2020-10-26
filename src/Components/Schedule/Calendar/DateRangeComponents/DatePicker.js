@@ -81,10 +81,11 @@ export default function DatePicker() {
           {formatDate(state.currentDateRange[0].startDate)}-
           {formatDate(state.currentDateRange[1].endDate)}
         </WhiteParagraph>
-      </PickerContainer>
-      <Button onClick={handleForward}>
+        <Button onClick={handleForward}>
         <IoIosArrowForward />
       </Button>
+      </PickerContainer>
+
     </div>
   );
 }
