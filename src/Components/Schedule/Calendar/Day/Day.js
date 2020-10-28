@@ -11,8 +11,10 @@ export default function Day(props) {
    */
 
   const DayContainer = styled.div`
-    background: "#045FB6";
-    border: white 2px solid;
+    /* background: "#045FB6"; */
+    z-index:1;
+    background:white;
+    border: black 2px solid;
     height: 40vh;
     width: 13vw;
   `;
