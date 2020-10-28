@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import api from "./api.png";
 import northwestern from "./northwestern.png";
+import BackButton from '../BackButton';
 const ProjectContainer = styled.div`
   background: #011627;
   height: 93vh;
@@ -141,6 +142,7 @@ export default function UniverseHome() {
           </ButtonsContainer>
         </ProjectRight>
       </ProjectContainer>
+      <BackButton />
     </div>
   );
 }
