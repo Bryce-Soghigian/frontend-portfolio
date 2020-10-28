@@ -5,14 +5,23 @@ import ModalEndState from "./Calendar/Day/Modal/ModalEndState";
 import DatePicker from "./Calendar/DateRangeComponents/DatePicker";
 import Calendar from "./Calendar/Calendar";
 export default function ScheduleHome() {
+  const lightblue = "#CAF4F4";
+
   const ScheduleContainer = styled.div`
-    background: #011627;
+    /* background:${lightblue}; */
+    z-index:1;
     height: 93vh;
     width: 100vw;
   `;
+  const H1 = styled.h1`
+  color:white;
+  
+  `
   return (
     <ScheduleContainer>
+    
       <DatePicker />
+      <H1>Select a time you are free and want to meet :)</H1>
       <Calendar />
       <ModalStartState />
       <ModalEndState />
