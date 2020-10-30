@@ -10,10 +10,23 @@ export const initialState = {
   fetchedScheduleData: false,
   scheduleData: [],
   currentMeetingType: "",
+  currentUserEmail:""
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "clearCurrentMeetingType":
+      return {
+        ...state,
+        currentMeetingType:""
+      }
+    case "handleChangeEmail":
+      console.log(action.payload,"action")
+      return {
+        ...state,
+        currentUserEmail:action.payload
+
+      }
     case "setMeetingType":
       return {
         ...state,

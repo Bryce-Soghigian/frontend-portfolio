@@ -8,7 +8,6 @@ export default function SuggestedTime(props) {
     meetingDate: props.newDate,
     fullDate: props.currentDate,
   };
-  console.log(payloadObject, "payloadObj");
   const triggerModal = () => {
     dispatch({
       type: "updateCurrentMeetingTime",
