@@ -13,15 +13,17 @@ export default function ScheduleHome() {
     height: 93vh;
     width: 100vw;
   `;
-  const H1 = styled.h1`
+  const H1 = styled.h3`
   color:white;
-  
+  font-family: "Changa One";
+  text-shadow:1px 1px black;
+  text-transform:uppercase;
   `
   return (
     <ScheduleContainer>
     
       <DatePicker />
-      <H1>Select a time you are free and want to meet :)</H1>
+      <H1>Select a time below you are available and want to meet!</H1>
       <Calendar />
       <ModalStartState />
       <ModalEndState />

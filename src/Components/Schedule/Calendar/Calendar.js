@@ -4,10 +4,14 @@ import Day from "./Day/Day";
 import styled from "styled-components";
 export default function Calendar() {
   const CalendarContainer = styled.div`
+    margin:3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
+    @media(max-width:500px){
+      flex-direction:column;
+    }
   `;
   let i = 0;
   const { state, dispatch } = useContext(GlobalContext);
@@ -21,14 +25,16 @@ export default function Calendar() {
     return (
       <CalendarContainer>
         {state.scheduleData.map(x => {
-          i++;
-          console.log(x);
+          console.log(x,"X");
+          i++
           return (
             <Day
+          
               suggestedTimesArray={x.freeTimesArray}
               date={x.date}
               day={x.day}
-              key={i + 100}
+              id={x.currentDate}
+              key={i+100}
             />
           );
         })}
