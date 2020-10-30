@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { SiZoom } from "react-icons/si";
 import { AiOutlinePhone } from "react-icons/ai";
 import MeetingIconType from "./MeetingIconType";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 export default function ModalEndState() {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const [email, setEmail] = useState({
     error: false,
     value: "",
-    errorMessage:""
+    errorMessage: "",
   });
   const { state, dispatch } = useContext(GlobalContext);
   const blue = "#045FB6";
@@ -70,46 +70,54 @@ export default function ModalEndState() {
     height: 4vh;
   `;
   const handleClick = meetingType => {
-    setEmail({...email,errorMessage:""})
+    setEmail({ ...email, errorMessage: "" });
     dispatch({ type: "setMeetingType", payload: meetingType });
   };
   const handleCancel = () => {
     dispatch({ type: "displayModalEndFalse" });
   };
   const handleSubmit = () => {
-    let value = email.value
+    let value = email.value;
     const isValidEmail = re.test(value);
-    if(state.currentMeetingType===""){
-      return setEmail({value,error:!false,errorMessage:"Please select a meeting type"})
+    if (state.currentMeetingType === "") {
+      return setEmail({
+        value,
+        error: !false,
+        errorMessage: "Please select a meeting type",
+      });
     }
-    if(isValidEmail){
+    if (isValidEmail) {
       dispatch({ type: "displayModalEndFalse" });
       Swal.fire(
-        'Thanks for scheduing a meeting!',
-        'Check your email for your invitation to meet',
-        'success'
-      )
-      dispatch({type:"clearCurrentMeetingType"})
-    }else{
+        "Thanks for scheduing a meeting!",
+        "Check your email for your invitation to meet",
+        "success",
+      );
+      dispatch({ type: "clearCurrentMeetingType" });
+    } else {
       setEmail({
         value,
         error: !isValidEmail,
-        errorMessage:"Please enter a valid email address"
+        errorMessage: "Please enter a valid email address",
       });
     }
-  }
+  };
   const handleChange = e => {
-    const value = e.target.value
+    const value = e.target.value;
 
     setEmail({
       value,
-      error:false
+      error: false,
     });
-    }
+  };
   if (state.displayModalEnd) {
     return (
       <ModalContainerEnd>
-        <p>{state.currentMeetingType?`You have selected that you would like to meeet via ${state.currentMeetingType}`:"How would you like to meet?"}</p>
+        <p>
+          {state.currentMeetingType
+            ? `You have selected that you would like to meeet via ${state.currentMeetingType}`
+            : "How would you like to meet?"}
+        </p>
         <ButtonsContainer>
           <MeetingIconType
             meetingType={"Phone"}
@@ -122,8 +130,14 @@ export default function ModalEndState() {
             onClickFunction={() => handleClick("zoom")}
           />
         </ButtonsContainer>
-    {email.error ?<p>{email.errorMessage}</p>:""}
-        <input name="email"  placeholder="youremail@gmail.com" type="text" onChange={handleChange} value={email.value}/>
+        {email.error ? <p>{email.errorMessage}</p> : ""}
+        <input
+          name="email"
+          placeholder="youremail@gmail.com"
+          type="text"
+          onChange={e => handleChange(e)}
+          value={email.value}
+        />
         <ButtonsContainer>
           <Button onClick={handleSubmit}>Submit</Button>
           <Button onClick={handleCancel}>Cancel</Button>

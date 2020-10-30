@@ -25,7 +25,7 @@ export default function ScheduleHome() {
       <H1>Select a time below you are available and want to meet!</H1>
       <Calendar />
       <ModalStartState />
-      <ModalEndState/>
+      <ModalEndState />
     </ScheduleContainer>
   );
 }
