@@ -13,8 +13,8 @@ export default function ModalStartState(props) {
     dispatch({ type: "displayModalStartFalse" });
   };
   const ModalContainer = styled.div`
-  font-family: "Changa One";
-    z-index:2;
+    font-family: "Changa One";
+    z-index: 2;
     background: ${blue};
     position: fixed;
     top: 50%;
@@ -27,9 +27,9 @@ export default function ModalStartState(props) {
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
-border-style: solid;
-border-color: black;
-text-shadow:1px 1px black;
+    border-style: solid;
+    border-color: black;
+    text-shadow: 1px 1px black;
   `;
   const Top = styled.div`
     text-align: center;
@@ -39,26 +39,26 @@ text-shadow:1px 1px black;
     display: flex;
     justify-content: space-between;
   `;
-const Button = styled.button`
-font-size: 0.7rem;
-margin: 1em;
-width: 9vw;
-height: 3vh;
-border-radius: 5px;
-border-style: solid;
-border-color: black;
-background: #61dbfb;
-font-family: "Changa One";
-cursor: pointer;
-min-width: 50px;
-:hover {
-  color: white;
-  border-style: solid;
-  border-color: white;
-  transform: scale(1.5);
-  transition: 0.5s;
-}
-`;
+  const Button = styled.button`
+    font-size: 0.7rem;
+    margin: 1em;
+    width: 9vw;
+    height: 3vh;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    background: #61dbfb;
+    font-family: "Changa One";
+    cursor: pointer;
+    min-width: 50px;
+    :hover {
+      color: white;
+      border-style: solid;
+      border-color: white;
+      transform: scale(1.5);
+      transition: 0.5s;
+    }
+  `;
   const Empty = styled.div`
     display: none;
   `;
@@ -69,7 +69,7 @@ min-width: 50px;
           <p>Schedule a meeting</p>
           <p>for {state.currentMeetingTime.meetingDate}</p>
 
-    <p>at {state.currentMeetingTime.time}?</p>
+          <p>at {state.currentMeetingTime.time}?</p>
         </Top>
         <ButtonsContainer>
           <Button onClick={yesClick}>Yes</Button>

@@ -9,10 +9,16 @@ export const initialState = {
   errorMessage: "",
   fetchedScheduleData: false,
   scheduleData: [],
+  currentMeetingType: "",
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "setMeetingType":
+      return {
+        ...state,
+        currentMeetingType: action.payload,
+      };
     case "updateCurrentMeetingTime":
       console.log("payload", action.payload);
       return {
@@ -134,7 +140,7 @@ export const reducer = (state, action) => {
               filteredData.freeTimesArray.push(key);
             }
           }
-          freeTimes.push(filteredData);
+          return freeTimes.push(filteredData);
         }),
       );
 

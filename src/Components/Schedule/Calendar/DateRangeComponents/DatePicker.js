@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../../../contexts";
-import { getTheCurrentDate,getTheDateSixMonthsLater } from "../../../../utils/today";
+import {
+  getTheCurrentDate,
+  getTheDateSixMonthsLater,
+} from "../../../../utils/today";
 import styled from "styled-components";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -9,7 +12,7 @@ export default function DatePicker() {
     color: #ff1a00;
   `;
   const Button = styled.button`
-    background:none;
+    background: none;
     border: none;
     color: white;
   `;
@@ -45,29 +48,28 @@ export default function DatePicker() {
         payload: `Date you tried to select is not a vaild meeting time`,
       });
     } else {
-        dispatch({
-            type:"newErrorMessage",
-            payload:``
-        })
+      dispatch({
+        type: "newErrorMessage",
+        payload: ``,
+      });
       dispatch({ type: "handleBackwards" });
     }
   };
 
   const handleForward = () => {
     let endDate = state.currentDateRange[1].endDate;
-    if(getTheDateSixMonthsLater()> endDate){
-        dispatch({
-            type:"newErrorMessage",
-            payload:`Thats far away! Lets choose a time closer!`
-        })
-    }else{
-        dispatch({
-            type:"newErrorMessage",
-            payload:``
-        })
-        dispatch({type:"handleForward"})
+    if (getTheDateSixMonthsLater() > endDate) {
+      dispatch({
+        type: "newErrorMessage",
+        payload: `Thats far away! Lets choose a time closer!`,
+      });
+    } else {
+      dispatch({
+        type: "newErrorMessage",
+        payload: ``,
+      });
+      dispatch({ type: "handleForward" });
     }
-
   };
 
   return (
@@ -85,7 +87,6 @@ export default function DatePicker() {
           <IoIosArrowForward />
         </Button>
       </PickerContainer>
-
     </div>
   );
 }

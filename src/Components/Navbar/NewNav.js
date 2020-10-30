@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Container = styled.div`
-
   display: flex;
   flex-direction: row-reverse;
   width: 100vw;
@@ -72,8 +71,8 @@ const Name = styled(Link)`
 `;
 
 const Menuham = styled(GiHamburgerMenu)`
-transform: rotate(180deg);
-transition:1s;
+  transform: rotate(180deg);
+  transition: 1s;
   color: #61dbfb;
   :hover {
     color: white;

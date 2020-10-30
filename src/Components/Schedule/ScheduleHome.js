@@ -14,14 +14,13 @@ export default function ScheduleHome() {
     width: 100vw;
   `;
   const H1 = styled.h3`
-  color:white;
-  font-family: "Changa One";
-  text-shadow:1px 1px black;
-  text-transform:uppercase;
-  `
+    color: white;
+    font-family: "Changa One";
+    text-shadow: 1px 1px black;
+    text-transform: uppercase;
+  `;
   return (
     <ScheduleContainer>
-    
       <DatePicker />
       <H1>Select a time below you are available and want to meet!</H1>
       <Calendar />
