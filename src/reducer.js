@@ -1,5 +1,6 @@
 import { getStartDate, getEndDate } from "./utils/DateRangeHelpers";
-
+import Axios from "axios";
+import Swal from "sweetalert2";
 export const initialState = {
   currentCalendarData: null,
   currentMeetingTime: "03:30",
@@ -15,13 +16,35 @@ export const initialState = {
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "requestPhoneMeeting":
+      let requestObject = {
+        email: action.payload,
+        currentDate: state.currentMeetingTime.fullDate,
+      };
+      requestObject[state.currentMeetingTime.time] = "Phone Interview";
+      Axios.put(`http://localhost:5555/api/v1/contact/phone`, requestObject)
+        .then(res => {
+          Swal.fire(
+            "Thanks for scheduing a meeting!",
+            "Check your email for your invitation to meet",
+            "success",
+          );
+        })
+        .catch(err => {
+          console.log(err);
+          Swal.fire(
+            "There was an error with processing your request",
+            "Please try again and if the error persists contact me at bsoghigian@gmail.com",
+            "error",
+          );
+        });
+      return { ...state };
     case "clearCurrentMeetingType":
       return {
         ...state,
         currentMeetingType: "",
       };
     case "handleChangeEmail":
-      console.log(action.payload, "action");
       return {
         ...state,
         currentUserEmail: action.payload,
@@ -32,7 +55,6 @@ export const reducer = (state, action) => {
         currentMeetingType: action.payload,
       };
     case "updateCurrentMeetingTime":
-      console.log("payload", action.payload);
       return {
         ...state,
         currentMeetingTime: action.payload,
@@ -40,7 +62,6 @@ export const reducer = (state, action) => {
     case "handleForward":
       const handleForwardReducer = () => {
         let currentDate = state.currentDateRange[0].startDate;
-        console.log(currentDate);
         let formatedStartDate =
           currentDate.slice(0, 2) +
           "-" +

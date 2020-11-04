@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SiZoom } from "react-icons/si";
 import { AiOutlinePhone } from "react-icons/ai";
 import MeetingIconType from "./MeetingIconType";
-import Swal from "sweetalert2";
+
 export default function ModalEndState() {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const [email, setEmail] = useState({
@@ -87,12 +87,13 @@ export default function ModalEndState() {
       });
     }
     if (isValidEmail) {
-      dispatch({ type: "displayModalEndFalse" });
-      Swal.fire(
-        "Thanks for scheduing a meeting!",
-        "Check your email for your invitation to meet",
-        "success",
-      );
+      if (state.currentMeetingType === "phone") {
+        dispatch({ type: "requestPhoneMeeting", payload: email.value });
+        dispatch({type:"displayModalEndFalse"})
+      } else {
+        console.log("not a phone");
+      }
+
       dispatch({ type: "clearCurrentMeetingType" });
     } else {
       setEmail({
