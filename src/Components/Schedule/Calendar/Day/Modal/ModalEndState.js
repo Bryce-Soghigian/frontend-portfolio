@@ -90,8 +90,11 @@ export default function ModalEndState() {
       if (state.currentMeetingType === "phone") {
         dispatch({ type: "requestPhoneMeeting", payload: email.value });
         dispatch({type:"displayModalEndFalse"})
-      } else {
-        console.log("not a phone");
+      }
+      if(state.currentMeetingType === "zoom"){
+        dispatch({type:"requestZoomMeeting",payload: email.value })
+        dispatch({type:"displayModalEndFalse"})
+
       }
 
       dispatch({ type: "clearCurrentMeetingType" });

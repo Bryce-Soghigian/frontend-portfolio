@@ -16,6 +16,29 @@ export const initialState = {
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "requestZoomMeeting":
+      let requestObjectZoomMeeting = {
+        email: action.payload,
+        currentDate: state.currentMeetingTime.fullDate,
+      };
+      requestObjectZoomMeeting[state.currentMeetingTime.time] = "Phone Interview";
+      Axios.put(`http://localhost:5555/api/v1/contact/zoom`, requestObjectZoomMeeting)
+        .then(res => {
+          Swal.fire(
+            "Thanks for scheduing a meeting!",
+            "Check your email for the zoom url for our meeting",
+            "success",
+          );
+        })
+        .catch(err => {
+          console.log(err);
+          Swal.fire(
+            "There was an error with processing your request",
+            "Please try again and if the error persists contact me at bsoghigian@gmail.com",
+            "error",
+          );
+        });
+      return { ...state };
     case "requestPhoneMeeting":
       let requestObject = {
         email: action.payload,
@@ -153,13 +176,26 @@ export const reducer = (state, action) => {
       };
     case "fetchScheduleData":
       let data = action.payload;
+      //Using bubble sort since the array is of length 8 and i think it is very readable in this case
+     
+    data = data.sort((a,b) => {
+      if(a.currentDate <b.currentDate){
+        return -1
+      }
+      if(a.currentDate > b.currentDate){
+        return 1
+      }
+      return 0
+    })
+      console.log(data,"DATA AFTER SORT")
+
       let results = [];
       let freeTimes = [];
       results.push(data);
       results.map(x =>
         x.map(x => {
           let filteredData = { freeTimesArray: [] };
-
+           
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
@@ -208,6 +244,7 @@ export const reducer = (state, action) => {
         currentCalendarData: action.payload,
       };
     default:
+      console.log(state)
       return { ...state };
   }
 };
