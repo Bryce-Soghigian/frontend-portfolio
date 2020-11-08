@@ -11,6 +11,7 @@ export default function ModalEndState() {
     error: false,
     value: "",
     errorMessage: "",
+    isSelected:false
   });
   const { state, dispatch } = useContext(GlobalContext);
   const blue = "#045FB6";
@@ -127,11 +128,13 @@ export default function ModalEndState() {
             meetingType={"Phone"}
             meetingIcon={<AiOutlinePhone />}
             onClickFunction={() => handleClick("phone")}
+            isSelected = {email.iconSelected}
           />
           <MeetingIconType
             meetingType={"Zoom"}
             meetingIcon={<SiZoom />}
             onClickFunction={() => handleClick("zoom")}
+            isSelected = {email.iconSelected}
           />
         </ButtonsContainer>
         {email.error ? <p>{email.errorMessage}</p> : ""}

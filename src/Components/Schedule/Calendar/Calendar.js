@@ -25,7 +25,6 @@ export default function Calendar() {
     return (
       <CalendarContainer>
         {state.scheduleData.map(x => {
-          console.log(x, "X");
           i++;
           return (
             <Day

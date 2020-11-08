@@ -3,7 +3,7 @@ import SuggestedTime from "./SuggestedTime";
 export default function MapSuggestedTimes(props) {
   let newDate = `${props.date}`;
   let i = 0;
-
+console.log(props.currentDate)
   return (
     <div>
       {props.suggestedTimesArray.map(x => {

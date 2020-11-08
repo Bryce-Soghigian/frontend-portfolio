@@ -30,7 +30,7 @@ export default function DatePicker() {
 
   const { state, dispatch } = useContext(GlobalContext);
   const formatDate = date => {
-    date = date.slice(0, 2) + "-" + date.slice(2, 4) + "-" + date.slice(6);
+    date = `${date.slice(0,3)}-${date.slice(4,6)}-${date.slice(6,8)}`
     let day = new Date(date).toString().split(" ");
 
     let returnString = `${day[1]} ${day[2]}`;
@@ -58,7 +58,8 @@ export default function DatePicker() {
 
   const handleForward = () => {
     let endDate = state.currentDateRange[1].endDate;
-    if (getTheDateSixMonthsLater() > endDate) {
+    console.log(getTheDateSixMonthsLater(),endDate,"fakjdsa;;;a;;adfs;adf;;fdsfadsfadsfs;")
+    if (getTheDateSixMonthsLater() < endDate) {
       dispatch({
         type: "newErrorMessage",
         payload: `Thats far away! Lets choose a time closer!`,

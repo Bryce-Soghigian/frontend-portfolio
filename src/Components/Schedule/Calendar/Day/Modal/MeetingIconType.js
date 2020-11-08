@@ -1,23 +1,10 @@
-import React from "react";
+import React,{useContext} from "react";
 import styled from "styled-components";
+import { GlobalContext } from "../../../../../contexts";
 export default function MeetingIconType(props) {
-  /**
-   *  zoom endpoint in the api
-   * the zoom endpoint needs to do a couple of things
-   * 1. Update my current schedule with the current {state.currentTime.time:`Zoom meeting at ${state.currentTime.time}`
-   * 2. Create a new zoom meeting
-   * 3. email req.body.email a zoom link and the date and time of the meeting
-   *
-   */
-
-  /**
-   * phone endpoint
-   * The phone endpoint is much simpler
-   * it will just send my phone number to the recipient and the date and time via email
-   * and update my current schedule withreq.body = {state.currentTime.time:`Phone meeting at ${state.currentTime.time}`
-   */
-
+  const {state} = useContext(GlobalContext)
   const lightblue = "#61dbfb";
+  const white = "FFFFFF"
   const MeetingIconDiv = styled.button`
     display: flex;
     width: 10vw;
@@ -27,7 +14,7 @@ export default function MeetingIconType(props) {
     justify-content: center;
     border: 2px solid black;
     border-radius: 5px;
-    background: ${lightblue};
+    background: ${state.isSelected?white:lightblue};
     margin: 2vw;
     :hover {
       border: white 2px solid;

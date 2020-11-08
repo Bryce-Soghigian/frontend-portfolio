@@ -4,7 +4,7 @@ export const getTheCurrentDate = () => {
   var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = today.getFullYear();
 
-  today = mm + dd + yyyy;
+  today = yyyy+mm+dd;
   return today;
 };
 export const getTheDateSixMonthsLater = date => {
@@ -13,6 +13,6 @@ export const getTheDateSixMonthsLater = date => {
   var dd = String(date.getDate()).padStart(2, "0");
   var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = date.getFullYear();
-  date = mm + dd + yyyy;
+  date = yyyy+mm+dd;
   return date;
 };
