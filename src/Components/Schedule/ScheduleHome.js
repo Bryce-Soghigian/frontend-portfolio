@@ -9,11 +9,11 @@ export default function ScheduleHome() {
 
   const ScheduleContainer = styled.div`
     /* background:${lightblue}; */
-    z-index:1;
+    z-index: 1;
     height: 93vh;
     width: 100vw;
-    @media(max-width:500px){
-      height:175vh;
+    @media (max-width: 500px) {
+      height: 175vh;
     }
   `;
   const H1 = styled.h3`

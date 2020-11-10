@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../../contexts";
 import Day from "./Day/Day";
 import styled from "styled-components";
+import LoadingSpinner from './LoadingSpinner'
 export default function Calendar() {
   const CalendarContainer = styled.div`
     margin: 3vw;
@@ -19,7 +20,7 @@ export default function Calendar() {
   if (state.scheduleData.length === 0) {
     return (
       <div>
-        <p>Loading ... </p>
+        <LoadingSpinner />
       </div>
     );
   } else {
