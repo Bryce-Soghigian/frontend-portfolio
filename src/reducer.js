@@ -51,7 +51,10 @@ export const reducer = (state, action) => {
         currentDate: state.currentMeetingTime.fullDate,
       };
       requestObject[state.currentMeetingTime.time] = "Phone Interview";
-      Axios.put(`https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/phone`, requestObject)
+      Axios.put(
+        `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/phone`,
+        requestObject,
+      )
         .then(res => {
           Swal.fire(
             "Thanks for scheduing a meeting!",
