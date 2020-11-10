@@ -32,8 +32,7 @@ export default function SuggestedTime(props) {
     }
     @media (max-width: 500px) {
       width: 30vw;
-      border-radius:0%;
-
+      border-radius: 0%;
     }
   `;
   return (

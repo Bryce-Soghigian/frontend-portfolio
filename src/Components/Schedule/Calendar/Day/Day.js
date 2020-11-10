@@ -19,8 +19,7 @@ export default function Day(props) {
     @media (max-width: 500px) {
       width: 95vw;
       height: 40vh;
-      display:flex;
-
+      display: flex;
     }
     overflow-y: scroll;
   `;
@@ -30,9 +29,9 @@ export default function Day(props) {
     color: white;
     text-shadow: 1px 1px black;
     @media (max-width: 500px) {
- display:flex;
- justify-content:flex-start;
- flex-direction:column-reverse;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
     }
   `;
   const Bottom = styled.div`

@@ -12,6 +12,9 @@ export default function ScheduleHome() {
     z-index:1;
     height: 93vh;
     width: 100vw;
+    @media(max-width:500px){
+      height:175vh;
+    }
   `;
   const H1 = styled.h3`
     color: white;
@@ -22,7 +25,10 @@ export default function ScheduleHome() {
   return (
     <ScheduleContainer>
       <DatePicker />
-      <H1>Like what you see? Please select a time you would like to meet with me below!</H1>
+      <H1>
+        Like what you see? Please select a time you would like to meet with me
+        below!
+      </H1>
       <Calendar />
       <ModalStartState />
       <ModalEndState />

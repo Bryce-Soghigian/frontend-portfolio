@@ -11,7 +11,7 @@ export default function ModalEndState() {
     error: false,
     value: "",
     errorMessage: "",
-    isSelected:false
+    isSelected: false,
   });
   const { state, dispatch } = useContext(GlobalContext);
   const blue = "#045FB6";
@@ -90,12 +90,11 @@ export default function ModalEndState() {
     if (isValidEmail) {
       if (state.currentMeetingType === "phone") {
         dispatch({ type: "requestPhoneMeeting", payload: email.value });
-        dispatch({type:"displayModalEndFalse"})
+        dispatch({ type: "displayModalEndFalse" });
       }
-      if(state.currentMeetingType === "zoom"){
-        dispatch({type:"requestZoomMeeting",payload: email.value })
-        dispatch({type:"displayModalEndFalse"})
-
+      if (state.currentMeetingType === "zoom") {
+        dispatch({ type: "requestZoomMeeting", payload: email.value });
+        dispatch({ type: "displayModalEndFalse" });
       }
 
       dispatch({ type: "clearCurrentMeetingType" });
@@ -128,13 +127,13 @@ export default function ModalEndState() {
             meetingType={"Phone"}
             meetingIcon={<AiOutlinePhone />}
             onClickFunction={() => handleClick("phone")}
-            isSelected = {email.iconSelected}
+            isSelected={email.iconSelected}
           />
           <MeetingIconType
             meetingType={"Zoom"}
             meetingIcon={<SiZoom />}
             onClickFunction={() => handleClick("zoom")}
-            isSelected = {email.iconSelected}
+            isSelected={email.iconSelected}
           />
         </ButtonsContainer>
         {email.error ? <p>{email.errorMessage}</p> : ""}

@@ -69,19 +69,18 @@ const Name = styled(Link)`
   }
 `;
 
-const MenuText = styled.button  `
+const MenuText = styled.button`
   transition: 1s;
   color: #61dbfb;
-  background:none;
+  background: none;
   font-family: "Changa One";
-  border:none;
+  border: none;
   :hover {
     color: white;
     transform: scale(1.2);
-    
   }
-  &:focus{
-    border:none;
+  &:focus {
+    border: none;
   }
   @media (min-width: 1000px) {
     font-size: 1.5rem;
@@ -92,7 +91,7 @@ const MenuText = styled.button  `
   @media (min-width: 1700px) {
     font-size: 4.5rem;
   }
-`
+`;
 //Container for second nav
 const ContainerTwo = styled.div`
   display: flex;
@@ -118,37 +117,36 @@ export default function NewNav() {
           <Name to="/">Bryce Soghigian</Name>
         </Left>
         <Right>
-        <MenuText
-          aria-controls="simple-menu"
-          aria-haspopup="true"
-          onClick={handleClick}>
-          See more...
-        </MenuText>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}>
-          <NavItem to="/">
-            <MenuItem onClick={handleClose}>Home </MenuItem>
-          </NavItem>
-          <NavItem to="/About">
-            <MenuItem onClick={handleClose}>About </MenuItem>
-          </NavItem>
-          <NavItem to="/Projects">
-            <MenuItem onClick={handleClose}>Projects </MenuItem>
-          </NavItem>
-          <NavItem to="/Skills">
-            {" "}
-            <MenuItem onClick={handleClose}>Skills </MenuItem>
-          </NavItem>
-          <NavItem to="/schedule">
-            <MenuItem onClick={handleClose}>Contact</MenuItem>{" "}
-          </NavItem>
-        </Menu>
+          <MenuText
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}>
+            See more...
+          </MenuText>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}>
+            <NavItem to="/">
+              <MenuItem onClick={handleClose}>Home </MenuItem>
+            </NavItem>
+            <NavItem to="/About">
+              <MenuItem onClick={handleClose}>About </MenuItem>
+            </NavItem>
+            <NavItem to="/Projects">
+              <MenuItem onClick={handleClose}>Projects </MenuItem>
+            </NavItem>
+            <NavItem to="/Skills">
+              {" "}
+              <MenuItem onClick={handleClose}>Skills </MenuItem>
+            </NavItem>
+            <NavItem to="/schedule">
+              <MenuItem onClick={handleClose}>Contact</MenuItem>{" "}
+            </NavItem>
+          </Menu>
         </Right>
-
       </ContainerTwo>
     );
   } else if (document.documentElement.clientWidth >= 500) {

@@ -1,10 +1,10 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { GlobalContext } from "../../../../../contexts";
 export default function MeetingIconType(props) {
-  const {state} = useContext(GlobalContext)
+  const { state } = useContext(GlobalContext);
   const lightblue = "#61dbfb";
-  const white = "FFFFFF"
+  const white = "FFFFFF";
   const MeetingIconDiv = styled.button`
     display: flex;
     width: 10vw;
@@ -14,7 +14,7 @@ export default function MeetingIconType(props) {
     justify-content: center;
     border: 2px solid black;
     border-radius: 5px;
-    background: ${state.isSelected?white:lightblue};
+    background: ${state.isSelected ? white : lightblue};
     margin: 2vw;
     :hover {
       border: white 2px solid;
