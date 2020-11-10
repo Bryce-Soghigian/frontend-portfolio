@@ -4,7 +4,6 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
 
 const Container = styled.div`
   display: flex;
@@ -70,13 +69,19 @@ const Name = styled(Link)`
   }
 `;
 
-const Menuham = styled(GiHamburgerMenu)`
-  transform: rotate(180deg);
+const MenuText = styled.button  `
   transition: 1s;
   color: #61dbfb;
+  background:none;
+  font-family: "Changa One";
+  border:none;
   :hover {
     color: white;
     transform: scale(1.2);
+    
+  }
+  &:focus{
+    border:none;
   }
   @media (min-width: 1000px) {
     font-size: 1.5rem;
@@ -87,7 +92,7 @@ const Menuham = styled(GiHamburgerMenu)`
   @media (min-width: 1700px) {
     font-size: 4.5rem;
   }
-`;
+`
 //Container for second nav
 const ContainerTwo = styled.div`
   display: flex;
@@ -108,13 +113,17 @@ export default function NewNav() {
   //Onclick have a dropdown with my nav routes
   if (document.documentElement.clientWidth <= 500) {
     return (
-      <Container>
-        <Button
+      <ContainerTwo>
+        <Left>
+          <Name to="/">Bryce Soghigian</Name>
+        </Left>
+        <Right>
+        <MenuText
           aria-controls="simple-menu"
           aria-haspopup="true"
           onClick={handleClick}>
-          <Menuham />
-        </Button>
+          See more...
+        </MenuText>
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
@@ -134,11 +143,13 @@ export default function NewNav() {
             {" "}
             <MenuItem onClick={handleClose}>Skills </MenuItem>
           </NavItem>
-          <NavItem to="/Contact">
-            <MenuItem onClick={handleClose}>Contact </MenuItem>{" "}
+          <NavItem to="/schedule">
+            <MenuItem onClick={handleClose}>Contact</MenuItem>{" "}
           </NavItem>
         </Menu>
-      </Container>
+        </Right>
+
+      </ContainerTwo>
     );
   } else if (document.documentElement.clientWidth >= 500) {
     return (
@@ -147,7 +158,7 @@ export default function NewNav() {
           <Name to="/">Bryce Soghigian</Name>
         </Left>
         <Right>
-          <NavItem to="/Contact">Contact</NavItem>
+          <NavItem to="/schedule">Contact</NavItem>
           <NavItem to="/Skills">Skills</NavItem>
           <NavItem to="/About">About</NavItem>
           <NavItem to="/Projects">Projects</NavItem>

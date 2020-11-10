@@ -22,7 +22,7 @@ export default function ScheduleHome() {
   return (
     <ScheduleContainer>
       <DatePicker />
-      <H1>Select a time below you are available and want to meet!</H1>
+      <H1>Like what you see? Please select a time you would like to meet with me below!</H1>
       <Calendar />
       <ModalStartState />
       <ModalEndState />
