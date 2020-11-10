@@ -208,12 +208,13 @@ export const reducer = (state, action) => {
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
-              let formatedDate = `${date.slice(0, 3)}-${date.slice(
+              let formatedDate = `${date.slice(0, 4)}-${date.slice(
                 4,
                 6,
               )}-${date.slice(6, 8)}`;
               let day = new Date(formatedDate).toString().split(" ");
               filteredData["day"] = day[0];
+              console.log(day)
               filteredData["date"] = `${day[1]} ${day[2]}`;
               filteredData[key] = x[key];
             } else if (x[key] === "free") {
