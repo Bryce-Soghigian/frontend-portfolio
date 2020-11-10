@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5555/api/v1/meeting/range/${state.currentDateRange[0].startDate}/${state.currentDateRange[1].endDate}`,
+        `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/meeting/range/${state.currentDateRange[0].startDate}/${state.currentDateRange[1].endDate}`,
       )
       .then(data => {
         dispatch({ type: "fetchScheduleData", payload: data.data });

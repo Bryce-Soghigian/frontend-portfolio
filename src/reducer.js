@@ -1,5 +1,6 @@
 import { getStartDate, getEndDate } from "./utils/DateRangeHelpers";
-
+import Axios from "axios";
+import Swal from "sweetalert2";
 export const initialState = {
   currentCalendarData: null,
   currentMeetingTime: "03:30",
@@ -9,12 +10,80 @@ export const initialState = {
   errorMessage: "",
   fetchedScheduleData: false,
   scheduleData: [],
+  currentMeetingType: "",
+  currentUserEmail: "",
+  isSelected: false,
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "requestZoomMeeting":
+      let requestObjectZoomMeeting = {
+        email: action.payload,
+        currentDate: state.currentMeetingTime.fullDate,
+      };
+      requestObjectZoomMeeting[state.currentMeetingTime.time] =
+        "Phone Interview";
+      console.log(requestObjectZoomMeeting, "zoom obj");
+      Axios.put(
+        `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/zoom`,
+        requestObjectZoomMeeting,
+      )
+        .then(res => {
+          Swal.fire(
+            "Thanks for scheduing a meeting!",
+            "Check your email for the zoom url for our meeting",
+            "success",
+          );
+        })
+        .catch(err => {
+          console.log(err);
+          Swal.fire(
+            "There was an error with processing your request",
+            "Please try again and if the error persists contact me at bsoghigian@gmail.com",
+            "error",
+          );
+        });
+      return { ...state, isSelected: !state.isSelected };
+    case "requestPhoneMeeting":
+      let requestObject = {
+        email: action.payload,
+        currentDate: state.currentMeetingTime.fullDate,
+      };
+      requestObject[state.currentMeetingTime.time] = "Phone Interview";
+      Axios.put(`https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/phone`, requestObject)
+        .then(res => {
+          Swal.fire(
+            "Thanks for scheduing a meeting!",
+            "Check your email for your invitation to meet",
+            "success",
+          );
+        })
+        .catch(err => {
+          console.log(err);
+          Swal.fire(
+            "There was an error with processing your request",
+            "Please try again and if the error persists contact me at bsoghigian@gmail.com",
+            "error",
+          );
+        });
+      return { ...state, isSelected: !state.isSelected };
+    case "clearCurrentMeetingType":
+      return {
+        ...state,
+        currentMeetingType: "",
+      };
+    case "handleChangeEmail":
+      return {
+        ...state,
+        currentUserEmail: action.payload,
+      };
+    case "setMeetingType":
+      return {
+        ...state,
+        currentMeetingType: action.payload,
+      };
     case "updateCurrentMeetingTime":
-      console.log("payload", action.payload);
       return {
         ...state,
         currentMeetingTime: action.payload,
@@ -22,36 +91,33 @@ export const reducer = (state, action) => {
     case "handleForward":
       const handleForwardReducer = () => {
         let currentDate = state.currentDateRange[0].startDate;
-        console.log(currentDate);
-        let formatedStartDate =
-          currentDate.slice(0, 2) +
-          "-" +
-          currentDate.slice(2, 4) +
-          "-" +
-          currentDate.slice(6);
+        let formatedStartDate = `${currentDate.slice(0, 4)}-${currentDate.slice(
+          4,
+          6,
+        )}-${currentDate.slice(6, 8)}`;
+        console.log(formatedStartDate);
         formatedStartDate = new Date(formatedStartDate);
-        formatedStartDate.setDate(formatedStartDate.getDate() + 7);
+        formatedStartDate.setDate(formatedStartDate.getDate() + 8);
         var dd = String(formatedStartDate.getDate()).padStart(2, "0");
         var mm = String(formatedStartDate.getMonth() + 1).padStart(2, "0");
         var yyyy = formatedStartDate.getFullYear();
-        let newStartDate = `${mm}${dd}${yyyy}`;
+        let newStartDate = `${yyyy}${mm}${dd}`;
 
         //Calculate new end date
 
         let currentEndDate = state.currentDateRange[1].endDate;
-        let formatedEndDate =
-          currentEndDate.slice(0, 2) +
-          "-" +
-          currentEndDate.slice(2, 4) +
-          "-" +
-          currentEndDate.slice(6);
+        let formatedEndDate = `${currentEndDate.slice(
+          0,
+          4,
+        )}-${currentEndDate.slice(4, 6)}-${currentEndDate.slice(6, 8)}`;
         formatedEndDate = new Date(formatedEndDate);
-        formatedEndDate.setDate(formatedEndDate.getDate() + 7);
+        formatedEndDate.setDate(formatedEndDate.getDate() + 8);
         var d = String(formatedEndDate.getDate()).padStart(2, "0");
         var m = String(formatedEndDate.getMonth() + 1).padStart(2, "0");
         var yy = formatedEndDate.getFullYear();
-        let newEndDate = `${m}${d}${yy}`;
-
+        let newEndDate = `${yy}${m}${d}`;
+        console.log(newStartDate, "newstart date");
+        console.log(newEndDate, "newENddate");
         return [newStartDate, newEndDate];
       };
       let resultsOfForwardReducer = handleForwardReducer();
@@ -66,45 +132,47 @@ export const reducer = (state, action) => {
 
     case "handleBackwards":
       //This function updates the start date by two weeks
+      const handleBackwardsHelper = () => {
+        let currentDate = state.currentDateRange[0].startDate;
+        let formatedStartDate = `${currentDate.slice(0, 4)}-${currentDate.slice(
+          4,
+          6,
+        )}-${currentDate.slice(6, 8)}`;
+        console.log(formatedStartDate);
+        formatedStartDate = new Date(formatedStartDate);
+        console.log(formatedStartDate, "formated start");
 
+        formatedStartDate.setDate(formatedStartDate.getDate() - 6);
+        var dd = String(formatedStartDate.getDate()).padStart(2, "0");
+        var mm = String(formatedStartDate.getMonth() + 1).padStart(2, "0");
+        var yyyy = formatedStartDate.getFullYear();
+        let newStartDate = `${yyyy}${mm}${dd}`;
+
+        //Calculate new end date
+
+        let currentEndDate = state.currentDateRange[1].endDate;
+        let formatedEndDate = `${currentEndDate.slice(
+          0,
+          4,
+        )}-${currentEndDate.slice(4, 6)}-${currentEndDate.slice(6, 8)}`;
+        formatedEndDate = new Date(formatedEndDate);
+        formatedEndDate.setDate(formatedEndDate.getDate() - 6);
+        var d = String(formatedEndDate.getDate()).padStart(2, "0");
+        var m = String(formatedEndDate.getMonth() + 1).padStart(2, "0");
+        var yy = formatedEndDate.getFullYear();
+        let newEndDate = `${yy}${m}${d}`;
+        console.log(newStartDate, "newstart date");
+        console.log(newEndDate, "newENddate");
+        return [newStartDate, newEndDate];
+      };
       //Calculate new start date
-
-      let currentDate = state.currentDateRange[0].startDate;
-      console.log(currentDate);
-      let formatedStartDate =
-        currentDate.slice(0, 2) +
-        "-" +
-        currentDate.slice(2, 4) +
-        "-" +
-        currentDate.slice(6);
-      formatedStartDate = new Date(formatedStartDate);
-      formatedStartDate.setDate(formatedStartDate.getDate() - 7);
-      var dd = String(formatedStartDate.getDate()).padStart(2, "0");
-      var mm = String(formatedStartDate.getMonth() + 1).padStart(2, "0");
-      var yyyy = formatedStartDate.getFullYear();
-      let newStartDate = `${mm}${dd}${yyyy}`;
-
-      //Calculate new end date
-
-      let currentEndDate = state.currentDateRange[1].endDate;
-      let formatedEndDate =
-        currentEndDate.slice(0, 2) +
-        "-" +
-        currentEndDate.slice(2, 4) +
-        "-" +
-        currentEndDate.slice(6);
-      formatedEndDate = new Date(formatedEndDate);
-      formatedEndDate.setDate(formatedEndDate.getDate() - 7);
-      var d = String(formatedEndDate.getDate()).padStart(2, "0");
-      var m = String(formatedEndDate.getMonth() + 1).padStart(2, "0");
-      var yy = formatedEndDate.getFullYear();
-      let newEndDate = `${m}${d}${yy}`;
+      let resultsOfBackwardHelper = handleBackwardsHelper();
 
       return {
         ...state,
         currentDateRange: [
-          { startDate: newStartDate },
-          { endDate: newEndDate },
+          { startDate: resultsOfBackwardHelper[0] },
+          { endDate: resultsOfBackwardHelper[1] },
         ],
       };
     case "newErrorMessage":
@@ -114,6 +182,19 @@ export const reducer = (state, action) => {
       };
     case "fetchScheduleData":
       let data = action.payload;
+      //Using bubble sort since the array is of length 8 and i think it is very readable in this case
+
+      data = data.sort((a, b) => {
+        if (a.currentDate < b.currentDate) {
+          return -1;
+        }
+        if (a.currentDate > b.currentDate) {
+          return 1;
+        }
+        return 0;
+      });
+      console.log(data, "DATA AFTER SORT");
+
       let results = [];
       let freeTimes = [];
       results.push(data);
@@ -124,8 +205,10 @@ export const reducer = (state, action) => {
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
-              let formatedDate =
-                date.slice(0, 2) + "-" + date.slice(2, 4) + "-" + date.slice(6);
+              let formatedDate = `${date.slice(0, 3)}-${date.slice(
+                4,
+                6,
+              )}-${date.slice(6, 8)}`;
               let day = new Date(formatedDate).toString().split(" ");
               filteredData["day"] = day[0];
               filteredData["date"] = `${day[1]} ${day[2]}`;
@@ -134,7 +217,7 @@ export const reducer = (state, action) => {
               filteredData.freeTimesArray.push(key);
             }
           }
-          freeTimes.push(filteredData);
+          return freeTimes.push(filteredData);
         }),
       );
 
@@ -169,6 +252,7 @@ export const reducer = (state, action) => {
         currentCalendarData: action.payload,
       };
     default:
+      console.log(state);
       return { ...state };
   }
 };

@@ -4,10 +4,8 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
 
 const Container = styled.div`
-
   display: flex;
   flex-direction: row-reverse;
   width: 100vw;
@@ -71,13 +69,18 @@ const Name = styled(Link)`
   }
 `;
 
-const Menuham = styled(GiHamburgerMenu)`
-transform: rotate(180deg);
-transition:1s;
+const MenuText = styled.button`
+  transition: 1s;
   color: #61dbfb;
+  background: none;
+  font-family: "Changa One";
+  border: none;
   :hover {
     color: white;
     transform: scale(1.2);
+  }
+  &:focus {
+    border: none;
   }
   @media (min-width: 1000px) {
     font-size: 1.5rem;
@@ -109,37 +112,42 @@ export default function NewNav() {
   //Onclick have a dropdown with my nav routes
   if (document.documentElement.clientWidth <= 500) {
     return (
-      <Container>
-        <Button
-          aria-controls="simple-menu"
-          aria-haspopup="true"
-          onClick={handleClick}>
-          <Menuham />
-        </Button>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}>
-          <NavItem to="/">
-            <MenuItem onClick={handleClose}>Home </MenuItem>
-          </NavItem>
-          <NavItem to="/About">
-            <MenuItem onClick={handleClose}>About </MenuItem>
-          </NavItem>
-          <NavItem to="/Projects">
-            <MenuItem onClick={handleClose}>Projects </MenuItem>
-          </NavItem>
-          <NavItem to="/Skills">
-            {" "}
-            <MenuItem onClick={handleClose}>Skills </MenuItem>
-          </NavItem>
-          <NavItem to="/Contact">
-            <MenuItem onClick={handleClose}>Contact </MenuItem>{" "}
-          </NavItem>
-        </Menu>
-      </Container>
+      <ContainerTwo>
+        <Left>
+          <Name to="/">Bryce Soghigian</Name>
+        </Left>
+        <Right>
+          <MenuText
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}>
+            See more...
+          </MenuText>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}>
+            <NavItem to="/">
+              <MenuItem onClick={handleClose}>Home </MenuItem>
+            </NavItem>
+            <NavItem to="/About">
+              <MenuItem onClick={handleClose}>About </MenuItem>
+            </NavItem>
+            <NavItem to="/Projects">
+              <MenuItem onClick={handleClose}>Projects </MenuItem>
+            </NavItem>
+            <NavItem to="/Skills">
+              {" "}
+              <MenuItem onClick={handleClose}>Skills </MenuItem>
+            </NavItem>
+            <NavItem to="/schedule">
+              <MenuItem onClick={handleClose}>Contact</MenuItem>{" "}
+            </NavItem>
+          </Menu>
+        </Right>
+      </ContainerTwo>
     );
   } else if (document.documentElement.clientWidth >= 500) {
     return (
@@ -148,7 +156,7 @@ export default function NewNav() {
           <Name to="/">Bryce Soghigian</Name>
         </Left>
         <Right>
-          <NavItem to="/Contact">Contact</NavItem>
+          <NavItem to="/schedule">Contact</NavItem>
           <NavItem to="/Skills">Skills</NavItem>
           <NavItem to="/About">About</NavItem>
           <NavItem to="/Projects">Projects</NavItem>

@@ -12,14 +12,14 @@ export default function SkillsHome() {
   const Container = styled.div`
     display: grid;
     height: 93vh;
-  background: #011526;
-      /* grid-template-columns: auto auto auto; */
+    background: #011526;
+    /* grid-template-columns: auto auto auto; */
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: 1fr 1fr;
     @media (max-width: 600px) {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   `;
 

@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../../../contexts";
-import { getTheCurrentDate,getTheDateSixMonthsLater } from "../../../../utils/today";
+import {
+  getTheCurrentDate,
+  getTheDateSixMonthsLater,
+} from "../../../../utils/today";
 import styled from "styled-components";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -9,7 +12,7 @@ export default function DatePicker() {
     color: #ff1a00;
   `;
   const Button = styled.button`
-    background:none;
+    background: none;
     border: none;
     color: white;
   `;
@@ -27,7 +30,7 @@ export default function DatePicker() {
 
   const { state, dispatch } = useContext(GlobalContext);
   const formatDate = date => {
-    date = date.slice(0, 2) + "-" + date.slice(2, 4) + "-" + date.slice(6);
+    date = `${date.slice(0, 3)}-${date.slice(4, 6)}-${date.slice(6, 8)}`;
     let day = new Date(date).toString().split(" ");
 
     let returnString = `${day[1]} ${day[2]}`;
@@ -45,29 +48,33 @@ export default function DatePicker() {
         payload: `Date you tried to select is not a vaild meeting time`,
       });
     } else {
-        dispatch({
-            type:"newErrorMessage",
-            payload:``
-        })
+      dispatch({
+        type: "newErrorMessage",
+        payload: ``,
+      });
       dispatch({ type: "handleBackwards" });
     }
   };
 
   const handleForward = () => {
     let endDate = state.currentDateRange[1].endDate;
-    if(getTheDateSixMonthsLater()> endDate){
-        dispatch({
-            type:"newErrorMessage",
-            payload:`Thats far away! Lets choose a time closer!`
-        })
-    }else{
-        dispatch({
-            type:"newErrorMessage",
-            payload:``
-        })
-        dispatch({type:"handleForward"})
+    console.log(
+      getTheDateSixMonthsLater(),
+      endDate,
+      "fakjdsa;;;a;;adfs;adf;;fdsfadsfadsfs;",
+    );
+    if (getTheDateSixMonthsLater() < endDate) {
+      dispatch({
+        type: "newErrorMessage",
+        payload: `Thats far away! Lets choose a time closer!`,
+      });
+    } else {
+      dispatch({
+        type: "newErrorMessage",
+        payload: ``,
+      });
+      dispatch({ type: "handleForward" });
     }
-
   };
 
   return (
@@ -85,7 +92,6 @@ export default function DatePicker() {
           <IoIosArrowForward />
         </Button>
       </PickerContainer>
-
     </div>
   );
 }

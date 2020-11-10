@@ -13,6 +13,8 @@ export default function ModalStartState(props) {
     dispatch({ type: "displayModalStartFalse" });
   };
   const ModalContainer = styled.div`
+    font-family: "Changa One";
+    z-index: 2;
     background: ${blue};
     position: fixed;
     top: 50%;
@@ -24,7 +26,10 @@ export default function ModalStartState(props) {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 5px solid ${lightblue};
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    text-shadow: 1px 1px black;
   `;
   const Top = styled.div`
     text-align: center;
@@ -34,8 +39,26 @@ export default function ModalStartState(props) {
     display: flex;
     justify-content: space-between;
   `;
-  const YesButton = styled.button``;
-  const NoButton = styled.button``;
+  const Button = styled.button`
+    font-size: 0.7rem;
+    margin: 1em;
+    width: 9vw;
+    height: 3vh;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    background: #61dbfb;
+    font-family: "Changa One";
+    cursor: pointer;
+    min-width: 50px;
+    :hover {
+      color: white;
+      border-style: solid;
+      border-color: white;
+      transform: scale(1.5);
+      transition: 0.5s;
+    }
+  `;
   const Empty = styled.div`
     display: none;
   `;
@@ -44,12 +67,13 @@ export default function ModalStartState(props) {
       <ModalContainer>
         <Top>
           <p>Schedule a meeting</p>
-          <p>for</p>
-          <p>{state.currentMeetingTime}?</p>
+          <p>for {state.currentMeetingTime.meetingDate}</p>
+
+          <p>at {state.currentMeetingTime.time}?</p>
         </Top>
         <ButtonsContainer>
-          <YesButton onClick={yesClick}>Yes</YesButton>
-          <NoButton onClick={noClick}>No</NoButton>
+          <Button onClick={yesClick}>Yes</Button>
+          <Button onClick={noClick}>No</Button>
         </ButtonsContainer>
       </ModalContainer>
     );
