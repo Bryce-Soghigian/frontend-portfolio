@@ -35,9 +35,26 @@ export default function SuggestedTime(props) {
       border-radius: 0%;
     }
   `;
+  const convertToAmOrPm = (meetingTime)=> {
+    let meetingTimeArray = meetingTime.split(":")
+    if(Number(meetingTimeArray[0]) < 12){
+      meetingTime += ' am'
+    }else{
+      if(Number(meetingTimeArray[0])=== 12){
+        meetingTime += " pm"
+      }else{
+        let convertedFromMilitaryTime = Number(meetingTimeArray[0]-12)
+        meetingTime = `${convertedFromMilitaryTime}:00 pm`
+      }
+
+    }
+    console.log(meetingTime,"meetingTIme")
+    return meetingTime
+  }
+  convertToAmOrPm(props.meetingTimeStart)
   return (
     <StyledButton onClick={triggerModal}>
-      {`${props.meetingTimeStart}`}
+      {convertToAmOrPm(props.meetingTimeStart)}
     </StyledButton>
   );
 }
