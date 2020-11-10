@@ -11,6 +11,7 @@ export default function Calendar() {
     height: 60vh;
     @media (max-width: 500px) {
       flex-direction: column;
+      height:150vh;
     }
   `;
   let i = 0;

@@ -17,8 +17,10 @@ export default function Day(props) {
     height: 40vh;
     width: 13vw;
     @media (max-width: 500px) {
-      width: 90vw;
-      height: 30vh;
+      width: 95vw;
+      height: 40vh;
+      display:flex;
+
     }
     overflow-y: scroll;
   `;
@@ -27,6 +29,11 @@ export default function Day(props) {
     justify-content: space-evenly;
     color: white;
     text-shadow: 1px 1px black;
+    @media (max-width: 500px) {
+ display:flex;
+ justify-content:flex-start;
+ flex-direction:column-reverse;
+    }
   `;
   const Bottom = styled.div`
     overflow-y: scroll;

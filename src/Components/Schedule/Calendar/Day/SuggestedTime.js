@@ -17,7 +17,7 @@ export default function SuggestedTime(props) {
   };
 
   const StyledButton = styled.button`
-    border-radius: 5%;
+    /* border-radius: 5%; */
     background: "#1e90ff";
     border: none;
     border-left: dodgerblue 5px solid;
@@ -29,6 +29,11 @@ export default function SuggestedTime(props) {
     border-color: "#61dbfb";
     ::hover() {
       transform: scale(1.1);
+    }
+    @media (max-width: 500px) {
+      width: 30vw;
+      border-radius:0%;
+
     }
   `;
   return (
