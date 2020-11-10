@@ -4,7 +4,7 @@ import Typist from "react-typist";
 import axios from "axios";
 import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
-import BuiltWithReact from './BuiltWithReact';
+import BuiltWithReact from "./BuiltWithReact";
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
