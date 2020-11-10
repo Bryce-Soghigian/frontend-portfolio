@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { GlobalContext } from "../../../../../contexts";
+import {convertToAmOrPm} from '../../../../../utils/Convert'
 export default function ModalStartState(props) {
   const { dispatch, state } = useContext(GlobalContext);
   const blue = "#045FB6";
@@ -69,7 +70,7 @@ export default function ModalStartState(props) {
           <p>Schedule a meeting</p>
           <p>for {state.currentMeetingTime.meetingDate}</p>
 
-          <p>at {state.currentMeetingTime.time}?</p>
+          <p>at {convertToAmOrPm(state.currentMeetingTime.time)}?</p>
         </Top>
         <ButtonsContainer>
           <Button onClick={yesClick}>Yes</Button>
