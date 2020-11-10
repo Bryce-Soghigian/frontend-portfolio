@@ -6,7 +6,9 @@ import { AiOutlinePhone } from "react-icons/ai";
 import MeetingIconType from "./MeetingIconType";
 
 export default function ModalEndState() {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  // const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const [email, setEmail] = useState({
     error: false,
     value: "",
@@ -137,7 +139,7 @@ export default function ModalEndState() {
           />
         </ButtonsContainer>
         {email.error ? <p>{email.errorMessage}</p> : ""}
-        <input
+        <Input
           name="email"
           placeholder="youremail@gmail.com"
           type="text"

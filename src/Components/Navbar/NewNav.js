@@ -1,18 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100vw;
-  height: 7vh;
-  background: #011627;
-  /* border-bottom: 5px #4B6478; */
-`;
+
 const NavItem = styled(Link)`
   display: flex;
   margin: 5px;
