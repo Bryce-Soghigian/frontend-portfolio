@@ -26,7 +26,7 @@ export const reducer = (state, action) => {
         "Phone Interview";
       console.log(requestObjectZoomMeeting, "zoom obj");
       Axios.put(
-        `http://localhost:5555/api/v1/contact/zoom`,
+        `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/zoom`,
         requestObjectZoomMeeting,
       )
         .then(res => {
@@ -51,7 +51,7 @@ export const reducer = (state, action) => {
         currentDate: state.currentMeetingTime.fullDate,
       };
       requestObject[state.currentMeetingTime.time] = "Phone Interview";
-      Axios.put(`http://localhost:5555/api/v1/contact/phone`, requestObject)
+      Axios.put(`https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/phone`, requestObject)
         .then(res => {
           Swal.fire(
             "Thanks for scheduing a meeting!",
