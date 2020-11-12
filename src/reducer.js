@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
         currentDate: state.currentMeetingTime.fullDate,
       };
       requestObjectZoomMeeting[state.currentMeetingTime.time] =
-        "Phone Interview";
+        `Zoom meeting with ${action.payload}`;
       console.log(requestObjectZoomMeeting, "zoom obj");
       Axios.put(
         `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/zoom`,
@@ -185,8 +185,6 @@ export const reducer = (state, action) => {
       };
     case "fetchScheduleData":
       let data = action.payload;
-      //Using bubble sort since the array is of length 8 and i think it is very readable in this case
-
       data = data.sort((a, b) => {
         if (a.currentDate < b.currentDate) {
           return -1;
@@ -196,10 +194,11 @@ export const reducer = (state, action) => {
         }
         return 0;
       });
-      console.log(data, "DATA AFTER SORT");
-
       let results = [];
       let freeTimes = [];
+      const monthsArrayAbbr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+      const monthsArray = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+
       results.push(data);
       results.map(x =>
         x.map(x => {
@@ -208,14 +207,12 @@ export const reducer = (state, action) => {
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
-              let formatedDate = `${date.slice(0, 4)}-${date.slice(
-                4,
-                6,
-              )}-${date.slice(6, 8)}`;
-              let day = new Date(formatedDate).toString().split(" ");
+              // let monthForDate = date.slice(4,6)
+              // let dayForMonth = date.slice(6, 8)
+              // if(dayForMonth + === )
+              let day = new Date(`${date.slice(6, 8)} ${monthsArray[date.slice(4,6)-1]} ${date.slice(0, 4)} ${"20:00"} UTC`).toString().split(" ")
               filteredData["day"] = day[0];
-              console.log(day)
-              filteredData["date"] = `${day[1]} ${day[2]}`;
+              filteredData["date"] = `${monthsArrayAbbr[date.slice(4,6)-1]} ${date.slice(6, 8)}`;
               filteredData[key] = x[key];
             } else if (x[key] === "free") {
               filteredData.freeTimesArray.push(key);

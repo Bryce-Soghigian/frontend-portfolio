@@ -22,6 +22,10 @@ export default function ScheduleHome() {
     text-shadow: 1px 1px black;
     text-transform: uppercase;
   `;
+  const H6 =styled.h6`
+  color:${lightblue};
+  
+  `
   return (
     <ScheduleContainer>
       <DatePicker />
@@ -30,6 +34,7 @@ export default function ScheduleHome() {
         below!
       </H1>
       <Calendar />
+      <H6>** All times are in the CST timezone</H6>
       <ModalStartState />
       <ModalEndState />
     </ScheduleContainer>
