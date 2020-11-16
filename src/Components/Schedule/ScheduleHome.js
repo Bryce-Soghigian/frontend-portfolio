@@ -17,10 +17,8 @@ export default function ScheduleHome() {
     }
   `;
   const H1 = styled.h3`
-    color: white;
-    font-family: "Changa One";
+    color: #61DBFB;
     text-shadow: 1px 1px black;
-    text-transform: uppercase;
   `;
   const H6 =styled.h6`
   color:${lightblue};

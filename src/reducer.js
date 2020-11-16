@@ -207,9 +207,6 @@ export const reducer = (state, action) => {
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
-              // let monthForDate = date.slice(4,6)
-              // let dayForMonth = date.slice(6, 8)
-              // if(dayForMonth + === )
               let day = new Date(`${date.slice(6, 8)} ${monthsArray[date.slice(4,6)-1]} ${date.slice(0, 4)} ${"20:00"} UTC`).toString().split(" ")
               filteredData["day"] = day[0];
               filteredData["date"] = `${monthsArrayAbbr[date.slice(4,6)-1]} ${date.slice(6, 8)}`;

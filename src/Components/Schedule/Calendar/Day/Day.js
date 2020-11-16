@@ -11,7 +11,7 @@ export default function Day(props) {
    */
 
   const DayContainer = styled.div`
-    background: #61dbfb;
+    background:#16B9E8;
     z-index: 1;
     border: black 2px solid;
     height: 40vh;
@@ -27,7 +27,7 @@ export default function Day(props) {
     display: flex;
     justify-content: space-evenly;
     color: white;
-    text-shadow: 1px 1px black;
+    text-transform:bold;
     @media (max-width: 500px) {
       display: flex;
       justify-content: flex-start;

@@ -21,7 +21,7 @@ export default function SuggestedTime(props) {
     /* border-radius: 5%; */
     background: "#1e90ff";
     border: none;
-    border-left: dodgerblue 5px solid;
+    border-left: #61dbfb 5px solid;
     width: 90%;
     height: 5vh;
     margin: 2%;
