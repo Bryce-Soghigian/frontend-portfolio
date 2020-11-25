@@ -17,13 +17,12 @@ export default function ScheduleHome() {
     }
   `;
   const H1 = styled.h3`
-    color: #61DBFB;
+    color: #61dbfb;
     text-shadow: 1px 1px black;
   `;
-  const H6 =styled.h6`
-  color:${lightblue};
-  
-  `
+  const H6 = styled.h6`
+    color: ${lightblue};
+  `;
   return (
     <ScheduleContainer>
       <DatePicker />

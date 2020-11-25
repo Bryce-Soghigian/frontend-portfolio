@@ -123,9 +123,6 @@ export default function NewNav() {
             <NavItem to="/">
               <MenuItem onClick={handleClose}>Home </MenuItem>
             </NavItem>
-            <NavItem to="/About">
-              <MenuItem onClick={handleClose}>About </MenuItem>
-            </NavItem>
             <NavItem to="/Projects">
               <MenuItem onClick={handleClose}>Projects </MenuItem>
             </NavItem>
@@ -147,9 +144,8 @@ export default function NewNav() {
           <Name to="/">Bryce Soghigian</Name>
         </Left>
         <Right>
-          <NavItem to="/schedule">Connect with me!</NavItem>
+          <NavItem to="/schedule">Lets Connect!</NavItem>
           <NavItem to="/Skills">Skills</NavItem>
-          <NavItem to="/About">About</NavItem>
           <NavItem to="/Projects">Projects</NavItem>
         </Right>
       </ContainerTwo>

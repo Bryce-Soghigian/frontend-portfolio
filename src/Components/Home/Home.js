@@ -5,6 +5,7 @@ import axios from "axios";
 import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
+// import Connect from './Connect'
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
@@ -18,6 +19,9 @@ const MainDiv = styled.div`
 const Header = styled.h1`
   color: #61dbfb;
   margin: 6.5%;
+  @media (min-width: 600px) {
+    margin: 3.5%;
+  }
   @media (min-width: 1200px) {
     font-size: 3rem;
   }
@@ -90,6 +94,10 @@ const ImageDiv = styled.div`
   margin: 5%;
   border: solid #61dbfb 5px;
   border-radius: 50%;
+  @media (min-width: 600px) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 `;
 const Image = styled.img`
   /* 
@@ -134,7 +142,8 @@ export default function Home() {
     <MainDiv>
       <Header>Bryce Soghigian</Header>
       <ImageDiv>
-        <Image src="https://i.imgur.com/G42HY0i.jpg" />
+        {/* <Image src="https://i.imgur.com/G42HY0i.jpg" /> */}
+        <Image src="https://i.imgur.com/4tYKhwK.jpg" />
       </ImageDiv>
       <Typist className="description" cursor={CursorProps}>
         Fullstack Web Developer
@@ -169,6 +178,7 @@ export default function Home() {
         </Github>
       </SocialsContainer>
       <BuiltWithReact />
+      {/* <Connect /> */}
     </MainDiv>
   );
 }

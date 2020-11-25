@@ -11,9 +11,10 @@ export default function Day(props) {
    */
 
   const DayContainer = styled.div`
-    background:#16B9E8;
+    background: #012a36;
+
     z-index: 1;
-    border: black 2px solid;
+    border: white 1px solid;
     height: 40vh;
     width: 13vw;
     @media (max-width: 500px) {
@@ -21,21 +22,29 @@ export default function Day(props) {
       height: 40vh;
       display: flex;
     }
-    overflow-y: scroll;
+    overflow-x: scroll;
   `;
   const Top = styled.div`
     display: flex;
     justify-content: space-evenly;
     color: white;
-    text-transform:bold;
+    text-transform: bold;
+    border-bottom: solid white 1px;
     @media (max-width: 500px) {
+      padding-left: 10px;
+      border-bottom: none;
       display: flex;
       justify-content: flex-start;
-      flex-direction: column-reverse;
+      align-items: center;
+      flex-direction: column;
     }
   `;
   const Bottom = styled.div`
-    overflow-y: scroll;
+    @media (max-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+    overflow-x: scroll;
   `;
   return (
     <DayContainer>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { GlobalContext } from "../../../../contexts";
-import {convertToAmOrPm} from '../../../../utils/Convert'
+import { convertToAmOrPm } from "../../../../utils/Convert";
 export default function SuggestedTime(props) {
   const { dispatch } = useContext(GlobalContext);
   let payloadObject = {
