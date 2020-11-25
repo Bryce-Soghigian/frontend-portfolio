@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../../contexts";
 import Day from "./Day/Day";
 import styled from "styled-components";
-import LoadingSpinner from './LoadingSpinner'
+import LoadingSpinner from "./LoadingSpinner";
 export default function Calendar() {
   const CalendarContainer = styled.div`
     margin: 3vw;

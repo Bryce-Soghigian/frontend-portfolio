@@ -64,11 +64,13 @@ export default function ProjectRight(props) {
   const ProjectRight = styled.div`
     width: 50vw;
     display: flex;
+    font-size: 1.5rem;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    @media (min-width: 800px) {
-      font-size: 1.5rem;
+    @media (max-width: 800px) {
+      font-size: 1.2rem;
+      width: 80vw;
     }
   `;
   const IMG = styled.img`
@@ -78,6 +80,13 @@ export default function ProjectRight(props) {
     transition: all 0.2s ease-in-out;
     :hover {
       transform: scale(1.1);
+    }
+    @media (max-width: 700px) {
+      width: 50vw;
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 0;
     }
   `;
   const Alink = styled(Link)``;

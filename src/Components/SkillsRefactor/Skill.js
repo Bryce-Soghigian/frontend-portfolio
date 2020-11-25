@@ -11,13 +11,23 @@ export default function Skill(props) {
     align-items: center;
     font-size: 2rem;
     color: ${props.color};
+    @media (min-width: 1000px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 1500px) {
+      font-size: 4rem;
+    }
+    @media (min-width: 1700px) {
+      font-size: 6rem;
+    }
   `;
-  const SkillsText = styled.h1`
-    font-size: 5rem;
+  const SkillsText = styled.h2`
+    font-size: 3rem;
     color: white;
     font-family: "Changa One";
     text-transform: bold;
     margin: 0;
+    margin-top:50px;
   `;
   const CursorProps = {
     show: true,

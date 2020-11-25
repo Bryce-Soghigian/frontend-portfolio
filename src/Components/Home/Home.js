@@ -5,6 +5,7 @@ import axios from "axios";
 import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
+// import Connect from './Connect'
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
@@ -18,6 +19,9 @@ const MainDiv = styled.div`
 const Header = styled.h1`
   color: #61dbfb;
   margin: 6.5%;
+  @media (min-width: 600px) {
+    margin: 3.5%;
+  }
   @media (min-width: 1200px) {
     font-size: 3rem;
   }
@@ -86,6 +90,24 @@ const Github = styled.a`
     font-size: 5rem;
   }
 `;
+const ImageDiv = styled.div`
+  margin: 5%;
+  border: solid #61dbfb 5px;
+  border-radius: 50%;
+  @media (min-width: 600px) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+`;
+const Image = styled.img`
+  /* 
+object-fit:cover; */
+
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+`;
+
 export default function Home() {
   //========Waking up our apis==============//
   useEffect(() => {
@@ -119,25 +141,29 @@ export default function Home() {
   return (
     <MainDiv>
       <Header>Bryce Soghigian</Header>
+      <ImageDiv>
+        {/* <Image src="https://i.imgur.com/G42HY0i.jpg" /> */}
+        <Image src="https://i.imgur.com/4tYKhwK.jpg" />
+      </ImageDiv>
       <Typist className="description" cursor={CursorProps}>
         Fullstack Web Developer
-        <Typist.Backspace count={24} delay={1000} />
-        <Typist.Delay ms={1500} />
+        <Typist.Backspace count={24} delay={100} />
+        <Typist.Delay ms={150} />
         ThreeJS Developer
-        <Typist.Backspace count={17} delay={2000} />
-        <Typist.Delay ms={2500} />
+        <Typist.Backspace count={17} delay={200} />
+        <Typist.Delay ms={250} />
         NodeJS Developer
-        <Typist.Backspace count={16} delay={3000} />
-        <Typist.Delay ms={3500} />
+        <Typist.Backspace count={16} delay={300} />
+        <Typist.Delay ms={350} />
         Javascript Developer
-        <Typist.Backspace count={21} delay={4000} />
-        <Typist.Delay ms={4500} />
+        <Typist.Backspace count={21} delay={400} />
+        <Typist.Delay ms={450} />
         Python Developer
-        <Typist.Backspace count={16} delay={5000} />
-        <Typist.Delay ms={5500} />
+        <Typist.Backspace count={16} delay={500} />
+        <Typist.Delay ms={550} />
         React Developer
-        <Typist.Backspace count={15} delay={6000} />
-        <Typist.Delay ms={6500} />
+        <Typist.Backspace count={15} delay={600} />
+        <Typist.Delay ms={650} />
         Fullstack Web Developer
       </Typist>
       <SocialsContainer>
@@ -152,6 +178,7 @@ export default function Home() {
         </Github>
       </SocialsContainer>
       <BuiltWithReact />
+      {/* <Connect /> */}
     </MainDiv>
   );
 }

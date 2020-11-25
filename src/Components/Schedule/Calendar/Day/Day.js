@@ -11,9 +11,10 @@ export default function Day(props) {
    */
 
   const DayContainer = styled.div`
-    background: #61dbfb;
+    background: #012a36;
+
     z-index: 1;
-    border: black 2px solid;
+    border: white 1px solid;
     height: 40vh;
     width: 13vw;
     @media (max-width: 500px) {
@@ -27,21 +28,28 @@ export default function Day(props) {
     display: flex;
     justify-content: space-evenly;
     color: white;
-    text-shadow: 1px 1px black;
+    text-transform: bold;
+    border-bottom: solid white 1px;
     @media (max-width: 500px) {
+      padding-left: 27px;
+      border-bottom: none;
       display: flex;
-      justify-content: flex-start;
-      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   `;
   const Bottom = styled.div`
-    overflow-y: scroll;
+    @media (max-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
   `;
   return (
     <DayContainer>
       <Top>
-        <p>{props.day}</p>
-        <p>{props.date}</p>
+        <h4>{props.day}</h4>
+        <h4>{props.date}</h4>
       </Top>
       <Bottom>
         {state.fetchedScheduleData ? (

@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
-export default function BuiltWithReact() {
+
+export default function Connect() {
   const BuiltWithReactContainer = styled.div`
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -10,8 +11,8 @@ export default function BuiltWithReact() {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     position: absolute;
-    right: 5%;
-    bottom: 5%;
+    right: 82%;
+    top: 13%;
   `;
   const H3 = styled(Link)`
     color: #61dbfb;
@@ -38,7 +39,7 @@ export default function BuiltWithReact() {
 
   return (
     <BuiltWithReactContainer>
-      <H3 to="/Projects">Built with</H3>
+      <H3 to="/Schedule">Let's_Talk!</H3>
       <IconContainer>
         <FaReact />
       </IconContainer>

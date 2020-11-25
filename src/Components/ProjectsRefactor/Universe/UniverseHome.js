@@ -45,6 +45,7 @@ const ProjectTitle = styled.h2`
 `;
 const Description = styled.p`
   color: white;
+  font-size: 1.2rem;
 `;
 const ButtonsContainer = styled.div`
   display: flex;

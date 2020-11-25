@@ -13,6 +13,8 @@ export const initialState = {
   currentMeetingType: "",
   currentUserEmail: "",
   isSelected: false,
+  scaleZoom:1,
+  scalePhone:1
 };
 
 export const reducer = (state, action) => {
@@ -22,8 +24,9 @@ export const reducer = (state, action) => {
         email: action.payload,
         currentDate: state.currentMeetingTime.fullDate,
       };
-      requestObjectZoomMeeting[state.currentMeetingTime.time] =
-        `Zoom meeting with ${action.payload}`;
+      requestObjectZoomMeeting[
+        state.currentMeetingTime.time
+      ] = `Zoom meeting with ${action.payload}`;
       console.log(requestObjectZoomMeeting, "zoom obj");
       Axios.put(
         `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/contact/zoom`,
@@ -82,10 +85,27 @@ export const reducer = (state, action) => {
         currentUserEmail: action.payload,
       };
     case "setMeetingType":
-      return {
-        ...state,
-        currentMeetingType: action.payload,
-      };
+      if(action.payload === "zoom"){
+        return {
+          ...state,
+          scaleZoom:1.5,
+          scalePhone:1,
+          currentMeetingType: action.payload,
+        };
+      }else if(action.payload==="phone"){
+        return {
+          ...state,
+          scaleZoom:1,
+          scalePhone:1.5,
+          currentMeetingType: action.payload,
+        };
+      }else{
+        return {
+          ...state
+        }
+      }
+      
+
     case "updateCurrentMeetingTime":
       return {
         ...state,
@@ -196,8 +216,34 @@ export const reducer = (state, action) => {
       });
       let results = [];
       let freeTimes = [];
-      const monthsArrayAbbr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-      const monthsArray = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+      const monthsArrayAbbr = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const monthsArray = [
+        "January",
+        "Febuary",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
 
       results.push(data);
       results.map(x =>
@@ -207,12 +253,17 @@ export const reducer = (state, action) => {
           for (let key in x) {
             if (key === "currentDate") {
               let date = x[key];
-              // let monthForDate = date.slice(4,6)
-              // let dayForMonth = date.slice(6, 8)
-              // if(dayForMonth + === )
-              let day = new Date(`${date.slice(6, 8)} ${monthsArray[date.slice(4,6)-1]} ${date.slice(0, 4)} ${"20:00"} UTC`).toString().split(" ")
+              let day = new Date(
+                `${date.slice(6, 8)} ${
+                  monthsArray[date.slice(4, 6) - 1]
+                } ${date.slice(0, 4)} ${"20:00"} UTC`,
+              )
+                .toString()
+                .split(" ");
               filteredData["day"] = day[0];
-              filteredData["date"] = `${monthsArrayAbbr[date.slice(4,6)-1]} ${date.slice(6, 8)}`;
+              filteredData["date"] = `${
+                monthsArrayAbbr[date.slice(4, 6) - 1]
+              } ${date.slice(6, 8)}`;
               filteredData[key] = x[key];
             } else if (x[key] === "free") {
               filteredData.freeTimesArray.push(key);

@@ -30,7 +30,7 @@ ${props.titlecolor};
       <ProjectRight
         isNavLink={true}
         title="Open Source Work"
-        importName="import { createBasicPlanet } from 'react-planetary' "
+        importName="import { createBasicPlanet } from 'react-planetary'; "
         description="Open source projects published to the npm registry"
         technology="NPM | NODE | REACT | THREE"
         route="/Open"
@@ -53,7 +53,7 @@ ${props.titlecolor};
         title="Universe Exploration"
         titlecolor={blue}
         infoColor={blue}
-        importName="import React from 'react' "
+        importName="import React,{useEffect,useContext} from 'react'; "
         imageLink="https://i.imgur.com/oZOqHeE.jpg"
         description="Collection Of Apps to Explore the Universe"
         technology="React | Express | PG | THREE"

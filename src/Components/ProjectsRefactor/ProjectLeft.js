@@ -32,23 +32,39 @@ export default function ProjectLeft(props) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    font-size: 1.5rem;
     align-items: center;
-    @media (min-width: 800px) {
-      font-size: 1.5rem;
+    @media (max-width: 800px) {
+      font-size: 1.2rem;
+      width: 80vw;
     }
   `;
   const ProjectLeftContainer = styled.div`
     width: 50vw;
+
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
+    }
   `;
   const Alink = styled(Link)``;
   const A = styled.a``;
   const IMG = styled.img`
     object-fit: cover;
     width: 45vw;
-    margin: 5%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0;
     transition: all 0.2s ease-in-out;
     :hover {
       transform: scale(1.1);
+    }
+    @media (max-width: 700px) {
+      width: 50vw;
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 0;
     }
   `;
   const Title = styled.h1`
