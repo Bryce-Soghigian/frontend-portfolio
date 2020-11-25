@@ -11,6 +11,15 @@ export default function Skill(props) {
     align-items: center;
     font-size: 2rem;
     color: ${props.color};
+    @media (min-width: 1000px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 1500px) {
+    font-size: 4rem;
+  }
+  @media (min-width: 1700px) {
+    font-size: 6rem;
+  }
   `;
   const SkillsText = styled.h1`
     font-size: 5rem;
