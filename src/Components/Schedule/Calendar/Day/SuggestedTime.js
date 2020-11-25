@@ -19,7 +19,7 @@ export default function SuggestedTime(props) {
 
   const StyledButton = styled.button`
     /* border-radius: 5%; */
-    background: "#1e90ff";
+    background: '#B3EBFE';
     border: none;
     border-left: #61dbfb 5px solid;
     width: 90%;

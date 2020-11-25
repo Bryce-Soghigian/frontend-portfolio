@@ -13,6 +13,8 @@ export const initialState = {
   currentMeetingType: "",
   currentUserEmail: "",
   isSelected: false,
+  scaleZoom:1,
+  scalePhone:1
 };
 
 export const reducer = (state, action) => {
@@ -83,10 +85,27 @@ export const reducer = (state, action) => {
         currentUserEmail: action.payload,
       };
     case "setMeetingType":
-      return {
-        ...state,
-        currentMeetingType: action.payload,
-      };
+      if(action.payload === "zoom"){
+        return {
+          ...state,
+          scaleZoom:1.5,
+          scalePhone:1,
+          currentMeetingType: action.payload,
+        };
+      }else if(action.payload==="phone"){
+        return {
+          ...state,
+          scaleZoom:1,
+          scalePhone:1.5,
+          currentMeetingType: action.payload,
+        };
+      }else{
+        return {
+          ...state
+        }
+      }
+      
+
     case "updateCurrentMeetingTime":
       return {
         ...state,

@@ -4,7 +4,14 @@ import { GlobalContext } from "../../../../../contexts";
 export default function MeetingIconType(props) {
   const { state } = useContext(GlobalContext);
   const lightblue = "#61dbfb";
+  let scale = 1
   const white = "FFFFFF";
+  if(props.meetingType ==="zoom"){
+    scale = state.scaleZoom
+  }
+  if(props.meetingType === "phone"){
+    scale = state.scalePhone
+  }
   const MeetingIconDiv = styled.button`
     display: flex;
     width: 10vw;
@@ -16,6 +23,7 @@ export default function MeetingIconType(props) {
     border-radius: 5px;
     background: ${state.isSelected ? white : lightblue};
     margin: 2vw;
+    transform:scale(${scale});
     :hover {
       border: white 2px solid;
       transform: scale(1.1);

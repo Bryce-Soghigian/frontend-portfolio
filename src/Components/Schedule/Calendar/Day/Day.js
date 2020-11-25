@@ -22,7 +22,7 @@ export default function Day(props) {
       height: 40vh;
       display: flex;
     }
-    overflow-x: scroll;
+    overflow-y: scroll;
   `;
   const Top = styled.div`
     display: flex;
@@ -31,10 +31,10 @@ export default function Day(props) {
     text-transform: bold;
     border-bottom: solid white 1px;
     @media (max-width: 500px) {
-      padding-left: 10px;
+      padding-left: 27px;
       border-bottom: none;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
     }
@@ -44,13 +44,12 @@ export default function Day(props) {
       display: flex;
       justify-content: center;
     }
-    overflow-x: scroll;
   `;
   return (
     <DayContainer>
       <Top>
-        <p>{props.day}</p>
-        <p>{props.date}</p>
+        <h4>{props.day}</h4>
+        <h4>{props.date}</h4>
       </Top>
       <Bottom>
         {state.fetchedScheduleData ? (
