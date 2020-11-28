@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SiZoom } from "react-icons/si";
 import { AiOutlinePhone } from "react-icons/ai";
 import MeetingIconType from "./MeetingIconType";
-const blue = "#045FB6";
+const blue = "#012a36";
 const lightblue = "#61dbfb";
 const Empty = styled.div`
   display: none;
@@ -27,7 +27,7 @@ const ModalContainerEnd = styled.div`
   flex-direction: column;
   border-radius: 5px;
   border-style: solid;
-  border-color: black;
+  border-color: ${lightblue}
   text-shadow: 1px 1px black;
 `;
 const ButtonsContainer = styled.div`

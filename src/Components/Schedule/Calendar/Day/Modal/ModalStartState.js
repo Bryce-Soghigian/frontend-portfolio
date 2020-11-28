@@ -4,7 +4,7 @@ import { GlobalContext } from "../../../../../contexts";
 import { convertToAmOrPm } from "../../../../../utils/Convert";
 export default function ModalStartState(props) {
   const { dispatch, state } = useContext(GlobalContext);
-  const blue = "#045FB6";
+  const blue = "#012a36";
   const lightblue = "#61dbfb";
   const yesClick = () => {
     dispatch({ type: "displayModalStartFalse" });
@@ -29,7 +29,7 @@ export default function ModalStartState(props) {
     flex-direction: column;
     border-radius: 5px;
     border-style: solid;
-    border-color: black;
+    border-color: ${lightblue};
     text-shadow: 1px 1px black;
   `;
   const Top = styled.div`
