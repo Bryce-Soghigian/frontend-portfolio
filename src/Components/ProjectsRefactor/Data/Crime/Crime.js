@@ -90,7 +90,7 @@ export default function Crime() {
               <FaCode />
             </Button>
           </A>
-          <A href="https://crimestatsfortravelers.com/" target="_blank">
+          <A href="https://fbi-crime-statistics.netlify.app/" target="_blank">
             {" "}
             <Button>Demo</Button>
           </A>
