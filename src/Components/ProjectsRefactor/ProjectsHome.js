@@ -39,7 +39,7 @@ ${props.titlecolor};
         imageLink="https://i.imgur.com/RIrixnU.jpg"
       />
       <ProjectLeft
-        title="Data and Machine Learning"
+        title="Data Science"
         imageLink="https://i.imgur.com/UivQoFy.png"
         titlecolor={lightblue}
         infoColor={lightblue}
@@ -50,16 +50,26 @@ ${props.titlecolor};
         isNavLink={true}
       />
       <ProjectRight
-        title="Universe Exploration"
+        title="Web Applications"
         titlecolor={blue}
         infoColor={blue}
         importName="import React,{useEffect,useContext} from 'react'; "
-        imageLink="https://i.imgur.com/oZOqHeE.jpg"
-        description="Collection Of Apps to Explore the Universe"
+        imageLink="https://i.imgur.com/VoOA9Q3.jpg"
+        description="Collection Of Web Apps I have built"
         technology="React | Express | PG | THREE"
         isNavLink={true}
-        route="/universe"
+        route="/apps"
       />
+      <ProjectLeft
+      title="Backend Development"
+      titlecolor={lightblue}
+      infocolor={lightblue}
+      imageLink="https://i.imgur.com/2zabm6l.jpg"
+      importName="const express = require('express').Router()"
+      description="Some of my apis I have developed"
+      technology="NodeJS | Python | Go"
+      isNavLink={true}
+      route="/apis" />
     </ComponentContainer>
   );
 }

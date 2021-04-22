@@ -13,6 +13,8 @@ import ScheduleHome from "./Components/Schedule/ScheduleHome";
 import { GlobalContext } from "./contexts";
 import { reducer, initialState } from "./reducer";
 import axios from "axios";
+import WebAppHome from "./Components/ProjectsRefactor/WebApp/WebAppHome";
+import BackendHome from "./Components/ProjectsRefactor/Apis/BackendHome";
 function App() {
   //Providing Global State
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -42,6 +44,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/Open" component={OpenHome} />
         <Route path="/Data" component={DataHome} />
+        <Route path="/apis" component={BackendHome} />
+        <Route path="/apps" component={WebAppHome} />
         <Route path="/universe" component={UniverseHome} />
         <Route path="/Schedule" component={ScheduleHome} />
         <Route exact path="/Projects" component={ProjectsHome} />
