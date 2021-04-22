@@ -10,6 +10,7 @@ import {
   SiJavascript,
   SiPython,
 } from "react-icons/si";
+import Project from "../Project";
 export default function BackendHome() {
   const BackendContainer = styled.div`
     display: flex;
@@ -24,13 +25,16 @@ export default function BackendHome() {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    border-bottom: 1px solid #4b6478;
   `;
   const BackendTitle = styled.h1`
     color: #61dbfb;
     font-size: 4rem;
+    font-family: "Fira Code";
   `;
   const H3 = styled.h3`
     color: #61dbfb;
+    font-family: "Fira Code";
   `;
   const Icons = styled.div`
     display: grid;
@@ -202,6 +206,7 @@ export default function BackendHome() {
       font-size: 6rem;
     }
   `
+
   return (
     <BackendContainer>
       <TopContainer>
@@ -242,6 +247,13 @@ export default function BackendHome() {
           </Py>
         </Icons>
       </TopContainer>
+      <Project
+      title="Nasa Exoplanets Api"
+      description="An api i built to serve the data nasa collected on exoplanets.It features 86 columns of data on 5,000 planets."
+      icons={[{color:"#f7df1e",icon:<FaNodeJs />},{icon:<SiPostgresql />,color:"#32648e"}]}
+      imageUrl="https://i.imgur.com/WH3wVx5.jpg"
+      links={[{src:"https://nasa-exoplanet-kepler-api.herokuapp.com/static/",body:"Docs"},{src:"https://github.com/Bryce-Soghigian/nasa-exoplanets-api",body:"Code"}]}
+      />
     </BackendContainer>
   );
 }
