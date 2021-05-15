@@ -14,7 +14,7 @@ export const initialState = {
   currentUserEmail: "",
   isSelected: false,
   scaleZoom:1,
-  scalePhone:1
+  scalePhone:1,
 };
 
 export const reducer = (state, action) => {
