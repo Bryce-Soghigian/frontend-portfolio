@@ -27,7 +27,18 @@ ${props.titlecolor};
   const lightblue = "#61dbfb";
   return (
     <ComponentContainer>
-      <ProjectRight
+        {/* <ProjectRight
+        title="Web Applications"
+        titlecolor={blue}
+        infoColor={blue}
+        importName="import React,{useEffect,useContext} from 'react'; "
+        imageLink="https://i.imgur.com/VoOA9Q3.jpg"
+        description="Collection Of Web Apps I have built"
+        technology="React | Express | PG | THREE"
+        isNavLink={true}
+        route="/apps"
+      /> */}
+      <ProjectLeft
         isNavLink={true}
         title="Open Source Work"
         importName="import { createBasicPlanet } from 'react-planetary'; "
@@ -38,6 +49,16 @@ ${props.titlecolor};
         infoColor={blue}
         imageLink="https://i.imgur.com/RIrixnU.jpg"
       />
+      <ProjectRight
+      title="Backend Development"
+      titlecolor={lightblue}
+      infocolor={lightblue}
+      imageLink="https://i.imgur.com/2zabm6l.jpg"
+      importName="const express = require('express').Router()"
+      description="Some of my apis I have developed"
+      technology="NodeJS | Python | Go"
+      isNavLink={true}
+      route="/apis" />
       <ProjectLeft
         title="Data Science"
         imageLink="https://i.imgur.com/UivQoFy.png"
@@ -49,27 +70,6 @@ ${props.titlecolor};
         route="/Data"
         isNavLink={true}
       />
-      <ProjectRight
-        title="Web Applications"
-        titlecolor={blue}
-        infoColor={blue}
-        importName="import React,{useEffect,useContext} from 'react'; "
-        imageLink="https://i.imgur.com/VoOA9Q3.jpg"
-        description="Collection Of Web Apps I have built"
-        technology="React | Express | PG | THREE"
-        isNavLink={true}
-        route="/apps"
-      />
-      <ProjectLeft
-      title="Backend Development"
-      titlecolor={lightblue}
-      infocolor={lightblue}
-      imageLink="https://i.imgur.com/2zabm6l.jpg"
-      importName="const express = require('express').Router()"
-      description="Some of my apis I have developed"
-      technology="NodeJS | Python | Go"
-      isNavLink={true}
-      route="/apis" />
     </ComponentContainer>
   );
 }
