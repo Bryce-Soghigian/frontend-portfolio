@@ -126,7 +126,7 @@ export default function NewNav() {
             <NavItem to="/Projects">
               <MenuItem onClick={handleClose}>Projects </MenuItem>
             </NavItem>
-            <NavItem to="/Skills">
+            <NavItem to="/Skills">  
               {" "}
               <MenuItem onClick={handleClose}>Skills </MenuItem>
             </NavItem>

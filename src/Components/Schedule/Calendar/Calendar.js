@@ -15,7 +15,7 @@ export default function Calendar() {
       height: 150vh;
     }
   `;
-  let i = 0;
+  
   const { state } = useContext(GlobalContext);
   if (state.scheduleData.length === 0) {
     return (
@@ -26,8 +26,8 @@ export default function Calendar() {
   } else {
     return (
       <CalendarContainer>
-        {state.scheduleData.map(x => {
-          i++;
+        {state.scheduleData.map((x,i) => {
+          console.log(state.scheduleData)
           return (
             <Day
               suggestedTimesArray={x.freeTimesArray}

@@ -1,13 +1,12 @@
-function getMonday(d) {
-  d = new Date(d);
-  var day = d.getDay(),
-    diff = d.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
-  console.log(new Date(d.setDate(diff)));
-  return new Date(d.setDate(diff));
-}
+
 
 export const getStartDate = () => {
-  let monday = getMonday(new Date());
+  var day = new Date().getDay(),
+  diff = new Date().getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
+console.log(new Date(new Date().setDate(diff)),"info") 
+let monday =  new Date(new Date().setDate(diff));
+  // let monday = getMonday(new Date());
+  console.log(monday)
   var dd = String(monday.getDate()).padStart(2, "0");
   var mm = String(monday.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = monday.getFullYear();

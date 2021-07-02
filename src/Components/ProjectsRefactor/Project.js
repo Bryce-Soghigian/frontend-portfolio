@@ -139,13 +139,15 @@ border-radius: 10px; */
           </Icons>
           <Bottom>
             {props.links.map(x => {
+              //{src:"",}
+              console.log(x,"LINKS INSIDE Links props")
               return (
                 <>
-                  <A href={props.src} target="_blank">
+                  <A href={x.src} target="_blank">
                     <Button >
                       {x.body}
                     </Button>
-                    ;
+                    
                   </A>
                 </>
               );
