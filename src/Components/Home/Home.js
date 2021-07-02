@@ -5,6 +5,7 @@ import axios from "axios";
 import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
+import { Link } from "react-router-dom";
 // import Connect from './Connect'
 import "./Home.css";
 const MainDiv = styled.div`
@@ -15,6 +16,23 @@ const MainDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+const NavItem = styled(Link)`
+  display: flex;
+  margin: 5px;
+  text-transform: bold;
+  font-size:1.3rem;
+  margin:2em;
+  color: white;
+  font-family: "Changa One";
+  text-decoration: none;
+  @media (min-width: 1700px) {
+    font-size: 2rem;
+  }
+  :hover {
+    transition: 0.5s;
+    color: #61dbfb;
+  }
 `;
 const Header = styled.h1`
   color: #61dbfb;
@@ -38,7 +56,6 @@ const SocialsContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   width: 7%;
-  margin: 5%;
   @media (max-width: 500px) {
     width: 15%;
   }
@@ -107,7 +124,11 @@ object-fit:cover; */
   height: 250px;
   border-radius: 50%;
 `;
-
+const Links = styled.div`
+display: flex;
+justify-content: center;
+align-items:center;
+`
 export default function Home() {
   //========Waking up our apis==============//
   useEffect(() => {
@@ -166,6 +187,11 @@ export default function Home() {
         <Typist.Delay ms={650} />
         Fullstack Web Developer
       </Typist>
+      <Links>
+      <NavItem to="/Projects">Projects</NavItem>
+      <NavItem to="/Skills">Skills</NavItem>
+  
+      </Links>
       <SocialsContainer>
         <Linked href="https://www.linkedin.com/in/bsoghigian/" target="_blank">
           <FaLinkedin />

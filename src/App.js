@@ -27,6 +27,7 @@ function App() {
         `https://scheduling-api-bryce-portfolio.herokuapp.com/api/v1/meeting/range/${state.currentDateRange[0].startDate}/${state.currentDateRange[1].endDate}`,
       )
       .then(data => {
+        console.log(state.currentDateRange[0].startDate,"bigblackcok",state.currentDateRange[1].endDate)
         dispatch({ type: "fetchScheduleData", payload: data.data });
       })
       .catch(err => {
