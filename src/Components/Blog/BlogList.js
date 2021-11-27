@@ -8,6 +8,7 @@ export default function BlogList(props) {
             {props.state.map(x => {
                 console.log(x, "X")
                 return <Blog
+                id={x.id}
                  title={x.entry_title}
                  date={x.date_created}
                 content={x.entry_content}

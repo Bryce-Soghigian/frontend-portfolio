@@ -11,7 +11,7 @@ export default function Blog(props) {
             </div>
             <p>{props.description}</p>
 
-            {toggle === true ? <BlogMarkdown blog_content={props.content}/>: "GOOOSE"}
+            {toggle === true ? <BlogMarkdown blog_content={props.content}/>: ""}
         </div>
     )
 }
