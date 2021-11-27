@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer} from "react";
 import { Route } from "react-router-dom";
 
 import { GlobalContext } from "./contexts";
@@ -14,7 +14,7 @@ import DataHome from "./Components/ProjectsRefactor/Data/DataHome";
 import UniverseHome from "./Components/ProjectsRefactor/Universe/UniverseHome";
 import WebAppHome from "./Components/ProjectsRefactor/WebApp/WebAppHome";
 import BackendHome from "./Components/ProjectsRefactor/Apis/BackendHome";
-
+import BlogHome from './Components/Blog/BlogHome'
 import "./App.css";
 
 function App() {

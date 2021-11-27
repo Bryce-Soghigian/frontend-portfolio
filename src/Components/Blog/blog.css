@@ -1,0 +1,22 @@
+.blog-container{
+    width:50vw;
+    background-color: powderblue;
+    height:auto;
+    border: dodgerblue 3px solid;
+    margin:3vw;
+}
+.top-blog{
+    display:flex;
+    justify-content: center;
+}
+
+.blog-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-list{
+    display: flex;
+    flex-direction: column;
+}
