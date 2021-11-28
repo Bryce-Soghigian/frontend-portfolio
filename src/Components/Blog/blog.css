@@ -1,13 +1,22 @@
 .blog-container{
-    width:50vw;
-    background-color: powderblue;
+    background-color: #61DBFB;
     height:auto;
-    border: dodgerblue 3px solid;
+    flex-direction: column;
     margin:3vw;
+    padding-bottom:1vh;
+    border-radius: 10px;
+    border: solid 4px dodgerblue;
 }
+.link-styling{
+    color: white;
+}
+
 .top-blog{
     display:flex;
-    justify-content: center;
+
+    width: 33vw;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 .blog-header{
@@ -15,8 +24,75 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color:white;
+    height: 100%;
 }
 .blog-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 33vw;
+}
+
+.align-left{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.entry-container{
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    font-size: 1.3rem;
+}
+.top-container{
+    width:100vw;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid red;
+}
+
+.entry-header{
+    display: flex;
+    padding-left:10vw;
+    width:50vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.entry-content{
+    width:55vw;
+    display: flex;
+    flex-direction: column;
+
+}
+.entry-container{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sub-topics{
+    display: flex;
+    width:20vw;
+    justify-content: space-around;
+    font-size: 75%;
+}
+.margin-none{
+    margin:none;
+}
+.entry-top{
+    display: flex;
+    align-items: center;
     flex-direction: column;
 }

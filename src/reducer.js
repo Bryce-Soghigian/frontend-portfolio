@@ -15,6 +15,8 @@ export const initialState = {
   isSelected: false,
   scaleZoom:1,
   scalePhone:1,
+  blogs:null,
+  id_to_blog: null,
 };
 
 export const reducer = (state, action) => {
@@ -221,8 +223,6 @@ export const reducer = (state, action) => {
         "Feb",
         "Mar",
         "Apr",
-        "May",
-        "Jun",
         "Jul",
         "Aug",
         "Sep",
@@ -303,6 +303,17 @@ export const reducer = (state, action) => {
         ...state,
         currentCalendarData: action.payload,
       };
+      case "fetchBlogData":
+        const blog_id_map = {}
+
+        for(let key = 0;key< action.payload.length;key++){
+          blog_id_map[action.payload[key].id] = action.payload[key]
+        }
+        return {
+          ...state,
+          blogs: [action.payload],
+          id_to_blog: blog_id_map,
+        }
     default:
       console.log(state);
       return { ...state };

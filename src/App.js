@@ -16,6 +16,7 @@ import WebAppHome from "./Components/ProjectsRefactor/WebApp/WebAppHome";
 import BackendHome from "./Components/ProjectsRefactor/Apis/BackendHome";
 import BlogHome from './Components/Blog/BlogHome'
 import "./App.css";
+import Blog from "./Components/Blog/Blog";
 
 function App() {
   //Providing Global State
@@ -39,7 +40,8 @@ function App() {
         <Route exact path="/Projects" component={ProjectsHome} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/Skills" component={SkillsHome} />
-        <Route exact path="/Blog" component={BlogHome} />
+        <Route exact path="/blog" component={BlogHome} />
+        <Route exact path="/blog/:blog_id" component={Blog} />
       </div>
     </GlobalContext.Provider>
   );

@@ -143,7 +143,7 @@ export default function ContactForm({ touched, errors }) {
       showConfirmButton: false,
       timer: 2500,
     });
-    console.log(state);
+
     document.getElementById("FormClear").reset();
   };
 

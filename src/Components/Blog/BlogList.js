@@ -1,19 +1,19 @@
 import React from 'react'
-import Blog from './Blog'
+import BlogListItem from './BlogListItem'
 export default function BlogList(props) {
     
 
+
     return (
         <div className='blog-list'>
-            {props.state.map(x => {
-                console.log(x, "X")
-                return <Blog
+            {props.state[0].map(x => {
+
+                return <BlogListItem
                 id={x.id}
-                 title={x.entry_title}
-                 date={x.date_created}
-                content={x.entry_content}
-                    description={x.entry_description}
-                    key={Math.random().toString().substr(2, 8)}  
+                title={x.entry_title}
+                date={x.date_created}
+                description={x.entry_description}
+                key={Math.random().toString().substr(2, 8)}  
                 /> 
             })}
         </div>
