@@ -64,8 +64,9 @@
 }
 
 .entry-content{
-    width:55vw;
+    width:73vw;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
 
 }
@@ -95,4 +96,48 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+
+.sidebar{
+    width:25vw;
+    background-color:#e8e8e8 ;
+    border-right: 1px red solid;
+    height:100%;
+    
+    margin-right: 2vw;
+}
+
+.entry-bottom{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-card{
+    margin:0;
+    border-bottom: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    color:black;
+    font-size: 2rem;
+}
+
+.black{
+    color: black;
+}
+
+.tags-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-container{
+width:150px;
+border-radius: 10%;
+border: white solid 1px;
+background-color:black;
+color:white
 }
