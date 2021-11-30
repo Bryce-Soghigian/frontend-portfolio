@@ -40,7 +40,7 @@ ${props.titlecolor};
       /> */}
       <ProjectLeft
         isNavLink={true}
-        title="Open Source Work"
+        title="Open Source Projects"
         importName="import { createBasicPlanet } from 'react-planetary'; "
         description="Open source projects published to the npm registry"
         technology="NPM | NODE | REACT | THREE"

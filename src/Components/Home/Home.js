@@ -135,7 +135,7 @@ export default function Home() {
     axios
       .get("https://portfolio-nodejs-streams.herokuapp.com/awake")
       .then(res => {
-        console.log(res);
+
         console.log("Made request");
       })
       .catch(err => {
@@ -190,7 +190,7 @@ export default function Home() {
       <Links>
       <NavItem to="/Projects">Projects</NavItem>
       <NavItem to="/Skills">Skills</NavItem>
-  
+      <NavItem to="/blog">Blog</NavItem>
       </Links>
       <SocialsContainer>
         <Linked href="https://www.linkedin.com/in/bsoghigian/" target="_blank">
