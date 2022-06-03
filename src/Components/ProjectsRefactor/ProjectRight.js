@@ -57,7 +57,9 @@ export default function ProjectRight(props) {
   const Info = styled(Link)`
     color: ${props.infoColor};
   `;
-  const A = styled.a``;
+  const A = styled.a`
+  color: ${props.infoColor};
+  `;
   const ProjectLeft = styled.div`
     width: 50vw;
   `;
@@ -97,6 +99,10 @@ export default function ProjectRight(props) {
     hideWhenDone: true,
     hideWhenDoneDelay: 300,
   };
+  const Learn = styled.h3`
+  color: ${props.infoColor};
+  text-decoration:none;
+  `
   return (
     <ProjectContainer>
       <ProjectRight>
@@ -110,7 +116,13 @@ export default function ProjectRight(props) {
           <br />
           {props.technology}
         </Description>
+        {props.isNavLink ? (
         <Info to={props.route}>Read More</Info>
+        ):(
+          <A href={props.projectLink} target="_blank">
+                <Learn>Learn More</Learn>
+          </A>
+        )}
       </ProjectRight>
       <ProjectLeft>
         {props.isNavLink === true ? (
