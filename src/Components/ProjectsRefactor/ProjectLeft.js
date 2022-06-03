@@ -3,6 +3,8 @@ import Typist from "react-typist";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export default function ProjectLeft(props) {
+  console.log(props)
+
   const CursorProps = {
     show: true,
     blink: true,
@@ -47,7 +49,9 @@ export default function ProjectLeft(props) {
     }
   `;
   const Alink = styled(Link)``;
-  const A = styled.a``;
+  const A = styled.a`
+  color: ${props.infoColor};
+  `;
   const IMG = styled.img`
     object-fit: cover;
     width: 45vw;
@@ -85,6 +89,10 @@ export default function ProjectLeft(props) {
   const Info = styled(Link)`
     color: ${props.infoColor};
   `;
+  const Learn = styled.h3`
+    color: ${props.infoColor};
+    text-decoration:none;
+  `
   return (
     <ProjectContainer>
       <ProjectLeftContainer>
@@ -109,7 +117,13 @@ export default function ProjectLeft(props) {
           <br />
           {props.technology}
         </Description>
+        {props.isNavLink ? (
         <Info to={props.route}>Read More</Info>
+        ):(
+          <A href={props.projectLink} target="_blank">
+                <Learn>Learn More</Learn>
+          </A>
+        )}
       </ProjectRight>
     </ProjectContainer>
   );
