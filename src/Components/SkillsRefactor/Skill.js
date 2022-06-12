@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
 export default function Skill(props) {
+  console.log(props)
   const SkillName = styled.h3`
     color: ${props.color};
   `;
@@ -39,6 +40,11 @@ export default function Skill(props) {
   const SkillsContainer = styled.div`
     margin: 4em;
     transition: all 0.2s ease-in-out;
+    position: fixed;
+    bottom: ${props.yPosition};
+    right: ${props.xPosition};
+
+
     :hover {
       transform: scale(1.1);
     }
