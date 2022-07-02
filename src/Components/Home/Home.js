@@ -6,7 +6,6 @@ import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
 import { Link } from "react-router-dom";
-// import Connect from './Connect'
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
@@ -117,9 +116,7 @@ const ImageDiv = styled.div`
   }
 `;
 const Image = styled.img`
-  /* 
-object-fit:cover; */
-
+  object-fit:cover;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -163,8 +160,7 @@ export default function Home() {
     <MainDiv>
       <Header>Bryce Soghigian</Header>
       <ImageDiv>
-        {/* <Image src="https://i.imgur.com/G42HY0i.jpg" /> */}
-        <Image src="https://i.imgur.com/4tYKhwK.jpg" />
+        <Image src="https://i.imgur.com/bZWUfZK.png" />
       </ImageDiv>
       <Typist className="description" cursor={CursorProps}>
         Fullstack Web Developer
