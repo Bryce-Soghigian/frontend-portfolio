@@ -117,9 +117,7 @@ const ImageDiv = styled.div`
   }
 `;
 const Image = styled.img`
-  /* 
-object-fit:cover; */
-
+object-fit:cover;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -163,29 +161,28 @@ export default function Home() {
     <MainDiv>
       <Header>Bryce Soghigian</Header>
       <ImageDiv>
-        {/* <Image src="https://i.imgur.com/G42HY0i.jpg" /> */}
-        <Image src="https://i.imgur.com/4tYKhwK.jpg" />
+        <Image src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltef4e64bcf37cf687/5bbf73cd16cab6460cb48688/gophers-500.png" />
       </ImageDiv>
       <Typist className="description" cursor={CursorProps}>
-        Fullstack Web Developer
-        <Typist.Backspace count={24} delay={100} />
+        Former Astrophyicist
+        <Typist.Backspace count={21} delay={100} />
         <Typist.Delay ms={150} />
-        ThreeJS Developer
+        Golang Expert?
         <Typist.Backspace count={17} delay={200} />
         <Typist.Delay ms={250} />
-        NodeJS Developer
-        <Typist.Backspace count={16} delay={300} />
+        Kubernetes Maintainer
+        <Typist.Backspace count={21} delay={300} />
         <Typist.Delay ms={350} />
-        Javascript Developer
-        <Typist.Backspace count={21} delay={400} />
+        Open Source Contributor
+        <Typist.Backspace count={25} delay={400} />
         <Typist.Delay ms={450} />
-        Python Developer
+        Python Addict
         <Typist.Backspace count={16} delay={500} />
         <Typist.Delay ms={550} />
-        React Developer
+        System Designer
         <Typist.Backspace count={15} delay={600} />
         <Typist.Delay ms={650} />
-        Fullstack Web Developer
+        Software Engineer II 
       </Typist>
       <Links>
       <NavItem to="/Projects">Projects</NavItem>

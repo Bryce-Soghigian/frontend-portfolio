@@ -1,13 +1,11 @@
 import React from 'react'
 import BlogListItem from './BlogListItem'
+
+
 export default function BlogList(props) {
-    
-
-
     return (
         <div className='blog-list'>
             {props.state[0].map(x => {
-
                 return <BlogListItem
                 id={x.id}
                 title={x.entry_title}

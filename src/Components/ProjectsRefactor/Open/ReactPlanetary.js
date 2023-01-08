@@ -26,9 +26,6 @@ export default function ReactPlanetary() {
   `;
   const RightPlanetaryContainer = styled.div`
     margin: 10px;
-    /* display:flex;
-    align-content:center;
-    /* justify-content:space-around; */
   `;
 
   const LeftPlanetaryContainer = styled.div`
