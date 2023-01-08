@@ -6,7 +6,6 @@ import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
 import { Link } from "react-router-dom";
-// import Connect from './Connect'
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
@@ -117,7 +116,11 @@ const ImageDiv = styled.div`
   }
 `;
 const Image = styled.img`
+<<<<<<< HEAD
 object-fit:cover;
+=======
+  object-fit:cover;
+>>>>>>> eef294fa9c080f632974cd3e5a6f4efd0068565a
   width: 250px;
   height: 250px;
   border-radius: 50%;
