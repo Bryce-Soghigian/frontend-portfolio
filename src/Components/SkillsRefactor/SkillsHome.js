@@ -1,53 +1,55 @@
-import React, { useState } from "react";
-import { FaReact, FaNodeJs, FaPython, FaAws } from "react-icons/fa";
-import { DiJavascript1, DiPostgresql, DiHtml5 } from "react-icons/di";
-import { GiMoebiusTriangle } from "react-icons/gi";
-import Skill from "./Skill";
-import styled from "styled-components";
-export default function SkillsHome() {
-  /**
-   * Objective of this component
-   * Render out the skills components in divs surrounding the skills text
-   */
-  const Container = styled.div`
-    height: 93vh;
-    background: #011526;
-    /* grid-template-columns: auto auto auto; */
-    column-count:2;
-    @media (min-width: 800px) {
-      display: grid;
-    height: 93vh;
-    background: #011526;
-    /* grid-template-columns: auto auto auto; */
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: 1fr 1fr;
-    }
-  `;
-
-  const [skills] = useState([
-    { icon: <FaAws />, color: "#FF9900", skillName: "Aws" },
-    { icon: <FaReact />, color: "#0d73d9", skillName: "React" },
-    { icon: <FaNodeJs />, color: "#addb67", skillName: "NodeJS" },
-    { icon: <FaPython />, color: "#4b8bbe", skillName: "Python" },
-    { isSkillsText: true },
-    { icon: <DiJavascript1 />, color: "#f7df1e", skillName: "Javascript" },
-    { icon: <DiPostgresql />, color: "#4b8bbe", skillName: "Postgres/SQL" },
-    { icon: <DiHtml5 />, color: "#f16529", skillName: "Html&&Css" },
-    { icon: <GiMoebiusTriangle />, color: "white", skillName: "ThreeJS" },
-  ]);
-
+import {useMemo} from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Physics, usePlane, useBox } from '@react-three/cannon'
+import { TextureLoader } from 'three'
+// import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+function Plane(props) {
+  const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }))
   return (
-    <Container>
-      {skills.map(x => {
-        return (
-          <Skill
-            isSkillsText={x.isSkillsText ? true : null}
-            icon={x.icon}
-            color={x.color}
-            skillName={x.skillName}
-          />
-        );
-      })}
-    </Container>
-  );
+    <mesh ref={ref} receiveShadow>
+      <planeGeometry args={[1000, 100000]} />
+      <shadowMaterial color="#171717" transparent opacity={0.4} />
+    </mesh>
+  )
 }
+
+function Cube(props) {
+  const {size, img} = props
+  const [ref] = useBox(() => ({ mass:10, position: [0, 5, 0], rotation: [0.4, 0.2, 0.5], ...props }))
+  const texture = useMemo(() => new TextureLoader().load(img), [])
+  return (
+    <mesh receiveShadow castShadow ref={ref}>
+      <boxGeometry args={[size, size, size]} />
+      <meshLambertMaterial map={texture} />
+    </mesh>
+  )
+}
+function Skill({ img }) {
+  return (
+  
+  <Canvas shadows dpr={[1, 2]} gl={{ alpha: false }} camera={{ position: [-1, 5, 5], fov: 45 }} styles={{ height: '94vh', width: '100vw' }} >
+    <color attach="background" args={['lightblue']} />
+    <ambientLight />
+    <directionalLight position={[10, 10, 10]} castShadow shadow-mapSize={[2048, 2048]} />
+    <Physics>
+      <Plane position={[0, -2.5, 0]} />
+    {[...Array(5)].map((_, index) => {
+      return <Cube position={[0.1, 5, 0]} img={img} size={index}/>
+    })}
+    </Physics>
+  </Canvas>
+  )
+
+}
+function Skills() {
+  return (
+    <div>
+      <Skill img="https://iili.io/H5ERq9S.md.png"/>
+      <Skill img="https://iili.io/H5GGAV2.md.jpg"/>
+      <Skill img="https://iili.io/H5GGAV2.md.jpg"/>
+      <Skill img="https://iili.io/H5GGAV2.md.jpg"/>
+      <Skill img="https://iili.io/H5GGAV2.md.jpg"/>
+    </div>
+  )
+}
+export default Skills
