@@ -126,11 +126,7 @@ export default function NewNav() {
             <NavItem to="/Projects">
               <MenuItem onClick={handleClose}>Projects </MenuItem>
             </NavItem>
-            <NavItem to="/Skills">  
-              {" "}
-              <MenuItem onClick={handleClose}>Skills </MenuItem>
-            </NavItem>
-                      </Menu>
+          </Menu>
         </Right>
       </ContainerTwo>
     );
@@ -142,7 +138,6 @@ export default function NewNav() {
         </Left>
         <Right>
           {/* <NavItem to="/schedule">Lets Connect!</NavItem> */}
-          <NavItem to="/Skills">Skills</NavItem>
           <NavItem to="/Projects">Projects</NavItem>
         </Right>
       </ContainerTwo>

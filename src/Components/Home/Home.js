@@ -108,19 +108,13 @@ const Github = styled.a`
 `;
 const ImageDiv = styled.div`
   margin: 5%;
-  border: solid #61dbfb 5px;
-  border-radius: 50%;
   @media (min-width: 600px) {
     margin: 0;
     margin-bottom: 20px;
   }
 `;
 const Image = styled.img`
-<<<<<<< HEAD
-object-fit:cover;
-=======
   object-fit:cover;
->>>>>>> eef294fa9c080f632974cd3e5a6f4efd0068565a
   width: 250px;
   height: 250px;
   border-radius: 50%;
