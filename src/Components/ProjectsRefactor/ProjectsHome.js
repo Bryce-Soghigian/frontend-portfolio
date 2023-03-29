@@ -41,8 +41,8 @@ ${props.titlecolor};
       <ProjectLeft
         isNavLink={true}
         title="Open Source Projects"
-        importName="import { createBasicPlanet } from 'react-planetary'; "
-        description="Open source projects published to the npm registry"
+        importName="go mod init k8s.io/kubernetes"
+        description="Open source contributions!"
         technology="NPM | NODE | REACT | THREE"
         route="/Open"
         titlecolor={blue}
