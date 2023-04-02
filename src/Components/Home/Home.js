@@ -183,7 +183,6 @@ export default function Home() {
       </Typist>
       <Links>
       <NavItem to="/Projects">Projects</NavItem>
-      <NavItem to="/Skills">Skills</NavItem>
       <NavItem to="/blog">Blog</NavItem>
       </Links>
       <SocialsContainer>
@@ -198,7 +197,6 @@ export default function Home() {
         </Github>
       </SocialsContainer>
       <BuiltWithReact />
-      {/* <Connect /> */}
     </MainDiv>
   );
 }
