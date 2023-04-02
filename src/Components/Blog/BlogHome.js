@@ -4,13 +4,8 @@ import LoadingBlogEntries from "./LoadingBlogEntries.js"
 import Axios from "axios";
 import { GlobalContext } from "../../contexts";
 import "./blog.css"
-export default function BlogHome(){
-/*
- This Component needs to
- 1. Fetch Catagories From API
- 2. Display Cards For all blog entries.
- */
 
+export default function BlogHome(){
 const { state, dispatch } = useContext(GlobalContext);
 const base_url = "http://127.0.0.1:8000"
 useEffect(() => {

@@ -1,0 +1,42 @@
+version: '3.7'
+
+
+services:
+  db:
+    image: "postgres:11"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  web:
+    image: soghigian-django-notes-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+      - static_data:/vol/web
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      - DEVELOPMENT_MODE=False
+
+  proxy:
+    image: soghigian-proxy-notes-api:latest
+    build:
+      context: ./proxy
+    volumes:
+      - static_data:/vol/static
+    ports:
+      - "8080:8080"
+    depends_on:
+      - web
+
+
+# We want to store our static data and database somewhere on our linux boi
+volumes:
+  static_data:
+  postgres_data:
