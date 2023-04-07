@@ -21,14 +21,10 @@ export default function Blog({ match }) {
 
     return (
         <div className='entry-container'>
-
             <div className='top-container'>
-
-
             <div className='entry-top'>
             <h1 className='title'>{state.entry_title}</h1>
                 <h4 className='margin-none'>Written By: Bryce Soghigian</h4>
-                
                 <div className='sub-topics'>
                     <h3 className='margin-none'>{state.date_created}</h3>
                     <h6 className='margin-none'>Topic: {state.category}</h6>

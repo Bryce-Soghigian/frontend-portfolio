@@ -1,5 +1,10 @@
+ACR=whimiscalgoose2.azurecr.io
 build:
-	docker build -t blog-api .
+	docker build -t $(ACR)/web-api:latest .
+
+
+push:
+	docker push $(ACR)/web-api:latest
 
 run:
 	docker run -p 8000:8000 blog-api

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
 
 const NavItem = styled(Link)`
@@ -100,47 +98,15 @@ export default function NewNav() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  //Onclick have a dropdown with my nav routes
-  if (document.documentElement.clientWidth <= 500) {
     return (
       <ContainerTwo>
         <Left>
           <Name to="/">Bryce Soghigian</Name>
         </Left>
         <Right>
-          <MenuText
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}>
-            See more...
-          </MenuText>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}>
-            <NavItem to="/">
-              <MenuItem onClick={handleClose}>Home </MenuItem>
-            </NavItem>
-            <NavItem to="/Projects">
-              <MenuItem onClick={handleClose}>Projects </MenuItem>
-            </NavItem>
-          </Menu>
-        </Right>
-      </ContainerTwo>
-    );
-  } else if (document.documentElement.clientWidth >= 500) {
-    return (
-      <ContainerTwo>
-        <Left>
-          <Name to="/">Bryce Soghigian</Name>
-        </Left>
-        <Right>
-          {/* <NavItem to="/schedule">Lets Connect!</NavItem> */}
           <NavItem to="/Projects">Projects</NavItem>
+          <NavItem to="/blog">Blog</NavItem>
         </Right>
       </ContainerTwo>
     );
-  }
 }

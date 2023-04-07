@@ -45,7 +45,7 @@ export default function OpenHome() {
       infoColor={blue}
       projectLink="https://github.com/kubernetes-sigs/cloud-provider-azure"
     />
-    <ProjectLeft 
+    <ProjectRight 
       isNavLink={false}
       title="Kubernetes"
       importName="go mod init k8s.io/kubernetes"

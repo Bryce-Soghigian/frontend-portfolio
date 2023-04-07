@@ -6,7 +6,6 @@ import { reducer, initialState } from "./reducer";
 
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contacts/Contact";
-import SkillsHome from "./Components/SkillsRefactor/SkillsHome";
 import NewNav from "./Components/Navbar/NewNav";
 import ProjectsHome from "./Components/ProjectsRefactor/ProjectsHome";
 import OpenHome from "./Components/ProjectsRefactor/Open/OpenHome";
@@ -39,7 +38,6 @@ function App() {
         <Route path="/universe" component={UniverseHome} />
         <Route exact path="/Projects" component={ProjectsHome} />
         <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/Skills" component={SkillsHome} />
         <Route exact path="/blog" component={BlogHome} />
         <Route exact path="/blog/:blog_id" component={Blog} />
       </div>
