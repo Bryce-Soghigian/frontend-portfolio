@@ -1,31 +1,22 @@
-FROM python:3.8-alpine
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim-buster
 
-ENV PYTHONUNBUFFERED=1
-ENV PATH="/scripts:${PATH}"
+# Set the working directory to /app
+WORKDIR /app
 
-WORKDIR /code
-RUN apk update \
-    && apk add --virtual build-essential gcc python3-dev musl-dev \
-    && apk add postgresql-dev \
-    && pip install psycopg2
-RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-COPY . /code/
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./scripts /scripts
+# Expose port 8000 for the Django app to listen on
+EXPOSE 8000
 
-# Upgrade permissions on scripts.
-RUN chmod +x /scripts/*
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-RUN mkdir -p /vol/web/static
+# Run Django migrations and start the development server
+CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8000
 
-RUN adduser -D user
-
-RUN chown -R user:user /vol
-RUN chmod -R 755 /vol/web
-
-USER user
-
-CMD ["entrypoint.sh"]

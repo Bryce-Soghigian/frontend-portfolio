@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 import sys
-import dj_database_url
+from urllib.parse import urlparse
 from django.core.management.utils import get_random_secret_key
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,22 +76,21 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+DATABASE_URL = ''
+
+url = urlparse(DATABASE_URL)
+
 DATABASES = {
-    'default':{}
-}
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'HOST': 'db',  # set in docker-compose.yml
-            'PORT': 5432  # default postgres port
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': url.path[1:],
+        'USER': url.username,
+        'PASSWORD': url.password,
+        'HOST': url.hostname,
+        'PORT': url.port,
     }
-else:
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(os.getenv("DATABASE_URL"))
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
