@@ -5,8 +5,6 @@ import { GlobalContext } from "../../contexts";
 import { blogData} from "./BlogData.js"
 import "./blog.css";
 
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-
 export default function BlogHome() {
   const { state, dispatch } = useContext(GlobalContext);
   console.log(state)
