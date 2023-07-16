@@ -58,29 +58,6 @@ const Name = styled(Link)`
   }
 `;
 
-const MenuText = styled.button`
-  transition: 1s;
-  color: #61dbfb;
-  background: none;
-  font-family: "Changa One";
-  border: none;
-  :hover {
-    color: white;
-    transform: scale(1.2);
-  }
-  &:focus {
-    border: none;
-  }
-  @media (min-width: 1000px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 1500px) {
-    font-size: 2.5rem;
-  }
-  @media (min-width: 1700px) {
-    font-size: 4.5rem;
-  }
-`;
 //Container for second nav
 const ContainerTwo = styled.div`
   display: flex;
@@ -89,15 +66,6 @@ const ContainerTwo = styled.div`
   background: #011627;
 `;
 export default function NewNav() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
     return (
       <ContainerTwo>
         <Left>
