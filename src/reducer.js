@@ -35,12 +35,7 @@ export const reducer = (state, action) => {
         ...state,
         displayModalEnd: false,
       };
-    case "fetchCurrentWeeksCalendarData":
-      return {
-        ...state,
-        currentCalendarData: action.payload,
-      };
-      case "fetchBlogData":
+    case "fetchBlogData":
         console.log(action.payload)
       return {
         ...state,
