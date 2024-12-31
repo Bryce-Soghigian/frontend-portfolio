@@ -6,6 +6,7 @@ import "babel-polyfill";
 import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import BuiltWithReact from "./BuiltWithReact";
 import { Link } from "react-router-dom";
+import GitHubCalendar from 'react-github-calendar';
 import "./Home.css";
 const MainDiv = styled.div`
   background: #011627;
@@ -181,6 +182,7 @@ export default function Home() {
         <Typist.Delay ms={650} />
         Software Engineer II 
       </Typist>
+      <GitHubCalendar username="bryce-soghigian" />
       <Links>
       <NavItem to="/Projects">Projects</NavItem>
       <NavItem to="/blog">Blog</NavItem>
